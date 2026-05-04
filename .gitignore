@@ -1,0 +1,13 @@
+# Dependencies / build artefacts
+node_modules/
+*.log
+
+# OS metadata
+.DS_Store
+Thumbs.db
+
+# Editors / IDEs
+.idea/
+.vscode/
+*.swp
+*~

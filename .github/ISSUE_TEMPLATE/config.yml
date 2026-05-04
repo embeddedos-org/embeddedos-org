@@ -1,0 +1,20 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 🐛 Bug in the OS kernel
+    url: https://github.com/embeddedos-org/eos/issues/new/choose
+    about: Report bugs against the EoS kernel.
+  - name: 🔐 Bug in the bootloader (eBoot)
+    url: https://github.com/embeddedos-org/eBoot/issues/new/choose
+    about: Report bugs against the eBoot secure bootloader.
+  - name: 📚 Issue with a book / docs page
+    url: https://github.com/embeddedos-org/embeddedos-org.github.io/issues/new/choose
+    about: Report typos, broken links, or suggestions for the developer portal.
+  - name: 🏪 Issue with an app
+    url: https://github.com/embeddedos-org/eApps/issues/new/choose
+    about: Report issues against apps in the marketplace.
+  - name: 💬 Discussions / Q&A
+    url: https://github.com/embeddedos-org/eos/discussions
+    about: Ask questions and discuss EmbeddedOS.
+  - name: 🔒 Report a security vulnerability
+    url: https://github.com/embeddedos-org/embeddedos-org/blob/main/SECURITY.md
+    about: Follow the disclosure policy — do NOT open public issues for security bugs.
