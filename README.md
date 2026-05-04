@@ -15,9 +15,9 @@ EmbeddedOS umbrella.*
 
 [![Website](https://img.shields.io/badge/🌐_Website-embeddedos--org.github.io-58a6ff?style=for-the-badge)](https://embeddedos-org.github.io)
 [![Org Profile](https://img.shields.io/badge/🏢_Org_Profile-View-bc8cff?style=for-the-badge)](https://github.com/embeddedos-org)
-[![Books](https://img.shields.io/badge/📚_Books-16_titles-3fb950?style=for-the-badge)](https://embeddedos-org.github.io/books.html)
+[![Books](https://img.shields.io/badge/📚_Books-14_titles-3fb950?style=for-the-badge)](https://embeddedos-org.github.io/books.html)
 [![App Store](https://img.shields.io/badge/🏪_App_Store-Browse-f0883e?style=for-the-badge)](https://embeddedos-org.github.io/eApps/)
-[![Docs](https://img.shields.io/badge/📖_Docs-15_modules-79c0ff?style=for-the-badge)](https://embeddedos-org.github.io/docs/)
+[![Docs](https://img.shields.io/badge/📖_Docs-13_modules-79c0ff?style=for-the-badge)](https://embeddedos-org.github.io/docs/)
 [![Get Started](https://img.shields.io/badge/🛠_Get_Started-Quickstart-f778ba?style=for-the-badge)](https://embeddedos-org.github.io/getting-started.html)
 
 <br>
@@ -27,7 +27,7 @@ EmbeddedOS umbrella.*
 [![Code of Conduct](https://img.shields.io/badge/Contributor_Covenant-2.1-purple?style=flat-square)](CODE_OF_CONDUCT.md)
 [![Conventional Commits](https://img.shields.io/badge/Commits-Conventional-orange?style=flat-square)](https://www.conventionalcommits.org/)
 
-**83 Board Ports** · **15 Products** · **41 Categories** · **500K+ Lines** · **65+ Diagrams** · **180+ Citations**
+**83 Board Ports** · **13 Products** · **41 Categories** · **500K+ Lines** · **65+ Diagrams** · **180+ Citations**
 
 </div>
 
@@ -44,49 +44,47 @@ served from `embeddedos-org/.github/profile/README.md`).
 Its only purpose is to **route visitors quickly** to the right downstream artefact:
 
 - 🌐 the **live website** (developer portal)
-- 📚 the **16 reference books** (free PDF downloads)
+- 📚 the **14 reference books** (free PDF downloads)
 - 🏪 the **app store** (60+ apps across 5 form factors)
-- 📖 the **documentation hub** (15 product modules)
-- 🧑‍💻 the **product source repos** (15 repos, listed below)
+- 📖 the **documentation hub** (13 product modules)
+- 🧑‍💻 the **product source repos** (13 repos, listed below)
 
 ![Products Banner](https://img.shields.io/badge/━━%20Product%20Catalogue%20━━-bc8cff?style=flat-square)
 
-## 📦 Product Catalogue (15 repos)
+## 📦 Product Catalogue (13 repos)
 
 ### 🔵 Core Platform
 
-| | Repo | Description | Stack |
-|---|------|-------------|-------|
-| ⚙️ | [**eos**](https://github.com/embeddedos-org/eos) | Real-Time Operating System kernel | ![](https://img.shields.io/badge/HAL-33_peripherals-blue) ![](https://img.shields.io/badge/boards-83-green) |
-| 🔐 | [**eBoot**](https://github.com/embeddedos-org/eBoot) | Secure bootloader platform | ![](https://img.shields.io/badge/crypto-Ed25519-purple) ![](https://img.shields.io/badge/A%2FB-slots-orange) |
-| 📡 | [**eIPC**](https://github.com/embeddedos-org/eIPC) | Inter-Process Communication | ![](https://img.shields.io/badge/transports-5-blue) ![](https://img.shields.io/badge/auth-HMAC-red) |
-| 🛠 | [**ebuild**](https://github.com/embeddedos-org/ebuild) | Build system & toolchain | ![](https://img.shields.io/badge/backends-CMake%20%7C%20Meson-orange) |
+| | Repo | Description |
+|---|------|-------------|
+| ⚙️ | [**eos**](https://github.com/embeddedos-org/eos) | EoS Embedded Operating system |
+| 🔐 | [**eBoot**](https://github.com/embeddedos-org/eBoot) | Project: Bootloader for Any Hardware |
+| 📡 | [**eIPC**](https://github.com/embeddedos-org/eIPC) | NIA ==>> Secure IPC ==>> AIL |
+| 🛠 | [**ebuild**](https://github.com/embeddedos-org/ebuild) | Next-gen embedded OS build tool |
 
 ### 🟣 AI & Neural
 
-| | Repo | Description | Stack |
-|---|------|-------------|-------|
-| 🧠 | [**eAI**](https://github.com/embeddedos-org/eAI) | Embedded AI & TinyML runtime | ![](https://img.shields.io/badge/runtime-TFLite%20%7C%20ONNX-purple) ![](https://img.shields.io/badge/LoRA-fine--tune-pink) |
-| 🧬 | [**eNI**](https://github.com/embeddedos-org/eNI) | Neural-interface platform (BCI/EEG) | ![](https://img.shields.io/badge/BCI-1024ch-pink) ![](https://img.shields.io/badge/EEG-30kHz-purple) |
-| 🤖 | [**eVera**](https://github.com/embeddedos-org/eVera) | AI assistant + 3D avatar | ![](https://img.shields.io/badge/agent-ReAct-pink) ![](https://img.shields.io/badge/3D-Three.js-cyan) |
+| | Repo | Description |
+|---|------|-------------|
+| 🧠 | [**eAI**](https://github.com/embeddedos-org/eAI) | AI Layer (AIL → eBot) can be integrated into EoS |
+| 🧬 | [**eNI**](https://github.com/embeddedos-org/eNI) | Neural Interface Adapter |
 
 ### 🟢 Apps & Services
 
-| | Repo | Description | Stack |
-|---|------|-------------|-------|
-| 📱 | [**eApps**](https://github.com/embeddedos-org/eApps) | App framework & marketplace | ![](https://img.shields.io/badge/apps-60+-yellow) ![](https://img.shields.io/badge/LVGL-widgets-green) |
-| 🗄 | [**eDB**](https://github.com/embeddedos-org/eDB) | Multi-model embedded database | ![](https://img.shields.io/badge/models-SQL%20%7C%20Doc%20%7C%20Graph%20%7C%20KV-green) |
-| 🌐 | [**eBrowser**](https://github.com/embeddedos-org/eBrowser) | Embedded web browser | ![](https://img.shields.io/badge/HTML5-CSS3-cyan) ![](https://img.shields.io/badge/TLS-1.3-blue) |
-| 📄 | [**eOffice**](https://github.com/embeddedos-org/eOffice) | AI office suite (CRDT) | ![](https://img.shields.io/badge/collab-CRDT-orange) ![](https://img.shields.io/badge/formats-OOXML%20%7C%20ODF-blue) |
-| 📈 | [**eStocks**](https://github.com/embeddedos-org/eStocks_Trading_Scripts) | Algorithmic trading | ![](https://img.shields.io/badge/backtest-walk--forward-blue) ![](https://img.shields.io/badge/risk-VaR-red) |
+| | Repo | Description |
+|---|------|-------------|
+| 📱 | [**eApps**](https://github.com/embeddedos-org/eApps) | EoS Unified Marketplace & App Store |
+| 🗄 | [**eDB**](https://github.com/embeddedos-org/eDB) | Lightweight embedded database manager — SQL editor, AI query assistance, multi-model |
+| 🌐 | [**eBrowser**](https://github.com/embeddedos-org/eBrowser) | Privacy-first web browser with custom rendering engine |
+| 📄 | [**eOffice**](https://github.com/embeddedos-org/eOffice) | Full office suite — eDocs, eSheets, eSlides, ePlanner, eNotes, eMail, eDrive, eConnect, eDB, eForms, eSwift |
 
 ### 🟠 Tools & Hardware
 
-| | Repo | Description | Stack |
-|---|------|-------------|-------|
-| 🔬 | [**EoSim**](https://github.com/embeddedos-org/EoSim) | Hardware simulator (QEMU/Renode) | ![](https://img.shields.io/badge/QEMU-Renode-red) ![](https://img.shields.io/badge/platforms-52+-orange) |
-| 🎨 | [**EoStudio**](https://github.com/embeddedos-org/EoStudio) | IDE & design suite | ![](https://img.shields.io/badge/editors-12-purple) ![](https://img.shields.io/badge/LSP-Tree--sitter-blue) |
-| 🔩 | [**eHardware**](https://github.com/embeddedos-org/eHardware-Designs-Products) | Hardware designs (KiCad PCB) | ![](https://img.shields.io/badge/KiCad-PCB-green) ![](https://img.shields.io/badge/products-3-orange) |
+| | Repo | Description |
+|---|------|-------------|
+| 🔬 | [**EoSim**](https://github.com/embeddedos-org/EoSim) | Hardware and platform simulator — 63+ boards, QEMU, GUI renderers |
+| 🎨 | [**EoStudio**](https://github.com/embeddedos-org/EoStudio) | Visual design IDE — UI, 3D, CAD, games, hardware, code generation |
+| 🔩 | [**eCAD-Hardware-Products**](https://github.com/embeddedos-org/eCAD-Hardware-Products) | Hardware designs + EE docs + Board datasheets of multiple products |
 
 ![Quickstart Banner](https://img.shields.io/badge/━━%20Quick%20Start%20━━-f0883e?style=flat-square)
 
