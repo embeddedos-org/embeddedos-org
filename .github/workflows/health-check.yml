@@ -9,6 +9,10 @@ on:
 permissions:
   contents: read
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: false
+
 jobs:
   linkinator:
     name: Crawl live sites for broken links
@@ -21,7 +25,7 @@ jobs:
 
       - name: Crawl developer portal
         run: |
-          npx --yes linkinator https://embeddedos-org.github.io \
+          npx --yes linkinator@6 https://embeddedos-org.github.io \
             --recurse \
             --skip 'github.com|googletagmanager|fonts.googleapis' \
             --timeout 10000 \
@@ -30,6 +34,6 @@ jobs:
 
       - name: Crawl org profile
         run: |
-          npx --yes linkinator https://github.com/embeddedos-org \
+          npx --yes linkinator@6 https://github.com/embeddedos-org \
             --skip 'login|signup|sponsors' \
             --timeout 10000

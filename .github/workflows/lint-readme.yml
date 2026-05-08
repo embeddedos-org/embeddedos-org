@@ -11,6 +11,10 @@ on:
 permissions:
   contents: read
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: false
+
 jobs:
   markdownlint:
     name: markdownlint
@@ -23,7 +27,7 @@ jobs:
           node-version: '20'
 
       - name: Run markdownlint
-        run: npx --yes markdownlint-cli '**/*.md' --ignore node_modules || true
+        run: npx --yes markdownlint-cli '**/*.md' --ignore node_modules
 
   lychee:
     name: lychee link check (offline)
