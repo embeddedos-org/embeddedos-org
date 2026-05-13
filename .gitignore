@@ -11,3 +11,11 @@ Thumbs.db
 .vscode/
 *.swp
 *~
+build/
+build-*/
+dist/
+__pycache__/
+*.pyc
+.venv/
+target/
+.pytest_cache/
