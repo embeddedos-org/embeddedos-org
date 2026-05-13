@@ -11,7 +11,7 @@ Thanks for considering a contribution to the EmbeddedOS ecosystem! 🎉
 
 This repo (`embeddedos-org/embeddedos-org`) is the **org-landing index**. It contains
 no product code — only navigation, links, and templates. Most code contributions belong
-in one of the **15 product repos** listed in [`README.md`](README.md).
+in one of the **13 product repos** listed in [`README.md`](README.md).
 
 | You want to … | Open the PR/issue here |
 |---------------|------------------------|
