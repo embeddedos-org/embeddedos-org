@@ -44,5 +44,4 @@ practices.
 
 - Website security policy:
   <https://github.com/embeddedos-org/embeddedos-org.github.io/blob/master/SECURITY.md>
-- Org compliance docs:
-  <https://github.com/embeddedos-org/.github/tree/main/docs/compliance>
+- Per-product security policies live in each product repo's own `SECURITY.md`.

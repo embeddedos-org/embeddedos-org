@@ -18,6 +18,7 @@ EmbeddedOS umbrella.*
 [![Books](https://img.shields.io/badge/📚_Books-14_titles-3fb950?style=for-the-badge)](https://embeddedos-org.github.io/books.html)
 [![App Store](https://img.shields.io/badge/🏪_App_Store-Browse-f0883e?style=for-the-badge)](https://embeddedos-org.github.io/eApps/)
 [![Docs](https://img.shields.io/badge/📖_Docs-13_modules-79c0ff?style=for-the-badge)](https://embeddedos-org.github.io/docs/)
+[![Stacks](https://img.shields.io/badge/🏭_Stacks-eFab-e3b341?style=for-the-badge)](https://embeddedos-org.github.io/stacks/)
 [![Get Started](https://img.shields.io/badge/🛠_Get_Started-Quickstart-f778ba?style=for-the-badge)](https://embeddedos-org.github.io/getting-started.html)
 
 <br>
@@ -37,9 +38,9 @@ EmbeddedOS umbrella.*
 
 `embeddedos-org/embeddedos-org` is the **organisation's namesake landing repo**. GitHub
 serves it whenever someone visits
-[`github.com/embeddedos-org/embeddedos-org`](https://github.com/embeddedos-org/embeddedos-org)
-(this is distinct from the [org profile](https://github.com/embeddedos-org), which is
-served from `embeddedos-org/.github/profile/README.md`).
+[`github.com/embeddedos-org/embeddedos-org`](https://github.com/embeddedos-org/embeddedos-org),
+and because no separate `embeddedos-org/.github` repo exists, GitHub *also* renders this
+file's contents at the org-profile page [`github.com/embeddedos-org`](https://github.com/embeddedos-org).
 
 Its only purpose is to **route visitors quickly** to the right downstream artefact:
 
@@ -47,6 +48,7 @@ Its only purpose is to **route visitors quickly** to the right downstream artefa
 - 📚 the **14 reference books** (free PDF downloads)
 - 🏪 the **app store** (60+ apps across 5 form factors)
 - 📖 the **documentation hub** (13 product modules)
+- 🏭 the **stacks hub** (curated, version-pinned bundles via `eFab`)
 - 🧑‍💻 the **product source repos** (13 repos, listed below)
 
 ![Products Banner](https://img.shields.io/badge/━━%20Product%20Catalogue%20━━-bc8cff?style=flat-square)
@@ -86,6 +88,20 @@ Its only purpose is to **route visitors quickly** to the right downstream artefa
 | 🎨 | [**EoStudio**](https://github.com/embeddedos-org/EoStudio) | Visual design IDE — UI, 3D, CAD, games, hardware, code generation |
 | 🔩 | [**eCAD-Hardware-Products**](https://github.com/embeddedos-org/eCAD-Hardware-Products) | Hardware designs + EE docs + Board datasheets of multiple products |
 
+![Meta Banner](https://img.shields.io/badge/━━%20Meta--Repos%20━━-79c0ff?style=flat-square)
+
+## 🧰 Meta-Repos (not part of the canonical 13)
+
+These repositories compose, route to, or describe the canonical roster. They are
+**explicitly excluded** from the 13-product / 14-book canon — adding one does not
+bump the canon counts.
+
+| | Repo | Role |
+|---|------|------|
+| 🚀 | [**embeddedos-org**](https://github.com/embeddedos-org/embeddedos-org) | This repo — org landing index. |
+| 🌐 | [**embeddedos-org.github.io**](https://github.com/embeddedos-org/embeddedos-org.github.io) | Developer portal (the live site at <https://embeddedos-org.github.io>). |
+| 🏭 | [**eFab**](https://github.com/embeddedos-org/eFab) | Stack fabricator — manifest-only meta-repo that pins versions, fetches sources, and runs end-to-end smoke tests for opinionated bundles of canonical products. v0.1.0 ships the `eai-edge` profile (ENI + EIPC + eAI). |
+
 ![Quickstart Banner](https://img.shields.io/badge/━━%20Quick%20Start%20━━-f0883e?style=flat-square)
 
 ## ⚡ Quick Start
@@ -117,11 +133,13 @@ open https://embeddedos-org.github.io/eApps/
 | 📚 Book Library | <https://embeddedos-org.github.io/books.html> |
 | 🏪 App Store | <https://embeddedos-org.github.io/eApps/> |
 | 📖 Documentation | <https://embeddedos-org.github.io/docs/> |
+| 🏭 Stacks | <https://embeddedos-org.github.io/stacks/> |
 | 🛠 Get Started | <https://embeddedos-org.github.io/getting-started.html> |
 | 🔬 Hardware Lab | <https://embeddedos-org.github.io/hardware-lab.html> |
 | 🧒 Kids Mode | <https://embeddedos-org.github.io/kids.html> |
 | 💬 Discussions | <https://github.com/embeddedos-org/eos/discussions> |
 | 🏢 Org Profile | <https://github.com/embeddedos-org> |
+| 🏭 eFab (manifest meta-repo) | <https://github.com/embeddedos-org/eFab> |
 
 ![Contribute Banner](https://img.shields.io/badge/━━%20Contributing%20━━-f778ba?style=flat-square)
 
@@ -130,8 +148,9 @@ open https://embeddedos-org.github.io/eApps/
 This repo is a **landing index**, so most code contributions belong in the downstream
 product repos listed above. For changes here:
 
-1. Read [`CONTRIBUTING.md`](CONTRIBUTING.md) (short stub) and the canonical guide at
-   [`embeddedos-org/.github/CONTRIBUTING.md`](https://github.com/embeddedos-org/.github/blob/main/CONTRIBUTING.md).
+1. Read [`CONTRIBUTING.md`](CONTRIBUTING.md) for the short stub specific to this repo, and
+   the per-product `CONTRIBUTING.md` inside each downstream product repository for the
+   detailed coding standards / commit conventions / review process applicable there.
 2. Open an issue or PR using the templates in [`.github/`](.github/).
 3. Follow our [Code of Conduct](CODE_OF_CONDUCT.md) (Contributor Covenant 2.1).
 4. Report security concerns via [`SECURITY.md`](SECURITY.md), **not** public issues.
@@ -142,6 +161,6 @@ product repos listed above. For changes here:
 
 **MIT License** · Made with ❤️ by [Srikanth Patchava](https://github.com/embeddedos-org) & Contributors
 
-[🌐 Website](https://embeddedos-org.github.io) · [📚 Books](https://embeddedos-org.github.io/books.html) · [🏪 Apps](https://embeddedos-org.github.io/eApps/) · [⭐ Star EoS](https://github.com/embeddedos-org/eos)
+[🌐 Website](https://embeddedos-org.github.io) · [📚 Books](https://embeddedos-org.github.io/books.html) · [🏪 Apps](https://embeddedos-org.github.io/eApps/) · [🏭 Stacks](https://embeddedos-org.github.io/stacks/) · [⭐ Star EoS](https://github.com/embeddedos-org/eos)
 
 </div>

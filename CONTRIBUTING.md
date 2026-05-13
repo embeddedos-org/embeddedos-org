@@ -3,7 +3,6 @@
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen?style=for-the-badge)](https://github.com/embeddedos-org/embeddedos-org/pulls)
 [![Conventional Commits](https://img.shields.io/badge/Commits-Conventional-orange?style=for-the-badge)](https://www.conventionalcommits.org/)
 [![Code of Conduct](https://img.shields.io/badge/Contributor_Covenant-2.1-purple?style=for-the-badge)](CODE_OF_CONDUCT.md)
-[![Canonical Guide](https://img.shields.io/badge/Full_Guide-.github%2FCONTRIBUTING-58a6ff?style=for-the-badge)](https://github.com/embeddedos-org/.github/blob/main/CONTRIBUTING.md)
 
 Thanks for considering a contribution to the EmbeddedOS ecosystem! 🎉
 
@@ -18,17 +17,21 @@ in one of the **13 product repos** listed in [`README.md`](README.md).
 | Fix a bug in the OS kernel | [`embeddedos-org/eos`](https://github.com/embeddedos-org/eos) |
 | Improve a book / docs page | [`embeddedos-org/embeddedos-org.github.io`](https://github.com/embeddedos-org/embeddedos-org.github.io) |
 | Add an app to the marketplace | [`embeddedos-org/eApps`](https://github.com/embeddedos-org/eApps) |
-| Update org-wide policies | [`embeddedos-org/.github`](https://github.com/embeddedos-org/.github) |
+| Add or change a stack profile | [`embeddedos-org/eFab`](https://github.com/embeddedos-org/eFab) |
 | Update **this** landing page | this repo (PR welcome!) |
 
-## Canonical contribution guide
+## Per-repo contribution guides
 
-The full 700-line guide — coding standards, commit-message format, branching strategy,
-review process, CLA, security, signing — lives in **one place** for the whole org:
+Each downstream product repository ships its own `CONTRIBUTING.md` covering
+coding standards, commit-message format, branching strategy, review process,
+CLA, security, and signing. Open the contribution guide of the repo you are
+actually changing — there is no separate org-wide canonical guide.
 
-> **➡️ <https://github.com/embeddedos-org/.github/blob/main/CONTRIBUTING.md>**
+For org-wide expectations:
 
-Please read it before opening any PR.
+- **Code of Conduct** — [`CODE_OF_CONDUCT.md`](CODE_OF_CONDUCT.md) (Contributor Covenant 2.1).
+- **Security** — [`SECURITY.md`](SECURITY.md).
+- **Commit messages** — [Conventional Commits](https://www.conventionalcommits.org/).
 
 ## Quick rules for **this** repo
 
