@@ -78,7 +78,7 @@ Its only purpose is to **route visitors quickly** to the right downstream artefa
 | 📱 | [**eApps**](https://github.com/embeddedos-org/eApps) | EoS Unified Marketplace & App Store |
 | 🗄 | [**eDB**](https://github.com/embeddedos-org/eDB) | Lightweight embedded database manager — SQL editor, AI query assistance, multi-model |
 | 🌐 | [**eBrowser**](https://github.com/embeddedos-org/eBrowser) | Privacy-first web browser with custom rendering engine |
-| 📄 | [**eOffice**](https://github.com/embeddedos-org/eOffice) | Full office suite — eDocs, eSheets, eSlides, ePlanner, eNotes, eMail, eDrive, eConnect, eDB, eForms, eSwift |
+| 📄 | [**eOffice**](https://github.com/embeddedos-org/eOffice) | Full office suite — eDocs, eSheets, eSlides, ePlanner, eNotes, eMail, eDrive, eConnect, eDB, eForms, eSway |
 
 ### 🟠 Tools & Hardware
 
