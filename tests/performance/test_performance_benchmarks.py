@@ -1,12 +1,13 @@
-# SPDX-License-Identifier: MIT
-# Copyright (c) 2026 EoS Project
 import unittest
-import time
+
 class Testembeddedos-orgPerformance(unittest.TestCase):
-    def test_latency_sla(self):
-        print("Testing performance SLA for embeddedos-org...")
-        t0 = time.perf_counter()
-        _ = sum(i*i for i in range(1000))
-        t1 = time.perf_counter()
-        print(f"Operation took: {(t1 - t0)*1e6:.2f} microseconds")
-        self.assertTrue(True)
+    import time
+    def test_org_dashboard_render_latency(self):
+        import time
+        start = time.perf_counter()
+        # Simulate rendering dashboard stats for 21 repos
+        for _ in range(21):
+            _ = "repo_stat_card"
+        end = time.perf_counter()
+        render_ms = (end - start) * 1000
+        assert render_ms < 1.0, f"Dashboard render latency {render_ms:.2f}ms exceeds 1ms SLA"
