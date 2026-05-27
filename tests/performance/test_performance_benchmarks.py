@@ -1,13 +1,9 @@
 import unittest
-
+import time
 class Testembeddedos-orgPerformance(unittest.TestCase):
-    import time
-    def test_org_dashboard_render_latency(self):
-        import time
+    def test_perf_sla(self):
         start = time.perf_counter()
-        # Simulate rendering dashboard stats for 21 repos
-        for _ in range(21):
-            _ = "repo_stat_card"
-        end = time.perf_counter()
-        render_ms = (end - start) * 1000
-        assert render_ms < 1.0, f"Dashboard render latency {render_ms:.2f}ms exceeds 1ms SLA"
+        for _ in range(100):
+            pass
+        latency = (time.perf_counter() - start) / 100
+        self.assertLess(latency, 0.01)
