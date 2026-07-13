@@ -125,7 +125,7 @@
     const logoHref = '/';
     const logoHTML = `
       <a href="${logoHref}" class="nav-logo" aria-label="EmbeddedOS Home">
-        <div class="nav-logo-mark" aria-hidden="true">EOS</div>
+        <img src="/images/brand/logo-icon-dark.png" alt="" aria-hidden="true" style="width:36px;height:36px;border-radius:8px;object-fit:contain;flex-shrink:0">
         <div class="nav-logo-text">
           EmbeddedOS
           <span>Open Source · Nonprofit</span>

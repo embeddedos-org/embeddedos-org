@@ -5,7 +5,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <meta charset="UTF-8">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://api.github.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self'">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' data: https://fonts.gstatic.com; connect-src 'self' https://api.github.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self'">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta name="referrer" content="strict-origin-when-cross-origin">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -22,7 +22,7 @@
 <meta property="og:url" content="https://embeddedos-org.github.io/">
 <meta property="og:title" content="EmbeddedOS - Open-Source Embedded OS (Cortex-M + Linux today; AArch64/x86_64/RISC-V on roadmap)">
 <meta property="og:description" content="A modular, real-time embedded operating system. Production today: ARM Cortex-M kernel, Linux host backend, STM32F407 BSP. Eboot ships an A/B bootloader with RFC 8032 Ed25519. More backends on the roadmap.">
-<meta property="og:image" content="https://embeddedos-org.github.io/og-image.png">
+<meta property="og:image" content="https://embeddedos-org.github.io/images/hero/hero-main.png">
 <meta property="og:image:secure_url" content="https://embeddedos-org.github.io/og-image.png">
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1200">
@@ -38,7 +38,7 @@
 <meta name="twitter:domain" content="embeddedos-org.github.io">
 <meta name="twitter:title" content="EmbeddedOS - Open-Source Embedded OS (Cortex-M + Linux today; AArch64/x86_64/RISC-V on roadmap)">
 <meta name="twitter:description" content="A modular, real-time embedded operating system. Production today: ARM Cortex-M kernel, Linux host backend, STM32F407 BSP.">
-<meta name="twitter:image" content="https://embeddedos-org.github.io/og-image.png">
+<meta name="twitter:image" content="https://embeddedos-org.github.io/images/hero/hero-main.png">
 <meta name="twitter:image:alt" content="EmbeddedOS — open-source embedded operating system, 13 products, 14 books, 60+ apps">
 <link rel="me" href="https://www.youtube.com/@EmbeddedOS_ORG">
 <link rel="me" href="https://www.linkedin.com/company/embedded-operating-systems-research-foundation">
@@ -163,27 +163,8 @@
     <div class="stat"><span class="stat-number text-cyan">14</span><span class="stat-label">Books</span></div>
   </div>
   </div>
-  <div class="hero-illustration svg-float">
-    <svg viewBox="0 0 220 220" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
-      <rect x="30" y="30" width="160" height="160" rx="12" fill="url(#grad-pcb)" stroke="#3fb950" stroke-width="1" opacity="0.7"/>
-      <path d="M50 100H80 M140 100H170 M110 50V80 M110 140V170" stroke="#3fb950" stroke-width="1" opacity="0.3"/>
-      <path d="M60 60L80 80 M160 60L140 80 M60 160L80 140 M160 160L140 140" stroke="#58a6ff" stroke-width="0.8" opacity="0.3"/>
-      <rect x="75" y="75" width="70" height="70" rx="4" fill="#1a1e24" stroke="#58a6ff" stroke-width="1.5"/>
-      <rect x="82" y="82" width="56" height="56" rx="2" fill="none" stroke="#58a6ff" stroke-width="0.5" opacity="0.5"/>
-      <line x1="90" y1="75" x2="90" y2="62" stroke="#8b949e" stroke-width="2"/><line x1="100" y1="75" x2="100" y2="62" stroke="#8b949e" stroke-width="2"/><line x1="110" y1="75" x2="110" y2="62" stroke="#8b949e" stroke-width="2"/><line x1="120" y1="75" x2="120" y2="62" stroke="#8b949e" stroke-width="2"/><line x1="130" y1="75" x2="130" y2="62" stroke="#8b949e" stroke-width="2"/>
-      <line x1="90" y1="145" x2="90" y2="158" stroke="#8b949e" stroke-width="2"/><line x1="100" y1="145" x2="100" y2="158" stroke="#8b949e" stroke-width="2"/><line x1="110" y1="145" x2="110" y2="158" stroke="#8b949e" stroke-width="2"/><line x1="120" y1="145" x2="120" y2="158" stroke="#8b949e" stroke-width="2"/><line x1="130" y1="145" x2="130" y2="158" stroke="#8b949e" stroke-width="2"/>
-      <line x1="75" y1="90" x2="62" y2="90" stroke="#8b949e" stroke-width="2"/><line x1="75" y1="100" x2="62" y2="100" stroke="#8b949e" stroke-width="2"/><line x1="75" y1="110" x2="62" y2="110" stroke="#8b949e" stroke-width="2"/><line x1="75" y1="120" x2="62" y2="120" stroke="#8b949e" stroke-width="2"/><line x1="75" y1="130" x2="62" y2="130" stroke="#8b949e" stroke-width="2"/>
-      <line x1="145" y1="90" x2="158" y2="90" stroke="#8b949e" stroke-width="2"/><line x1="145" y1="100" x2="158" y2="100" stroke="#8b949e" stroke-width="2"/><line x1="145" y1="110" x2="158" y2="110" stroke="#8b949e" stroke-width="2"/><line x1="145" y1="120" x2="158" y2="120" stroke="#8b949e" stroke-width="2"/><line x1="145" y1="130" x2="158" y2="130" stroke="#8b949e" stroke-width="2"/>
-      <text x="110" y="115" text-anchor="middle" fill="#58a6ff" font-size="10" font-weight="700" font-family="monospace">EoS</text>
-      <circle cx="50" cy="50" r="4" fill="#3fb950" opacity="0.8"><animate attributeName="opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite"/></circle>
-      <circle cx="170" cy="50" r="4" fill="#58a6ff" opacity="0.8"><animate attributeName="opacity" values="0.6;1;0.6" dur="1.5s" repeatCount="indefinite"/></circle>
-      <circle cx="170" cy="170" r="4" fill="#f778ba" opacity="0.8"><animate attributeName="opacity" values="0.5;1;0.5" dur="2.5s" repeatCount="indefinite"/></circle>
-      <circle cx="50" cy="170" r="4" fill="#e3b341" opacity="0.8"><animate attributeName="opacity" values="0.3;1;0.3" dur="1.8s" repeatCount="indefinite"/></circle>
-      <rect x="55" y="78" width="8" height="4" rx="1" fill="#2a2e34" stroke="#6e7681" stroke-width="0.5"/>
-      <rect x="157" y="78" width="8" height="4" rx="1" fill="#2a2e34" stroke="#6e7681" stroke-width="0.5"/>
-      <rect x="55" y="138" width="8" height="4" rx="1" fill="#2a2e34" stroke="#6e7681" stroke-width="0.5"/>
-      <rect x="157" y="138" width="8" height="4" rx="1" fill="#2a2e34" stroke="#6e7681" stroke-width="0.5"/>
-    </svg>
+    <div class="hero-illustration">
+    <img src="images/hero/hero-main.png" alt="EmbeddedOS running across multiple embedded devices — smartwatch, drone, SBC, IoT sensor, and laptop — connected by glowing amber data flows" loading="eager" width="600" height="338" style="width:100%;max-width:600px;border-radius:var(--radius-lg);box-shadow:0 24px 80px rgba(249,115,22,0.25),0 8px 32px rgba(0,0,0,0.5)">
   </div>
 </div>
 </section>
@@ -222,7 +203,7 @@
 <div class="product-grid">
 
   <div class="product-card card-eos">
-    <div class="card-icon"><svg viewBox="0 0 32 32" aria-hidden="true"><rect x="8" y="8" width="16" height="16" rx="2" fill="none" stroke="#58a6ff" stroke-width="1.5"/><rect x="11" y="11" width="10" height="10" rx="1" fill="url(#grad-blue)" opacity="0.6"/><line x1="12" y1="8" x2="12" y2="4" stroke="#58a6ff" stroke-width="1.5" stroke-linecap="round"/><line x1="16" y1="8" x2="16" y2="4" stroke="#58a6ff" stroke-width="1.5" stroke-linecap="round"/><line x1="20" y1="8" x2="20" y2="4" stroke="#58a6ff" stroke-width="1.5" stroke-linecap="round"/><line x1="12" y1="24" x2="12" y2="28" stroke="#58a6ff" stroke-width="1.5" stroke-linecap="round"/><line x1="16" y1="24" x2="16" y2="28" stroke="#58a6ff" stroke-width="1.5" stroke-linecap="round"/><line x1="20" y1="24" x2="20" y2="28" stroke="#58a6ff" stroke-width="1.5" stroke-linecap="round"/><line x1="8" y1="12" x2="4" y2="12" stroke="#58a6ff" stroke-width="1.5" stroke-linecap="round"/><line x1="8" y1="16" x2="4" y2="16" stroke="#58a6ff" stroke-width="1.5" stroke-linecap="round"/><line x1="8" y1="20" x2="4" y2="20" stroke="#58a6ff" stroke-width="1.5" stroke-linecap="round"/><line x1="24" y1="12" x2="28" y2="12" stroke="#58a6ff" stroke-width="1.5" stroke-linecap="round"/><line x1="24" y1="16" x2="28" y2="16" stroke="#58a6ff" stroke-width="1.5" stroke-linecap="round"/><line x1="24" y1="20" x2="28" y2="20" stroke="#58a6ff" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+    <div class="card-icon"><img src="images/products/icon-eos-kernel.png" alt="EmbeddedOS Kernel" style="width:64px;height:64px;border-radius:12px"></div>
     <h3>EoS</h3>
     <p>Universal embedded OS framework with <strong>41 product profiles</strong> (compile-time flag bundles) backed by 33 HAL interface declarations. Production today: ARM Cortex-M kernel arch port, Linux host backend, and the STM32F407 BSP (GPIO/UART/I2C/SPI/ADC/Timer). Other peripherals and arch ports are tracked as roadmap on a per-cell capability matrix.</p>
     <div class="card-tags">
@@ -238,7 +219,7 @@
   </div>
 
   <div class="product-card card-eboot">
-    <div class="card-icon"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 4L20 14L24 14L16 22L18 15L14 15Z" fill="url(#grad-green)" stroke="#3fb950" stroke-width="1" stroke-linejoin="round"/><circle cx="16" cy="26" r="3" fill="none" stroke="#3fb950" stroke-width="1" opacity="0.6"/><path d="M13 27Q16 32 19 27" stroke="#3fb950" stroke-width="1" fill="none" opacity="0.4"/></svg></div>
+    <div class="card-icon"><img src="images/products/icon-eboot.png" alt="eBoot Secure Bootloader" style="width:64px;height:64px;border-radius:12px"></div>
     <h3>eBoot</h3>
     <p>A fast, safe, testable A/B embedded bootloader. Production reference: <strong>STM32F4</strong> (exercised end-to-end on QEMU). Partial: rpi4 / nrf52 / stm32h7 / samd51 / x86_64_serial. Staged boot (stage-0 + stage-1), A/B slots with rollback, stream-based firmware update, recovery mode. Ed25519 verification uses a vendored, RFC&nbsp;8032-conformant implementation.</p>
     <div class="card-tags">
@@ -270,7 +251,7 @@
   </div>
 
   <div class="product-card card-eipc">
-    <div class="card-icon"><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="8" cy="16" r="3" fill="url(#grad-cyan)" opacity="0.7"/><circle cx="24" cy="8" r="3" fill="url(#grad-cyan)" opacity="0.7"/><circle cx="24" cy="24" r="3" fill="url(#grad-cyan)" opacity="0.7"/><line x1="11" y1="15" x2="21" y2="9" stroke="#79c0ff" stroke-width="1.5" stroke-linecap="round"/><line x1="11" y1="17" x2="21" y2="23" stroke="#79c0ff" stroke-width="1.5" stroke-linecap="round"/><line x1="24" y1="11" x2="24" y2="21" stroke="#79c0ff" stroke-width="1" stroke-dasharray="2 2" opacity="0.5"/></svg></div>
+    <div class="card-icon"><img src="images/products/icon-eipc.png" alt="EIPC Inter-Process Communication" style="width:64px;height:64px;border-radius:12px"></div>
     <h3>EIPC</h3>
     <p>Secure, real-time IPC framework with Go &amp; C SDKs. Pluggable transports (TCP, Unix sockets, shared memory, Windows pipes), HMAC-SHA256 integrity, capability-based auth, pub/sub broker, policy engine, replay protection, keyring management, and JSON-line audit logging.</p>
     <div class="card-tags">
@@ -286,7 +267,7 @@
   </div>
 
   <div class="product-card card-eai">
-    <div class="card-icon"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 4C10 4 6 10 6 16C6 20 8 24 12 26L12 28L20 28L20 26C24 24 26 20 26 16C26 10 22 4 16 4Z" fill="none" stroke="#bc8cff" stroke-width="1.5"/><path d="M11 14Q16 8 21 14" stroke="#bc8cff" stroke-width="1" fill="none" opacity="0.6"/><path d="M11 18Q16 12 21 18" stroke="#bc8cff" stroke-width="1" fill="none" opacity="0.4"/><circle cx="12" cy="16" r="1.5" fill="#bc8cff" opacity="0.8"/><circle cx="20" cy="16" r="1.5" fill="#bc8cff" opacity="0.8"/><circle cx="16" cy="13" r="1.5" fill="#bc8cff" opacity="0.8"/><line x1="12" y1="28" x2="20" y2="28" stroke="#bc8cff" stroke-width="1.5"/></svg></div>
+    <div class="card-icon"><img src="images/products/icon-eai.png" alt="eAI Edge on-device AI inference" style="width:64px;height:64px;border-radius:12px"></div>
     <h3>EAI</h3>
     <p>C11 embedded AI framework with <strong>two tiers</strong>: EAI-Min (50KB RAM, MCUs) and EAI-Framework (enterprise). 12 curated LLMs (TinyLlama to Qwen2.5 7B), ReAct agents with tool calling, LoRA fine-tuning, federated learning, 8-layer security, power-aware inference, and 5 deployment profiles.</p>
     <div class="card-tags">
@@ -537,6 +518,9 @@
 </section>
 
 <!-- WHY EMBEDDEDOS -->
+<section class="section-full" style="padding:0;overflow:hidden">
+  <img src="images/sections/community-illustration.png" alt="Diverse global community of developers and engineers collaborating on EmbeddedOS, connected by glowing amber network lines forming a world map" loading="lazy" style="width:100%;max-height:480px;object-fit:cover;display:block">
+</section>
 <section class="section">
   <h2 class="section-title">Why EmbeddedOS?</h2>
   <p class="section-subtitle">One unified platform from bootloader to browser</p>
@@ -611,6 +595,9 @@
 </section>
 
 <!-- QUICK START -->
+<section class="section-full" style="padding:0;overflow:hidden">
+  <img src="images/sections/open-source-banner.png" alt="Open Source — Open Minds, Open Code, Open Future. Built by a global community, powered by collaboration, free for everyone forever." loading="lazy" style="width:100%;max-height:400px;object-fit:cover;display:block">
+</section>
 <section class="section">
   <h2 class="section-title">Quick Start</h2>
   <p class="section-subtitle">Get running in minutes</p>
@@ -652,7 +639,11 @@ cd eBrowser &amp;&amp; ./setup.sh</code></pre>
 <section class="section">
   <h2 class="section-title">System Architecture</h2>
   <p class="section-subtitle">How all 13 EmbeddedOS repositories work together</p>
-<hr class="section-divider"><div class="arch-diagram">
+<hr class="section-divider">
+<div style="text-align:center;margin:2rem 0">
+  <img src="images/sections/architecture-diagram.png" alt="EmbeddedOS layered architecture: Hardware/Silicon → EmbeddedOS Kernel → eBoot/eSec/EIPC/eNet → eAI Edge/eBrowser/eDB/eOffice → Developer APIs & SDKs" loading="lazy" style="width:100%;max-width:960px;border-radius:var(--radius-lg);box-shadow:0 16px 60px rgba(0,0,0,0.5)">
+</div>
+<div class="arch-diagram">
     <div class="arch-row">
       <div class="arch-box" style="border-color:var(--orange);color:var(--orange)">eOffice (11 Apps)</div>
       <div class="arch-box" style="border-color:var(--yellow);color:var(--yellow)">eApps (60+ Apps)</div>
