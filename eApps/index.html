@@ -11,11 +11,11 @@
 <title>eApps - EoSim Play and Browser Extensions - EmbeddedOS</title>
 <meta name="description" content="Interactive 3D simulation games, browser extensions, and apps for EmbeddedOS. Play aircraft, drone, and vehicle simulators in your browser.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://embeddedos-org.github.io/eApps/">
+<meta property="og:url" content="/eApps/">
 <meta property="og:title" content="eApps - EoSim Play and Browser Extensions - EmbeddedOS">
 <meta property="og:description" content="Interactive 3D simulation games, browser extensions, and apps for EmbeddedOS. Play aircraft, drone, and vehicle simulators in your browser.">
-<meta property="og:image" content="https://embeddedos-org.github.io/og-image.png">
-<meta property="og:image:secure_url" content="https://embeddedos-org.github.io/og-image.png">
+<meta property="og:image" content="/og-image.png">
+<meta property="og:image:secure_url" content="/og-image.png">
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -24,13 +24,13 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="eApps - EoSim Play and Browser Extensions - EmbeddedOS">
 <meta name="twitter:description" content="Interactive 3D simulation games, browser extensions, and apps for EmbeddedOS. Play aircraft, drone, and vehicle simulators in your browser.">
-<meta name="twitter:image" content="https://embeddedos-org.github.io/og-image.png">
+<meta name="twitter:image" content="/og-image.png">
 <meta name="twitter:site" content="@EmbeddedOS_ORG">
 <meta name="twitter:creator" content="@EmbeddedOS_ORG">
-<meta name="twitter:url" content="https://embeddedos-org.github.io/">
+<meta name="twitter:url" content="/">
 <meta name="twitter:domain" content="embeddedos-org.github.io">
 <meta name="twitter:image:alt" content="EmbeddedOS — open-source embedded operating system, 13 products, 14 books, 60+ apps">
-<link rel="canonical" href="https://embeddedos-org.github.io/eApps/">
+<link rel="canonical" href="/eApps/">
   
   
   <link rel="stylesheet" href="../style.css">
@@ -290,7 +290,7 @@ git clone --recursive https://github.com/embeddedos-org/eBrowser.git
 cd eBrowser && setup.bat
 
 # Open EoSim Play games in eBrowser
-./eBrowser https://embeddedos-org.github.io/eApps/</code></pre></div>
+./eBrowser /eApps/</code></pre></div>
 
 <div class="callout callout-info"><div class="callout-title">eBrowser Architecture</div>
 <pre><code>┌─────────────────────────────────────────────┐
@@ -311,7 +311,7 @@ cd eBrowser && setup.bat
 
 eb_config cfg = eb_config_default();
 eb_instance *browser = eb_create(&amp;cfg);
-eb_navigate(browser, "https://embeddedos-org.github.io/eApps/");
+eb_navigate(browser, "/eApps/");
 eb_run(browser);
 eb_destroy(browser);</code></pre></div>
 
@@ -325,7 +325,7 @@ EoSim Python Renderers (source of truth)
   eosim/gui/renderers/drone.py     ─┘           │
                                                  ├──→  Browser Extension (eosim-play.html)
                                                  ├──→  Mobile PWA (mobile-apps/eosim-play/)
-                                                 └──→  GitHub Pages (embeddedos-org.github.io/eApps/)
+                                                 └──→  GitHub Pages (/eApps/)
 
 Layer Reuse (Docker-like):
   ┌────────────────────────────────────────────┐
@@ -475,12 +475,12 @@ npx serve .
 <h2 id="images" style="border:none;text-align:center;font-size:1.6rem"><span class="section-icon">🖼️</span>Hosted Assets</h2>
 <p style="text-align:center;color:var(--text-secondary);max-width:700px;margin:0 auto 1rem">All icons and images are hosted at:</p>
 <div class="callout callout-info"><div class="callout-title">Image URLs</div>
-<pre><code>https://embeddedos-org.github.io/eApps/icons/eosim.svg
-https://embeddedos-org.github.io/eApps/icons/eosim-play.svg
-https://embeddedos-org.github.io/eApps/icons/ebrowser.svg
-https://embeddedos-org.github.io/eApps/icons/sim-aircraft.svg
-https://embeddedos-org.github.io/eApps/icons/sim-vehicle.svg
-https://embeddedos-org.github.io/eApps/icons/sim-drone.svg</code></pre></div>
+<pre><code>/eApps/icons/eosim.svg
+/eApps/icons/eosim-play.svg
+/eApps/icons/ebrowser.svg
+/eApps/icons/sim-aircraft.svg
+/eApps/icons/sim-vehicle.svg
+/eApps/icons/sim-drone.svg</code></pre></div>
 
 </div>
 <footer class="footer" role="contentinfo">
@@ -503,7 +503,7 @@ const EosSearch={pages:[
 {t:'Platform Flow',u:'../flow.html',d:'EoS platform build and deployment flow'},
 {t:'Kids Guide',u:'../kids.html',d:'Welcome young explorers to EmbeddedOS'},
 {t:'Hardware Lab',u:'../hardware-lab.html',d:'Pick your board and get EoS running on real hardware'},
-{t:'App Store',u:'https://embeddedos-org.github.io/eApps/',d:'60+ apps across all platforms'},
+{t:'App Store',u:'/eApps/',d:'60+ apps across all platforms'},
 {t:'EoS Kernel',u:'../docs/eos.html',d:'Modular RTOS kernel with HAL and multicore framework'},
 {t:'eBoot Bootloader',u:'../docs/eboot.html',d:'Secure A/B bootloader with verified boot chain'},
 {t:'ebuild CLI',u:'../docs/ebuild.html',d:'Unified build system with cross-compilation'},
