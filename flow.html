@@ -1,7 +1,7 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://api.github.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self'">
-    <meta http-equiv="X-Content-Type-Options" content="nosniff">
-    <meta name="referrer" content="strict-origin-when-cross-origin">
+ <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://api.github.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self'">
+ <meta http-equiv="X-Content-Type-Options" content="nosniff">
+ <meta name="referrer" content="strict-origin-when-cross-origin">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/og-image.png"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>EoS Platform Flow - EmbeddedOS</title>
@@ -126,39 +126,39 @@
 </head>
 <body class="flow-page">
 <nav class="navbar" role="navigation" aria-label="Main navigation">
-  <div class="nav-inner">
-    <a href="index.html" class="logo">
-      <span class="logo-icon">EoS</span>
-      EmbeddedOS
-      <span class="nav-version version-badge">v1.0.0</span>
-    </a>
-    <button class="nav-toggle" type="button"
-            aria-label="Toggle navigation menu"
-            aria-expanded="false"
-            aria-controls="main-nav-links">
-      <span class="hamburger-bar"></span>
-      <span class="hamburger-bar"></span>
-      <span class="hamburger-bar"></span>
-    </button>
-    <ul class="nav-links" id="main-nav-links" role="list">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="getting-started.html">Get Started</a></li>
-      <li><a href="docs/index.html">Docs</a></li>
-      <li><a href="https://embeddedos-org.github.io/eApps/" class="nav-github" target="_blank" rel="noopener">&#127978; App Store</a></li>
-      <li><a href="kids.html">Kids &#127918;</a></li>
-      <li><a href="hardware-lab.html">Hardware Lab &#128268;</a></li>
-      <li><a href="flow.html" class="active">Flow</a></li>
-      <li><a href="books.html">&#128218; Books</a></li>
-      <li><a href="stacks/index.html">&#127981; Stacks</a></li>
-      <li><a href="get-involved.html">&#129309; Get Involved</a></li>
-      <li><a href="https://github.com/embeddedos-org" class="nav-github" target="_blank" rel="noopener">&#9733; GitHub</a></li>
-      <li class="nav-search-item">
-        <button class="nav-search-btn" type="button"
-                onclick="if(window.EoSearch)EoSearch.open()"
-                aria-label="Search (press /)" title="Search (/)">&#128269;</button>
-      </li>
-    </ul>
-  </div>
+ <div class="nav-inner">
+ <a href="index.html" class="logo">
+ <span class="logo-icon">EoS</span>
+ EmbeddedOS
+ <span class="nav-version version-badge">v1.0.0</span>
+ </a>
+ <button class="nav-toggle" type="button"
+ aria-label="Toggle navigation menu"
+ aria-expanded="false"
+ aria-controls="main-nav-links">
+ <span class="hamburger-bar"></span>
+ <span class="hamburger-bar"></span>
+ <span class="hamburger-bar"></span>
+ </button>
+ <ul class="nav-links" id="main-nav-links" role="list">
+ <li><a href="index.html">Home</a></li>
+ <li><a href="getting-started.html">Get Started</a></li>
+ <li><a href="docs/index.html">Docs</a></li>
+ <li><a href="https://embeddedos-org.github.io/eApps/" class="nav-github" target="_blank" rel="noopener">&#127978; App Store</a></li>
+ <li><a href="kids.html">Kids &#127918;</a></li>
+ <li><a href="hardware-lab.html">Hardware Lab &#128268;</a></li>
+ <li><a href="flow.html" class="active">Flow</a></li>
+ <li><a href="books.html">&#128218; Books</a></li>
+ <li><a href="stacks/index.html">&#127981; Stacks</a></li>
+ <li><a href="get-involved.html">&#129309; Get Involved</a></li>
+ <li><a href="https://github.com/embeddedos-org" class="nav-github" target="_blank" rel="noopener">&#9733; GitHub</a></li>
+ <li class="nav-search-item">
+ <button class="nav-search-btn" type="button"
+ onclick="if(window.EoSearch)EoSearch.open()"
+ aria-label="Search (press /)" title="Search (/)">&#128269;</button>
+ </li>
+ </ul>
+ </div>
 </nav>
 <section class="flow-hero">
 <h1>EoS Platform Flow</h1>
@@ -207,7 +207,6 @@
 <p>Flash to real hardware (RPi4, STM32, etc.). <code>ebot</code> connects to <code>eai</code> server at <code>192.168.1.100:8420</code>.</p>
 <span class="step-output">&#8594; Device online</span></div>
 </section>
-<!--RUNTIME_ARCH-->
 <section class="runtime-arch">
 <h2>Runtime Architecture</h2>
 <p style="text-align:center;color:var(--text-secondary);margin-bottom:2rem">How EoS components interact on a deployed device</p>
@@ -227,7 +226,6 @@
 <div class="arch-hw"><div class="arch-hw-label">Hardware</div>
 <div class="arch-hw-chip">GPIO</div><div class="arch-hw-chip">UART</div><div class="arch-hw-chip">SPI</div><div class="arch-hw-chip">I2C</div><div class="arch-hw-chip">ETH</div></div>
 </div></div></section>
-<!--CICD_SECTION-->
 <section class="cicd-pipeline">
 <h2>CI/CD Pipeline</h2>
 <p style="text-align:center;color:var(--text-secondary);margin-bottom:2.5rem">Gated release pipeline &mdash; every commit passes 4 quality gates</p>
@@ -242,11 +240,9 @@
 <div class="gate-connector"></div>
 <div class="gate gate-release"><div class="gate-circle">&#10003;</div><div class="gate-label">Release 6 Platforms</div></div>
 </div></section>
-<!--HW_GRID-->
 <section class="hw-grid-section">
 <h2>Hardware Targets</h2>
 <p style="text-align:center;color:var(--text-secondary);margin-bottom:2.5rem">52 hardware targets across 14 CPU architectures</p>
-
 <div class="hw-row hw-row-mcu"><div class="hw-row-label">&#9899; MCU — 19 Platforms (ARM Cortex-M, Xtensa, RISC-V, MIPS)</div>
 <div class="hw-row-cards">
 <div class="hw-target">STM32F4<small>Cortex-M4 &bull; 180MHz</small></div>
@@ -268,7 +264,6 @@
 <div class="hw-target">GD32VF103<small>RISC-V &bull; 108MHz</small></div>
 <div class="hw-target">PIC32MZ<small>MIPS &bull; 200MHz</small></div>
 </div></div>
-
 <div class="hw-row hw-row-sbc"><div class="hw-row-label">&#128421; SBC &amp; Application Processors &mdash; 15 Platforms (ARM64, RISC-V 64)</div>
 <div class="hw-row-cards">
 <div class="hw-target">Raspberry Pi 5<small>Cortex-A76 &bull; 4-core</small></div>
@@ -287,7 +282,6 @@
 <div class="hw-target">VExpress A9<small>Cortex-A9 &bull; Dev</small></div>
 <div class="hw-target">VExpress A15<small>Cortex-A15 &bull; Dev</small></div>
 </div></div>
-
 <div class="hw-row hw-row-soc"><div class="hw-row-label">&#128296; Automotive &amp; Safety &mdash; 6 Platforms (TriCore, Cortex-R, RH850)</div>
 <div class="hw-row-cards">
 <div class="hw-target">AURIX TC3xx<small>TriCore &bull; ASIL-D</small></div>
@@ -297,14 +291,12 @@
 <div class="hw-target">Cortex-R52<small>ARM R52 &bull; ASIL-D</small></div>
 <div class="hw-target">S32K344<small>Cortex-M7 &bull; CAN-FD</small></div>
 </div></div>
-
 <div class="hw-row hw-row-virt"><div class="hw-row-label">&#128187; x86 / Intel / AMD &mdash; 3 Platforms</div>
 <div class="hw-row-cards">
 <div class="hw-target">x86_64 Generic<small>Intel/AMD &bull; Linux</small></div>
 <div class="hw-target">QEMU Q35<small>Intel Q35 &bull; UEFI</small></div>
 <div class="hw-target">x86_64 EFI<small>Intel/AMD &bull; Edge</small></div>
 </div></div>
-
 <div class="hw-row hw-row-virt"><div class="hw-row-label">&#127760; Other Architectures &mdash; 6 Platforms (MIPS, PowerPC, MicroBlaze, ARC)</div>
 <div class="hw-row-cards">
 <div class="hw-target">MIPS Malta<small>MIPS 24Kf &bull; LE</small></div>
@@ -314,7 +306,6 @@
 <div class="hw-target">VersatilePB<small>ARM926 &bull; Legacy</small></div>
 <div class="hw-target">ARM Generic<small>AArch64 &bull; Linux</small></div>
 </div></div>
-
 <div class="hw-row hw-row-soc"><div class="hw-row-label">&#127919; Specialty Simulators &mdash; 5 Platforms</div>
 <div class="hw-row-cards">
 <div class="hw-target">Aerodynamics<small>Physics &bull; CFD</small></div>
@@ -323,26 +314,24 @@
 <div class="hw-target">Physiology<small>Domain &bull; Medical</small></div>
 <div class="hw-target">Weather<small>Domain &bull; Forecast</small></div>
 </div></div>
-
 <div style="text-align:center;margin-top:2rem;padding:1.5rem;background:var(--bg-card);border:1px solid var(--border-color);border-radius:var(--radius-md)">
 <p style="font-size:1rem;font-weight:700;color:var(--cyan);margin-bottom:.5rem">14 CPU Architectures Supported</p>
 <p style="font-size:.85rem;color:var(--text-secondary);margin:0">ARM Cortex-M &bull; ARM Cortex-A &bull; ARM Cortex-R &bull; AArch64 &bull; RISC-V 32 &bull; RISC-V 64 &bull; Xtensa &bull; <strong style="color:var(--blue)">x86_64 (Intel/AMD)</strong> &bull; MIPS &bull; PowerPC &bull; MicroBlaze &bull; ARC &bull; TriCore &bull; RH850</p>
 </div>
-
 </section>
 <footer class="footer"><div class="footer-inner"><div class="footer-brand"><h3>EmbeddedOS</h3><p>Open-source embedded operating system.</p></div>
 <div><h4>Documentation</h4><ul><li><a href="docs/eos.html">EoS</a></li><li><a href="docs/eboot.html">eBoot</a></li><li><a href="docs/ebuild.html">ebuild</a></li></ul></div>
 <div><h4>Components</h4><ul><li><a href="docs/eai.html">EAI</a></li><li><a href="docs/eni.html">ENI</a></li><li><a href="docs/eipc.html">EIPC</a></li><li><a href="docs/eosuite.html">eApps</a></li><li><a href="docs/eosim.html">EoSim</a></li></ul></div>
 <div><h4>Community</h4><ul><li><a href="https://github.com/embeddedos-org" target="_blank" rel="noopener">GitHub</a></li><li><a href="https://github.com/embeddedos-org/eos/discussions" target="_blank" rel="noopener">Discussions</a></li></ul></div>
-  <div>
-    <h4>Connect</h4>
-    <ul class="social-list">
-      <li><a class="social-link social-youtube" href="https://www.youtube.com/@EmbeddedOS_ORG" target="_blank" rel="noopener" aria-label="YouTube"><span class="social-icon">▶</span> YouTube</a></li>
-      <li><a class="social-link social-linkedin" href="https://www.linkedin.com/company/embedded-operating-systems-research-foundation" target="_blank" rel="noopener" aria-label="LinkedIn"><span class="social-icon">in</span> LinkedIn</a></li>
-      <li><a class="social-link social-x" href="https://x.com/EmbeddedOS_ORG" target="_blank" rel="noopener" aria-label="X (Twitter)"><span class="social-icon">𝕏</span> X (Twitter)</a></li>
-      <li><a class="social-link social-facebook" href="https://www.facebook.com/people/Embedded-Operating-Systems-Research-Foundation/61588978691494/" target="_blank" rel="noopener" aria-label="Facebook"><span class="social-icon">f</span> Facebook</a></li>
-    </ul>
-  </div></div><div class="footer-bottom">&copy; 2025 EmbeddedOS Project &bull; Licensed under MIT</div></footer>
+ <div>
+ <h4>Connect</h4>
+ <ul class="social-list">
+ <li><a class="social-link social-youtube" href="https://www.youtube.com/@EmbeddedOS_ORG" target="_blank" rel="noopener" aria-label="YouTube"><span class="social-icon">▶</span> YouTube</a></li>
+ <li><a class="social-link social-linkedin" href="https://www.linkedin.com/company/embedded-operating-systems-research-foundation" target="_blank" rel="noopener" aria-label="LinkedIn"><span class="social-icon">in</span> LinkedIn</a></li>
+ <li><a class="social-link social-x" href="https://x.com/EmbeddedOS_ORG" target="_blank" rel="noopener" aria-label="X (Twitter)"><span class="social-icon">𝕏</span> X (Twitter)</a></li>
+ <li><a class="social-link social-facebook" href="https://www.facebook.com/people/Embedded-Operating-Systems-Research-Foundation/61588978691494/" target="_blank" rel="noopener" aria-label="Facebook"><span class="social-icon">f</span> Facebook</a></li>
+ </ul>
+ </div></div><div class="footer-bottom">&copy; 2025 EmbeddedOS Project &bull; Licensed under MIT</div></footer>
 <div id="eos-search-overlay" class="search-overlay" hidden>
 <div class="search-modal">
 <div class="search-header">
