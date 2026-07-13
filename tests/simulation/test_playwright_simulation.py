@@ -15,7 +15,7 @@ import asyncio, os, sys, time, json
 from pathlib import Path
 from playwright.async_api import async_playwright, expect
 
-BASE_URL = "http://localhost:8765"
+BASE_URL = "http://localhost:8777"
 SCREENSHOTS_DIR = Path(__file__).parent.parent.parent / "test-screenshots"
 SCREENSHOTS_DIR.mkdir(exist_ok=True)
 

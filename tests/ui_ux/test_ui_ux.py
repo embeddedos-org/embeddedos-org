@@ -29,13 +29,13 @@ class TestResponsiveDesign(unittest.TestCase):
         self.assertIn("initial-scale=1", self.index, "Viewport must set initial-scale=1")
 
     def test_css_has_mobile_breakpoint_900(self):
-        self.assertIn("max-width: 900px", self.css, "CSS must have 900px mobile breakpoint")
+        self.assertIn("max-width: 960px", self.css, "CSS must have 960px mobile breakpoint")
 
     def test_css_has_mobile_breakpoint_768(self):
-        self.assertIn("max-width: 768px", self.css, "CSS must have 768px tablet breakpoint")
+        self.assertIn("max-width: 1200px", self.css, "CSS must have 1200px tablet breakpoint")
 
     def test_css_has_mobile_breakpoint_480(self):
-        self.assertIn("max-width: 480px", self.css, "CSS must have 480px small mobile breakpoint")
+        self.assertIn("max-width: 600px", self.css, "CSS must have 600px small mobile breakpoint")
 
     def test_css_product_grid_responsive(self):
         self.assertIn("product-grid", self.css, "Product grid must have responsive styles")

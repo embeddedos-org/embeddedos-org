@@ -70,6 +70,7 @@
     // Floating button
     var fab = document.createElement('button');
     fab.id = 'ebot-fab';
+    fab.style.cssText = 'min-width:52px;min-height:52px;width:52px;height:52px;';
     fab.setAttribute('aria-label', 'Open eBot AI Assistant');
     fab.innerHTML = '<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>';
     document.body.appendChild(fab);

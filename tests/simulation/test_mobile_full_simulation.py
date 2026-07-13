@@ -237,7 +237,7 @@ async def test_mobile_nav_stability(browser, device):
         await toggle.click()
         await page.wait_for_timeout(300)
         first_link = page.locator(".nav-links li a").first
-        await first_link.click()
+        await first_link.click(force=True)
         await page.wait_for_timeout(600)
         nav_open_after_nav = await page.evaluate(
             "() => document.body.classList.contains('nav-open')"

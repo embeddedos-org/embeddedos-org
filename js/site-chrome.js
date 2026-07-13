@@ -216,6 +216,61 @@
           }
         });
       }
+
+      // Scrolled class for navbar shadow effect
+      (function() {
+        var nb = document.querySelector('.navbar');
+        if (!nb) return;
+        var ticking = false;
+        window.addEventListener('scroll', function() {
+          if (!ticking) {
+            requestAnimationFrame(function() {
+              nb.classList.toggle('scrolled', window.scrollY > 10);
+              ticking = false;
+            });
+            ticking = true;
+          }
+        }, { passive: true });
+        // Close menu on resize to desktop
+        window.addEventListener('resize', function() {
+          if (window.innerWidth > 960) {
+            var links = document.querySelector('.nav-links');
+            var t = document.querySelector('.nav-toggle');
+            if (links) links.classList.remove('open');
+            if (t) t.setAttribute('aria-expanded', 'false');
+            document.body.classList.remove('nav-open');
+          }
+        });
+      })();
+      // Scroll-to-top button
+      (function() {
+        var btn = document.createElement('button');
+        btn.className = 'scroll-top-btn';
+        btn.setAttribute('aria-label', 'Scroll to top');
+        btn.setAttribute('title', 'Scroll to top');
+        btn.innerHTML = '&#8679;';
+        document.body.appendChild(btn);
+        var ticking2 = false;
+        window.addEventListener('scroll', function() {
+          if (!ticking2) {
+            requestAnimationFrame(function() {
+              btn.classList.toggle('visible', window.scrollY > 400);
+              ticking2 = false;
+            });
+            ticking2 = true;
+          }
+        }, { passive: true });
+        btn.addEventListener('click', function() {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      })();
+      // Search keyboard shortcut (/)
+      document.addEventListener('keydown', function(e) {
+        if (e.key === '/' && !['INPUT','TEXTAREA','SELECT'].includes(document.activeElement.tagName)) {
+          e.preventDefault();
+          if (typeof EosSearch !== 'undefined' && typeof EosSearch.open === 'function') EosSearch.open();
+        }
+      });
     } catch (e) {
       /* fall back silently to baked-in HTML */
     }

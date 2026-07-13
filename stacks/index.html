@@ -63,20 +63,37 @@
 
 <nav class="navbar" role="navigation" aria-label="Main navigation">
   <div class="nav-inner">
-    <a href="../index.html" class="logo"><span class="logo-icon">EoS</span> EmbeddedOS <span class="nav-version">v1.0.0</span></a>
-    <button class="nav-toggle" onclick="this.nextElementSibling.classList.toggle('open')" aria-label="Menu">&#9776;</button>
-    <div class="nav-links">
-      <a href="../index.html">Home</a>
-      <a href="../getting-started.html">Get Started</a>
-      <a href="../docs/index.html">Docs</a>
-      <a href="https://embeddedos-org.github.io/eApps/" class="nav-github" target="_blank" rel="noopener">🏪 App Store</a>
-      <a href="../kids.html">Kids 🎮</a>
-      <a href="../hardware-lab.html">Hardware Lab 🔌</a>
-      <a href="../flow.html">Flow</a>
-      <a href="../books.html">📚 Books</a>
-      <a href="/index.html#health-devices">&#10084;&#65039; Health</a><a href="https://github.com/embeddedos-org" class="nav-github" target="_blank" rel="noopener">&#9733; GitHub</a>
-      <button class="nav-search-btn" onclick="EosSearch.open()" aria-label="Search" title="Search (/)">&#128269;</button>
-    </div>
+    <a href="../index.html" class="logo">
+      <span class="logo-icon">EoS</span>
+      EmbeddedOS
+      <span class="nav-version version-badge">v1.0.0</span>
+    </a>
+    <button class="nav-toggle" type="button"
+            aria-label="Toggle navigation menu"
+            aria-expanded="false"
+            aria-controls="main-nav-links">
+      <span class="hamburger-bar"></span>
+      <span class="hamburger-bar"></span>
+      <span class="hamburger-bar"></span>
+    </button>
+    <ul class="nav-links" id="main-nav-links" role="list">
+      <li><a href="../index.html" class="active">Home</a></li>
+      <li><a href="../getting-started.html">Get Started</a></li>
+      <li><a href="../docs/index.html" class="active">Docs</a></li>
+      <li><a href="https://embeddedos-org.github.io/eApps/" class="nav-github" target="_blank" rel="noopener">&#127978; App Store</a></li>
+      <li><a href="../kids.html">Kids &#127918;</a></li>
+      <li><a href="../hardware-lab.html">Hardware Lab &#128268;</a></li>
+      <li><a href="../flow.html">Flow</a></li>
+      <li><a href="../books.html">&#128218; Books</a></li>
+      <li><a href="../stacks/index.html" class="active">&#127981; Stacks</a></li>
+      <li><a href="../get-involved.html">&#129309; Get Involved</a></li>
+      <li><a href="https://github.com/embeddedos-org" class="nav-github" target="_blank" rel="noopener">&#9733; GitHub</a></li>
+      <li class="nav-search-item">
+        <button class="nav-search-btn" type="button"
+                onclick="if(window.EoSearch)EoSearch.open()"
+                aria-label="Search (press /)" title="Search (/)">&#128269;</button>
+      </li>
+    </ul>
   </div>
 </nav>
 
@@ -96,7 +113,7 @@
 <section class="section" style="max-width:1100px;margin:0 auto;padding:0 2rem">
   <h2 class="section-title">What is a stack?</h2>
   <p class="section-subtitle">A recipe, not a fork.</p>
-  <div style="background:var(--bg-card);border:1px solid var(--border-color);border-radius:var(--radius-md);padding:1.5rem;margin-top:1.5rem">
+<hr class="section-divider"><div style="background:var(--bg-card);border:1px solid var(--border-color);border-radius:var(--radius-md);padding:1.5rem;margin-top:1.5rem">
     <p style="color:var(--text-secondary);line-height:1.7;margin:0 0 1rem">
       EmbeddedOS publishes <strong>13 small, independently-versioned product repositories</strong>. That is a deliberate design choice &mdash; <a href="../docs/eipc.html" style="color:var(--cyan)">eIPC</a> alone is a useful secure-IPC layer, <a href="../docs/eai.html" style="color:var(--cyan)">eAI</a> alone is a useful on-device inference framework, and so on.
     </p>
@@ -113,8 +130,7 @@
 <div class="section" style="max-width:1100px;margin:0 auto;padding:2rem">
   <h2 class="section-title">Available stacks</h2>
   <p class="section-subtitle">v0.1.0 ships one profile. More land in v0.2 &ndash; v1.0 &mdash; see the <a href="https://github.com/embeddedos-org/eFab/blob/main/docs/roadmap.md" style="color:var(--cyan)" target="_blank" rel="noopener">roadmap</a>.</p>
-
-  <div class="product-grid" style="margin-top:2rem">
+<hr class="section-divider"><div class="product-grid" style="margin-top:2rem">
     <div class="product-card" style="border-top:3px solid var(--purple)">
       <div class="card-icon" style="background:var(--purple-dim);color:var(--purple);font-size:1.4rem">🧠</div>
       <h3>eai-edge <span class="badge badge-green" style="font-size:.65rem;vertical-align:middle">v0.1.0</span></h3>
