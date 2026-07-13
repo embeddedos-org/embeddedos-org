@@ -35,46 +35,14 @@
 .analogy-box{background:var(--bg-secondary);border:1px solid var(--border-color);border-radius:var(--radius-md);padding:1rem;margin:.5rem 0}
 .analogy-box .real-world{color:var(--green);font-weight:600;font-size:.92rem}
 </style><script src="/js/site-chrome.js" defer></script>
+  <meta name="theme-color" content="#020817">
 </head><body>
+<a href="#main-content" class="skip-to-content">Skip to main content</a>
 <svg width="0" height="0" aria-hidden="true" style="position:absolute"><defs>
 <linearGradient id="k-grad-blue" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#58a6ff"/><stop offset="100%" stop-color="#1158a6"/></linearGradient>
 <linearGradient id="k-grad-green" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#3fb950"/><stop offset="100%" stop-color="#1a6b2a"/></linearGradient>
 </defs></svg>
-<nav class="navbar" role="navigation" aria-label="Main navigation">
-  <div class="nav-inner">
-    <a href="index.html" class="logo">
-      <span class="logo-icon">EoS</span>
-      EmbeddedOS
-      <span class="nav-version version-badge">v1.0.0</span>
-    </a>
-    <button class="nav-toggle" type="button"
-            aria-label="Toggle navigation menu"
-            aria-expanded="false"
-            aria-controls="main-nav-links">
-      <span class="hamburger-bar"></span>
-      <span class="hamburger-bar"></span>
-      <span class="hamburger-bar"></span>
-    </button>
-    <ul class="nav-links" id="main-nav-links" role="list">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="getting-started.html">Get Started</a></li>
-      <li><a href="docs/index.html">Docs</a></li>
-      <li><a href="https://embeddedos-org.github.io/eApps/" class="nav-github" target="_blank" rel="noopener">&#127978; App Store</a></li>
-      <li><a href="kids.html" class="active">Kids &#127918;</a></li>
-      <li><a href="hardware-lab.html">Hardware Lab &#128268;</a></li>
-      <li><a href="flow.html">Flow</a></li>
-      <li><a href="books.html">&#128218; Books</a></li>
-      <li><a href="stacks/index.html">&#127981; Stacks</a></li>
-      <li><a href="get-involved.html">&#129309; Get Involved</a></li>
-      <li><a href="https://github.com/embeddedos-org" class="nav-github" target="_blank" rel="noopener">&#9733; GitHub</a></li>
-      <li class="nav-search-item">
-        <button class="nav-search-btn" type="button"
-                onclick="if(window.EoSearch)EoSearch.open()"
-                aria-label="Search (press /)" title="Search (/)">&#128269;</button>
-      </li>
-    </ul>
-  </div>
-</nav>
+<nav class="navbar" id="main-nav" role="navigation" aria-label="Main navigation"></nav>
 <section class="hero" style="padding:4rem 2rem 3rem"><div class="hero-content">
 <h1 style="font-size:2.8rem">Welcome, Young Explorer!</h1>
 <p class="subtitle">EmbeddedOS makes robots, drones, smart watches, and tiny computers come alive. No experience needed!</p>
@@ -117,19 +85,7 @@ git clone https://github.com/embeddedos-org/eos.git</code></pre></div>
 <h2 style="border:none;text-align:center;font-size:1.8rem">Where to Go Next</h2>
 <div class="quick-links"><a href="getting-started.html" class="quick-link"><div class="ql-icon" style="background:var(--blue-dim);color:var(--blue)">Go</div><div class="ql-text">Getting Started</div></a><a href="hardware-lab.html" class="quick-link"><div class="ql-icon" style="background:var(--green-dim);color:var(--green)">HW</div><div class="ql-text">Hardware Lab</div></a><a href="docs/eosuite.html" class="quick-link"><div class="ql-icon" style="background:var(--yellow-dim);color:var(--yellow)">App</div><div class="ql-text">All 38 eApps</div></a><a href="docs/eostudio.html" class="quick-link"><div class="ql-icon" style="background:var(--pink-dim);color:var(--pink)">Des</div><div class="ql-text">EoStudio</div></a></div>
 </div>
-<footer class="footer"><div class="footer-inner"><div class="footer-brand"><h3>EmbeddedOS</h3><p>Open-source embedded OS.</p></div>
-<div><h4>Docs</h4><ul><li><a href="getting-started.html">Get Started</a></li><li><a href="docs/eos.html">EoS</a></li></ul></div>
-<div><h4>Components</h4><ul><li><a href="docs/eai.html">EAI</a></li><li><a href="docs/eosuite.html">eApps</a></li><li><a href="docs/eosim.html">EoSim</a></li></ul></div>
-<div><h4>Learn</h4><ul><li><a href="kids.html">Kids Guide</a></li><li><a href="hardware-lab.html">Hardware Lab</a></li></ul></div>
-  <div>
-    <h4>Connect</h4>
-    <ul class="social-list">
-      <li><a class="social-link social-youtube" href="https://www.youtube.com/@EmbeddedOS_ORG" target="_blank" rel="noopener" aria-label="YouTube"><span class="social-icon">▶</span> YouTube</a></li>
-      <li><a class="social-link social-linkedin" href="https://www.linkedin.com/company/embedded-operating-systems-research-foundation" target="_blank" rel="noopener" aria-label="LinkedIn"><span class="social-icon">in</span> LinkedIn</a></li>
-      <li><a class="social-link social-x" href="https://x.com/EmbeddedOS_ORG" target="_blank" rel="noopener" aria-label="X (Twitter)"><span class="social-icon">𝕏</span> X (Twitter)</a></li>
-      <li><a class="social-link social-facebook" href="https://www.facebook.com/people/Embedded-Operating-Systems-Research-Foundation/61588978691494/" target="_blank" rel="noopener" aria-label="Facebook"><span class="social-icon">f</span> Facebook</a></li>
-    </ul>
-  </div></div><div class="footer-bottom">&copy; 2025 EmbeddedOS Project &bull; MIT License</div></footer>
+<footer class="footer" role="contentinfo"></footer>
 <div id="eos-search-overlay" class="search-overlay" hidden>
 <div class="search-modal">
 <div class="search-header">

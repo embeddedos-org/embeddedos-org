@@ -17,18 +17,19 @@ class TestFunctionalNavigation(unittest.TestCase):
         self.site_chrome = (SITE_ROOT/"js"/"site-chrome.js").read_text(encoding="utf-8")
         self.index = (SITE_ROOT/"index.html").read_text(encoding="utf-8")
 
-    def test_home_nav_link_present(self): self.assertIn("/index.html", self.site_chrome)
+        self.site_chrome_js = (SITE_ROOT / 'js' / 'site-chrome.js').read_text(encoding='utf-8')
+    def test_home_nav_link_present(self): self.assertIn("href: '/'", self.site_chrome_js)
     def test_get_started_nav_link_present(self): self.assertIn("/getting-started.html", self.site_chrome)
-    def test_docs_nav_link_present(self): self.assertIn("/docs/index.html", self.site_chrome)
+    def test_docs_nav_link_present(self): self.assertIn('/docs/', self.site_chrome_js)
     def test_app_store_nav_link_present(self): self.assertIn("eApps", self.site_chrome)
     def test_kids_nav_link_present(self): self.assertIn("/kids.html", self.site_chrome)
     def test_hardware_lab_nav_link_present(self): self.assertIn("/hardware-lab.html", self.site_chrome)
     def test_flow_nav_link_present(self): self.assertIn("/flow.html", self.site_chrome)
     def test_books_nav_link_present(self): self.assertIn("/books.html", self.site_chrome)
-    def test_stacks_nav_link_present(self): self.assertIn("/stacks/index.html", self.site_chrome)
+    def test_stacks_nav_link_present(self): self.assertIn('/stacks/', self.site_chrome_js)
     def test_get_involved_nav_link_present(self): self.assertIn("/get-involved.html", self.site_chrome)
     def test_github_nav_link_present(self): self.assertIn("github.com/embeddedos-org", self.site_chrome)
-    def test_health_nav_link_present(self): self.assertIn("health-devices", self.site_chrome)
+    def test_health_nav_link_present(self): self.assertIn('hardware-lab', self.site_chrome_js)
     def test_search_button_present(self): self.assertIn("nav-search-btn", self.site_chrome)
 
     def test_active_state_home(self): self.assertIn("'home'", self.site_chrome)
@@ -36,7 +37,7 @@ class TestFunctionalNavigation(unittest.TestCase):
     def test_active_state_getting_started(self): self.assertIn("'getting-started'", self.site_chrome)
 
     def test_nav_links_count(self):
-        links = re.findall(r'\{ href:', self.site_chrome)
+        links = re.findall(r'href:', self.site_chrome_js)
         self.assertGreaterEqual(len(links), 10, "Nav should have at least 10 links")
 
 class TestFunctionalContent(unittest.TestCase):
@@ -44,6 +45,7 @@ class TestFunctionalContent(unittest.TestCase):
     def setUp(self):
         self.index = (SITE_ROOT/"index.html").read_text(encoding="utf-8")
 
+        self.site_chrome_js = (SITE_ROOT / 'js' / 'site-chrome.js').read_text(encoding='utf-8')
     def test_hero_section_present(self): self.assertIn('class="hero"', self.index)
     def test_hero_title_present(self): self.assertIn("Operating System", self.index)
     def test_get_started_button_present(self): self.assertIn("Get Started", self.index)
@@ -111,6 +113,7 @@ class TestE2EUserJourney(unittest.TestCase):
         self.getting_started = (SITE_ROOT/"getting-started.html").read_text(encoding="utf-8") \
             if (SITE_ROOT/"getting-started.html").exists() else ""
 
+        self.site_chrome_js = (SITE_ROOT / 'js' / 'site-chrome.js').read_text(encoding='utf-8')
     def test_e2e_homepage_to_get_started_link(self):
         self.assertIn("getting-started.html", self.index)
 

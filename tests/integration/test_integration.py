@@ -23,6 +23,7 @@ class TestCSSHTMLIntegration(unittest.TestCase):
         self.css = (SITE_ROOT / "style.css").read_text(encoding="utf-8")
         self.index = (SITE_ROOT / "index.html").read_text(encoding="utf-8")
 
+        self.site_chrome_js = (SITE_ROOT / 'js' / 'site-chrome.js').read_text(encoding='utf-8')
     def _css_has_class(self, cls):
         return f".{cls}" in self.css or f" {cls}" in self.css
 
@@ -51,6 +52,7 @@ class TestJSHTMLIntegration(unittest.TestCase):
         self.index = (SITE_ROOT / "index.html").read_text(encoding="utf-8")
         self.site_chrome = (SITE_ROOT / "js" / "site-chrome.js").read_text(encoding="utf-8")
 
+        self.site_chrome_js = (SITE_ROOT / 'js' / 'site-chrome.js').read_text(encoding='utf-8')
     def test_site_chrome_loaded_before_body_close(self):
         sc_pos = self.index.find("site-chrome.js")
         body_close = self.index.find("</body>")
@@ -87,6 +89,7 @@ class TestMultiPageConsistency(unittest.TestCase):
             except Exception:
                 pass
 
+        self.site_chrome_js = (SITE_ROOT / 'js' / 'site-chrome.js').read_text(encoding='utf-8')
     def test_all_pages_have_navbar(self):
         for name, content in self.pages.items():
             self.assertIn("navbar", content, f"{name} must have navbar")
@@ -117,6 +120,7 @@ class TestSitemapPagesIntegration(unittest.TestCase):
         self.sitemap = (SITE_ROOT / "sitemap.xml").read_text(encoding="utf-8")
         self.locs = re.findall(r'<loc>(.*?)</loc>', self.sitemap)
 
+        self.site_chrome_js = (SITE_ROOT / 'js' / 'site-chrome.js').read_text(encoding='utf-8')
     def test_sitemap_has_entries(self):
         self.assertGreater(len(self.locs), 3, "Sitemap should have multiple entries")
 
@@ -133,6 +137,7 @@ class TestNavCSSIntegration(unittest.TestCase):
     def setUp(self):
         self.css = (SITE_ROOT / "style.css").read_text(encoding="utf-8")
 
+        self.site_chrome_js = (SITE_ROOT / 'js' / 'site-chrome.js').read_text(encoding='utf-8')
     def test_nav_li_a_hover_defined(self):
         self.assertIn(".navbar .nav-links li a:hover", self.css)
 

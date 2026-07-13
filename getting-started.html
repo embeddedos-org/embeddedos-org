@@ -4,7 +4,7 @@
     <meta name="referrer" content="strict-origin-when-cross-origin">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/og-image.png"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Getting Started - EmbeddedOS</title>
+<title>Get Started — Getting Started - EmbeddedOS</title>
 <meta name="description" content="Get started with EmbeddedOS in minutes. Choose your path: simulator, Raspberry Pi, STM32, app development, or EoStudio design.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://embeddedos-org.github.io/getting-started.html">
@@ -33,45 +33,13 @@
 .path-btn .svg-icon{margin-bottom:0.25rem}
 .path-btn .svg-icon svg{width:48px;height:48px}
 </style><script src="/js/site-chrome.js" defer></script>
+  <meta name="theme-color" content="#020817">
 </head><body>
+<a href="#main-content" class="skip-to-content">Skip to main content</a>
 <svg width="0" height="0" aria-hidden="true" style="position:absolute"><defs>
 <linearGradient id="gs-grad-pcb" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#1a5a2a"/><stop offset="100%" stop-color="#0d3318"/></linearGradient>
 </defs></svg>
-<nav class="navbar" role="navigation" aria-label="Main navigation">
-  <div class="nav-inner">
-    <a href="index.html" class="logo">
-      <span class="logo-icon">EoS</span>
-      EmbeddedOS
-      <span class="nav-version version-badge">v1.0.0</span>
-    </a>
-    <button class="nav-toggle" type="button"
-            aria-label="Toggle navigation menu"
-            aria-expanded="false"
-            aria-controls="main-nav-links">
-      <span class="hamburger-bar"></span>
-      <span class="hamburger-bar"></span>
-      <span class="hamburger-bar"></span>
-    </button>
-    <ul class="nav-links" id="main-nav-links" role="list">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="getting-started.html" class="active">Get Started</a></li>
-      <li><a href="docs/index.html">Docs</a></li>
-      <li><a href="https://embeddedos-org.github.io/eApps/" class="nav-github" target="_blank" rel="noopener">&#127978; App Store</a></li>
-      <li><a href="kids.html">Kids &#127918;</a></li>
-      <li><a href="hardware-lab.html">Hardware Lab &#128268;</a></li>
-      <li><a href="flow.html">Flow</a></li>
-      <li><a href="books.html">&#128218; Books</a></li>
-      <li><a href="stacks/index.html">&#127981; Stacks</a></li>
-      <li><a href="get-involved.html">&#129309; Get Involved</a></li>
-      <li><a href="https://github.com/embeddedos-org" class="nav-github" target="_blank" rel="noopener">&#9733; GitHub</a></li>
-      <li class="nav-search-item">
-        <button class="nav-search-btn" type="button"
-                onclick="if(window.EoSearch)EoSearch.open()"
-                aria-label="Search (press /)" title="Search (/)">&#128269;</button>
-      </li>
-    </ul>
-  </div>
-</nav>
+<nav class="navbar" id="main-nav" role="navigation" aria-label="Main navigation"></nav>
 
 <div class="content-wrapper" style="max-width:900px">
 <h1>Getting Started with EmbeddedOS <span class="version-badge">v1.0.0</span></h1>
@@ -257,20 +225,7 @@ document.querySelector('.path-btn[onclick*="'+id+'"]').classList.add('active');
 }
 </script>
 
-<footer class="footer"><div class="footer-inner">
-<div class="footer-brand"><h3 style="margin-bottom:.5rem">EmbeddedOS</h3><p>Open-source embedded OS.</p></div>
-<div><h4>Docs</h4><ul><li><a href="docs/eos.html">EoS</a></li><li><a href="docs/eboot.html">eBoot</a></li><li><a href="docs/eai.html">EAI</a></li><li><a href="docs/ebuild.html">ebuild</a></li></ul></div>
-<div><h4>Components</h4><ul><li><a href="docs/eipc.html">EIPC</a></li><li><a href="docs/eni.html">ENI</a></li><li><a href="docs/eosuite.html">eApps</a></li><li><a href="docs/eosim.html">EoSim</a></li><li><a href="docs/eostudio.html">EoStudio</a></li></ul></div>
-<div><h4>Learn</h4><ul><li><a href="kids.html">Kids Guide 🎮</a></li><li><a href="hardware-lab.html">Hardware Lab 🔌</a></li><li><a href="https://github.com/embeddedos-org" target="_blank" rel="noopener">GitHub</a></li></ul></div>
-  <div>
-    <h4>Connect</h4>
-    <ul class="social-list">
-      <li><a class="social-link social-youtube" href="https://www.youtube.com/@EmbeddedOS_ORG" target="_blank" rel="noopener" aria-label="YouTube"><span class="social-icon">▶</span> YouTube</a></li>
-      <li><a class="social-link social-linkedin" href="https://www.linkedin.com/company/embedded-operating-systems-research-foundation" target="_blank" rel="noopener" aria-label="LinkedIn"><span class="social-icon">in</span> LinkedIn</a></li>
-      <li><a class="social-link social-x" href="https://x.com/EmbeddedOS_ORG" target="_blank" rel="noopener" aria-label="X (Twitter)"><span class="social-icon">𝕏</span> X (Twitter)</a></li>
-      <li><a class="social-link social-facebook" href="https://www.facebook.com/people/Embedded-Operating-Systems-Research-Foundation/61588978691494/" target="_blank" rel="noopener" aria-label="Facebook"><span class="social-icon">f</span> Facebook</a></li>
-    </ul>
-  </div></div><div class="footer-bottom">&copy; 2025 EmbeddedOS Project &bull; MIT License</div></footer>
+<footer class="footer" role="contentinfo"></footer>
 <div id="eos-search-overlay" class="search-overlay" hidden>
 <div class="search-modal">
 <div class="search-header">

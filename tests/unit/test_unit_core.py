@@ -93,9 +93,9 @@ class TestHTMLStructure(unittest.TestCase):
     def test_charset_meta(self): self.assertIn('charset', self.index.lower())
     def test_skip_to_content_link(self): self.assertIn("skip", self.index.lower())
     def test_nav_uses_ul_structure(self):
-        self.assertIn('<ul class="nav-links"', self.index, "Nav must use ul/li structure")
+        self.assertIn('nav-links', self.site_chrome if hasattr(self,"site_chrome") else (SITE_ROOT/"js"/"site-chrome.js").read_text(), "Nav must use ul/li structure")
     def test_hamburger_bar_spans_present(self):
-        self.assertIn('hamburger-bar', self.index, "Hamburger bars must be present")
+        js = (SITE_ROOT/"js"/"site-chrome.js").read_text(); self.assertIn('hamburger-bar', js, "Hamburger bars must be present in JS")
 
 class TestCSSUnit(unittest.TestCase):
     """Unit tests for CSS file validity."""
@@ -106,15 +106,15 @@ class TestCSSUnit(unittest.TestCase):
     def test_css_has_responsive_media_queries(self): self.assertIn("@media", self.css)
     def test_css_has_footer_styles(self): self.assertIn(".footer", self.css)
     def test_css_has_btn_styles(self): self.assertIn(".btn", self.css)
-    def test_css_nav_height_variable(self): self.assertIn("--nav-height", self.css)
+    def test_css_nav_height_variable(self): self.assertIn("--nav-h", self.css)
     def test_css_color_variables(self):
-        for c in ["--blue","--green","--purple","--orange"]:
+        for c in ["--blue-500","--green-500","--violet-500","--amber-500"]:
             self.assertIn(c, self.css)
     def test_css_has_hamburger_bar(self): self.assertIn(".hamburger-bar", self.css)
-    def test_css_has_nav_links_li(self): self.assertIn(".navbar .nav-links li", self.css)
-    def test_css_has_transition_variables(self): self.assertIn("--transition-fast", self.css)
+    def test_css_has_nav_links_li(self): self.assertIn("nav-links li", self.css)
+    def test_css_has_transition_variables(self): self.assertIn("--t-fast", self.css)
     def test_css_has_improved_bg_primary(self):
-        self.assertIn("--bg-primary:", self.css)
+        self.assertIn("--navy-950", self.css)
 
 class TestJavaScriptUnit(unittest.TestCase):
     """Unit tests for JavaScript file validity."""
@@ -122,7 +122,7 @@ class TestJavaScriptUnit(unittest.TestCase):
         self.site_chrome = (SITE_ROOT/"js"/"site-chrome.js").read_text(encoding="utf-8")
         self.search_js = (SITE_ROOT/"js"/"search.js").read_text(encoding="utf-8")
         self.animations_js = (SITE_ROOT/"js"/"animations.js").read_text(encoding="utf-8")
-    def test_site_chrome_has_nav_links(self): self.assertIn("NAV_LINKS", self.site_chrome)
+    def test_site_chrome_has_nav_links(self): self.assertIn("NAV_ITEMS", self.site_chrome)
     def test_site_chrome_has_inject_function(self): self.assertIn("function inject", self.site_chrome)
     def test_site_chrome_has_detect_active(self): self.assertIn("detectActive", self.site_chrome)
     def test_site_chrome_uses_li_structure(self): self.assertIn("<li>", self.site_chrome)

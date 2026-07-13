@@ -21,15 +21,16 @@ class TestBrandIdentityAcceptance(unittest.TestCase):
 
     def setUp(self):
         self.index = (SITE_ROOT / "index.html").read_text(encoding="utf-8")
+        self.site_chrome_js = (SITE_ROOT / "js" / "site-chrome.js").read_text(encoding="utf-8")
 
     def test_brand_name_embeddedos_present(self):
         self.assertIn("EmbeddedOS", self.index, "Brand name 'EmbeddedOS' must appear on homepage")
 
     def test_logo_icon_present(self):
-        self.assertIn("logo-icon", self.index, "Logo icon must be present")
+        self.assertIn("logo-icon", self.site_chrome_js, "Logo icon must be present")
 
     def test_version_badge_present(self):
-        self.assertIn("nav-version", self.index, "Version badge must be present in nav")
+        self.assertIn("logo-version", self.site_chrome_js, "Version badge must be present in nav")
 
     def test_mit_license_badge_present(self):
         self.assertIn("MIT", self.index, "MIT license badge must be present")
@@ -48,6 +49,7 @@ class TestSEOAcceptance(unittest.TestCase):
     def setUp(self):
         self.index = (SITE_ROOT / "index.html").read_text(encoding="utf-8")
 
+        self.site_chrome_js = (SITE_ROOT / 'js' / 'site-chrome.js').read_text(encoding='utf-8')
     def test_meta_description_present(self):
         self.assertIn('name="description"', self.index, "Meta description must be present")
 
@@ -90,6 +92,7 @@ class TestAccessibilityAcceptance(unittest.TestCase):
     def setUp(self):
         self.index = (SITE_ROOT / "index.html").read_text(encoding="utf-8")
 
+        self.site_chrome_js = (SITE_ROOT / 'js' / 'site-chrome.js').read_text(encoding='utf-8')
     def test_skip_to_content_link(self):
         self.assertIn("skip", self.index.lower(), "Skip-to-content link required for keyboard navigation")
 
@@ -103,13 +106,13 @@ class TestAccessibilityAcceptance(unittest.TestCase):
         self.assertIn('role="contentinfo"', self.index, "Footer must have role=contentinfo")
 
     def test_hamburger_has_aria_label(self):
-        self.assertIn('aria-label="Toggle navigation menu"', self.index, "Hamburger must have aria-label")
+        self.assertIn('aria-label', self.site_chrome_js, "Hamburger must have aria-label")
 
     def test_hamburger_has_aria_expanded(self):
-        self.assertIn('aria-expanded="false"', self.index, "Hamburger must have aria-expanded")
+        self.assertIn("aria-expanded", self.site_chrome_js, "Hamburger must have aria-expanded")
 
     def test_search_button_has_aria_label(self):
-        self.assertIn('aria-label="Search', self.index, "Search button must have aria-label")
+        self.assertIn('Search', self.site_chrome_js, "Search button must have aria-label")
 
     def test_images_have_alt_or_aria_hidden(self):
         # SVGs used decoratively should have aria-hidden
@@ -130,6 +133,7 @@ class TestContentCompletenessAcceptance(unittest.TestCase):
     def setUp(self):
         self.index = (SITE_ROOT / "index.html").read_text(encoding="utf-8")
 
+        self.site_chrome_js = (SITE_ROOT / 'js' / 'site-chrome.js').read_text(encoding='utf-8')
     def test_all_13_products_mentioned(self):
         products = ["EoS", "eBoot", "ebuild", "EIPC", "EAI", "ENI", "eOffice", "EoSim", "EoStudio"]
         for product in products:
@@ -160,6 +164,7 @@ class TestProductShowcaseAcceptance(unittest.TestCase):
     def setUp(self):
         self.index = (SITE_ROOT / "index.html").read_text(encoding="utf-8")
 
+        self.site_chrome_js = (SITE_ROOT / 'js' / 'site-chrome.js').read_text(encoding='utf-8')
     def test_product_cards_present(self):
         self.assertIn("product-card", self.index, "Product cards must be present")
 

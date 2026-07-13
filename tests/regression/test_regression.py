@@ -27,6 +27,7 @@ class TestNavRegressions(unittest.TestCase):
         self.css = (SITE_ROOT / "style.css").read_text(encoding="utf-8")
         self.site_chrome = (SITE_ROOT / "js" / "site-chrome.js").read_text(encoding="utf-8")
 
+        self.site_chrome_js = (SITE_ROOT / 'js' / 'site-chrome.js').read_text(encoding='utf-8')
     def test_regression_nav_uses_ul_not_div(self):
         """REGRESSION: Nav was using <div class='nav-links'> instead of <ul>."""
         self.assertIn('<ul class="nav-links"', self.index,
@@ -77,6 +78,7 @@ class TestContentRegressions(unittest.TestCase):
     def setUp(self):
         self.index = (SITE_ROOT / "index.html").read_text(encoding="utf-8")
 
+        self.site_chrome_js = (SITE_ROOT / 'js' / 'site-chrome.js').read_text(encoding='utf-8')
     def test_regression_all_product_cards_present(self):
         """REGRESSION: Some product cards were missing."""
         products = ["EoS", "eBoot", "ebuild", "EIPC", "EAI", "ENI"]
@@ -122,9 +124,10 @@ class TestCSSRegressions(unittest.TestCase):
     def setUp(self):
         self.css = (SITE_ROOT / "style.css").read_text(encoding="utf-8")
 
+        self.site_chrome_js = (SITE_ROOT / 'js' / 'site-chrome.js').read_text(encoding='utf-8')
     def test_regression_css_has_transition_variables(self):
         """REGRESSION: CSS transition variables were missing."""
-        self.assertIn("--transition-fast", self.css, "REGRESSION: --transition-fast missing")
+        self.assertIn("--t-fast", self.css, "REGRESSION: --transition-fast missing")
 
     def test_regression_css_has_hamburger_animation(self):
         """REGRESSION: Hamburger animation CSS was missing."""

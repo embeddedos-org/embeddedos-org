@@ -123,43 +123,10 @@
 .flow-page .footer{margin-top:0}
 @media(max-width:768px){.arch-apps{grid-template-columns:1fr}.pipeline-track{flex-direction:column}.gate-connector{width:3px;height:30px}.hw-row-cards{grid-template-columns:repeat(2,1fr)}.flow-hero h1{font-size:2.2rem}}
 </style><script src="/js/site-chrome.js" defer></script>
+  <meta name="theme-color" content="#020817">
 </head>
 <body class="flow-page">
-<nav class="navbar" role="navigation" aria-label="Main navigation">
-  <div class="nav-inner">
-    <a href="index.html" class="logo">
-      <span class="logo-icon">EoS</span>
-      EmbeddedOS
-      <span class="nav-version version-badge">v1.0.0</span>
-    </a>
-    <button class="nav-toggle" type="button"
-            aria-label="Toggle navigation menu"
-            aria-expanded="false"
-            aria-controls="main-nav-links">
-      <span class="hamburger-bar"></span>
-      <span class="hamburger-bar"></span>
-      <span class="hamburger-bar"></span>
-    </button>
-    <ul class="nav-links" id="main-nav-links" role="list">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="getting-started.html">Get Started</a></li>
-      <li><a href="docs/index.html">Docs</a></li>
-      <li><a href="https://embeddedos-org.github.io/eApps/" class="nav-github" target="_blank" rel="noopener">&#127978; App Store</a></li>
-      <li><a href="kids.html">Kids &#127918;</a></li>
-      <li><a href="hardware-lab.html">Hardware Lab &#128268;</a></li>
-      <li><a href="flow.html" class="active">Flow</a></li>
-      <li><a href="books.html">&#128218; Books</a></li>
-      <li><a href="stacks/index.html">&#127981; Stacks</a></li>
-      <li><a href="get-involved.html">&#129309; Get Involved</a></li>
-      <li><a href="https://github.com/embeddedos-org" class="nav-github" target="_blank" rel="noopener">&#9733; GitHub</a></li>
-      <li class="nav-search-item">
-        <button class="nav-search-btn" type="button"
-                onclick="if(window.EoSearch)EoSearch.open()"
-                aria-label="Search (press /)" title="Search (/)">&#128269;</button>
-      </li>
-    </ul>
-  </div>
-</nav>
+<nav class="navbar" id="main-nav" role="navigation" aria-label="Main navigation"></nav>
 <section class="flow-hero">
 <h1>EoS Platform Flow</h1>
 <p>Watch how the entire embedded OS ecosystem builds, tests, and deploys &mdash; from hardware design to production.</p>
@@ -330,19 +297,7 @@
 </div>
 
 </section>
-<footer class="footer"><div class="footer-inner"><div class="footer-brand"><h3>EmbeddedOS</h3><p>Open-source embedded operating system.</p></div>
-<div><h4>Documentation</h4><ul><li><a href="docs/eos.html">EoS</a></li><li><a href="docs/eboot.html">eBoot</a></li><li><a href="docs/ebuild.html">ebuild</a></li></ul></div>
-<div><h4>Components</h4><ul><li><a href="docs/eai.html">EAI</a></li><li><a href="docs/eni.html">ENI</a></li><li><a href="docs/eipc.html">EIPC</a></li><li><a href="docs/eosuite.html">eApps</a></li><li><a href="docs/eosim.html">EoSim</a></li></ul></div>
-<div><h4>Community</h4><ul><li><a href="https://github.com/embeddedos-org" target="_blank" rel="noopener">GitHub</a></li><li><a href="https://github.com/embeddedos-org/eos/discussions" target="_blank" rel="noopener">Discussions</a></li></ul></div>
-  <div>
-    <h4>Connect</h4>
-    <ul class="social-list">
-      <li><a class="social-link social-youtube" href="https://www.youtube.com/@EmbeddedOS_ORG" target="_blank" rel="noopener" aria-label="YouTube"><span class="social-icon">▶</span> YouTube</a></li>
-      <li><a class="social-link social-linkedin" href="https://www.linkedin.com/company/embedded-operating-systems-research-foundation" target="_blank" rel="noopener" aria-label="LinkedIn"><span class="social-icon">in</span> LinkedIn</a></li>
-      <li><a class="social-link social-x" href="https://x.com/EmbeddedOS_ORG" target="_blank" rel="noopener" aria-label="X (Twitter)"><span class="social-icon">𝕏</span> X (Twitter)</a></li>
-      <li><a class="social-link social-facebook" href="https://www.facebook.com/people/Embedded-Operating-Systems-Research-Foundation/61588978691494/" target="_blank" rel="noopener" aria-label="Facebook"><span class="social-icon">f</span> Facebook</a></li>
-    </ul>
-  </div></div><div class="footer-bottom">&copy; 2025 EmbeddedOS Project &bull; Licensed under MIT</div></footer>
+<footer class="footer" role="contentinfo"></footer>
 <div id="eos-search-overlay" class="search-overlay" hidden>
 <div class="search-modal">
 <div class="search-header">
