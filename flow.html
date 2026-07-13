@@ -1,4 +1,27 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://api.github.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self'"><meta http-equiv="X-Content-Type-Options" content="nosniff"><meta name="referrer" content="strict-origin-when-cross-origin"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/og-image.png"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>EoS Platform Flow - EmbeddedOS</title><meta name="description" content="Complete build and deployment flow for EmbeddedOS, from ebuild compilation through EoS kernel, eBoot bootloader, to EoSim simulation."><meta property="og:type" content="website"><meta property="og:url" content="https://embeddedos-org.github.io/flow.html"><meta property="og:title" content="EoS Platform Flow - EmbeddedOS"><meta property="og:description" content="Complete build and deployment flow for EmbeddedOS, from ebuild compilation through EoS kernel, eBoot bootloader, to EoSim simulation."><meta property="og:image" content="https://embeddedos-org.github.io/og-image.png"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="EoS Platform Flow - EmbeddedOS"><meta name="twitter:description" content="Complete build and deployment flow for EmbeddedOS, from ebuild compilation through EoS kernel, eBoot bootloader, to EoSim simulation."><meta name="twitter:image" content="https://embeddedos-org.github.io/og-image.png"><link rel="canonical" href="https://embeddedos-org.github.io/flow.html"><link rel="preload" href="style.css" as="style"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Fira+Code:wght@400;500&amp;display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css"><style>
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://api.github.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self'">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/og-image.png"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EoS Platform Flow - EmbeddedOS</title>
+<meta name="description" content="Complete build and deployment flow for EmbeddedOS, from ebuild compilation through EoS kernel, eBoot bootloader, to EoSim simulation.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://embeddedos-org.github.io/flow.html">
+<meta property="og:title" content="EoS Platform Flow - EmbeddedOS">
+<meta property="og:description" content="Complete build and deployment flow for EmbeddedOS, from ebuild compilation through EoS kernel, eBoot bootloader, to EoSim simulation.">
+<meta property="og:image" content="https://embeddedos-org.github.io/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="EoS Platform Flow - EmbeddedOS">
+<meta name="twitter:description" content="Complete build and deployment flow for EmbeddedOS, from ebuild compilation through EoS kernel, eBoot bootloader, to EoSim simulation.">
+<meta name="twitter:image" content="https://embeddedos-org.github.io/og-image.png">
+<link rel="canonical" href="https://embeddedos-org.github.io/flow.html">
+<link rel="preload" href="style.css" as="style">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Fira+Code:wght@400;500&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
 .flow-hero{background:var(--gradient-hero);padding:5rem 2rem 3rem;text-align:center;position:relative;overflow:hidden}
 .flow-hero::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(circle at 40% 50%,rgba(88,166,255,.08) 0%,transparent 50%),radial-gradient(circle at 60% 50%,rgba(188,140,255,.08) 0%,transparent 50%);animation:heroGlow 8s ease-in-out infinite alternate}
 .flow-hero h1{font-size:3rem;font-weight:800;background:linear-gradient(135deg,var(--blue),var(--purple),var(--pink));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:.5rem;position:relative;z-index:1}
@@ -99,4 +122,238 @@
 @keyframes pulseCyan{0%,100%{box-shadow:0 0 3px rgba(121,192,255,.1)}50%{box-shadow:0 0 12px rgba(121,192,255,.25)}}
 .flow-page .footer{margin-top:0}
 @media(max-width:768px){.arch-apps{grid-template-columns:1fr}.pipeline-track{flex-direction:column}.gate-connector{width:3px;height:30px}.hw-row-cards{grid-template-columns:repeat(2,1fr)}.flow-hero h1{font-size:2.2rem}}
-</style><script src="/js/site-chrome.js" defer></script></head><body class="flow-page"><nav class="navbar"><div class="nav-inner"><a href="index.html" class="logo"><span class="logo-icon">EoS</span> EmbeddedOS <span class="nav-version">v1.0.0</span></a><button class="nav-toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false"><span class="hamburger-bar"></span><span class="hamburger-bar"></span><span class="hamburger-bar"></span></button><ul class="nav-links" role="list"><li><a href="index.html">Home</a></li><li><a href="getting-started.html">Get Started</a></li><li><a href="docs/index.html">Docs</a></li><li><a href="https://embeddedos-org.github.io/eApps/" class="nav-github" target="_blank" rel="noopener">🏪 App Store</a></li><li><a href="kids.html">Kids &#127918;</a></li><li><a href="hardware-lab.html">Hardware Lab &#128268;</a></li><li><a href="flow.html" class="active">Flow</a></li><li><a href="books.html">📚 Books</a></li><li><a href="stacks/index.html">&#127981; Stacks</a></li><li><a href="/index.html#health-devices">&#10084;&#65039; Health</a></li><li><a href="https://github.com/embeddedos-org" class="nav-github" target="_blank" rel="noopener">&#9733; GitHub</a></li><button class="nav-search-btn" onclick="EosSearch.open()" aria-label="Search" title="Search (/)">&#128269;</button></ul></div></nav><section class="flow-hero"><h1>EoS Platform Flow</h1><p>Watch how the entire embedded OS ecosystem builds, tests, and deploys &mdash; from hardware design to production.</p><div class="progress-bar"><div class="progress-fill"></div></div></section><section class="build-flow"><div class="flow-step step-ebuild" id="step1"><div class="flow-dot"></div><div class="step-num">1</div><span class="tooltip">Analyze board schematics and pin mappings from KiCad/YAML</span><h3>&#128209; Hardware Design</h3><p>KiCad schematics &amp; YAML board definitions analyzed by <code>ebuild analyze</code> to extract pin maps, peripheral configs, and memory layouts.</p><span class="step-output">&#8594; Board Support Package</span></div><div class="flow-step step-ebuild" id="step2"><div class="flow-dot"></div><div class="step-num">2</div><span class="tooltip">Generate cross-compilation toolchain and sysroot for target</span><h3>&#9881; SDK Generation</h3><p><code>ebuild sdk --target raspi4</code> generates cross-compilation toolchain, sysroot, headers, and pre-built libraries.</p><span class="step-output">&#8594; toolchain + sysroot</span></div><div class="flow-step step-eos" id="step3"><div class="flow-dot"></div><div class="step-num">3</div><span class="tooltip">Compile the core OS: HAL, kernel scheduler, and system services</span><h3>&#128268; Build OS</h3><p><strong style="color:var(--blue)">eos</strong> (HAL + Kernel + Services) &#8594; <code>libeos.a</code><br><strong style="color:var(--green)">eboot</strong> (Secure Bootloader) &#8594; <code>libeboot.a</code></p><span class="step-output">&#8594; libeos.a + libeboot.a</span></div><div class="flow-step step-eai" id="step4"><div class="flow-dot"></div><div class="step-num">4</div><span class="tooltip">Build AI inference engine, neural interface, and secure IPC</span><h3>&#129302; Build AI + Neural</h3><p><strong style="color:var(--purple)">eai</strong> &#8594; <code>libeai.a</code> &bull; <strong style="color:var(--pink)">eni</strong> &#8594; <code>libeni.a</code> &bull; <strong style="color:var(--cyan)">eipc</strong> &#8594; <code>libeipc.a</code></p><span class="step-output">&#8594; libeai.a + libeni.a + libeipc.a</span></div><div class="flow-step step-eosuite" id="step5"><div class="flow-dot"></div><div class="step-num">5</div><span class="tooltip">Compile eApps applications and ebot chat client</span><h3>&#128736; Build Tools</h3><p><strong style="color:var(--yellow)">eApps</strong> (38 GUI apps + ebot) compiled into the <code>ebot</code> binary and application suite.</p><span class="step-output">&#8594; ebot binary</span></div><div class="flow-step step-eipc" id="step6"><div class="flow-dot"></div><div class="step-num">6</div><span class="tooltip">Assemble root filesystem image from all compiled components</span><h3>&#128230; Package Image</h3><p>rootfs = eos + eboot + eai + eni + eipc + eApps. All components packaged into a deployable filesystem image.</p><span class="step-output">&#8594; eos-image-raspi4.cpio.gz</span></div><div class="flow-step step-eosim" id="step7"><div class="flow-dot"></div><div class="step-num">7</div><span class="tooltip">Boot image in virtual machine and run full test suite</span><h3>&#128300; Simulate &amp; Test</h3><p><strong style="color:var(--red)">EoSim</strong> boots the image in a VM. Runs <strong>583+ tests</strong> across <strong>52 platforms</strong> and <strong>14 CPU architectures</strong> (GPIO, UART, SPI, I2C, crypto, OTA, AI).</p><span class="step-output">&#8594; 583 tests passed</span></div><div class="flow-step step-eboot" id="step8"><div class="flow-dot"></div><div class="step-num">8</div><span class="tooltip">Flash firmware to real hardware and connect to AI server</span><h3>&#128640; Deploy</h3><p>Flash to real hardware (RPi4, STM32, etc.). <code>ebot</code> connects to <code>eai</code> server at <code>192.168.1.100:8420</code>.</p><span class="step-output">&#8594; Device online</span></div></section><section class="runtime-arch"><h2>Runtime Architecture</h2><p style="text-align:center;color:var(--text-secondary);margin-bottom:2rem">How EoS components interact on a deployed device</p><div class="arch-device"><div class="arch-inner"><div class="arch-apps"><div class="arch-app app-suite">eApps<small>(ebot)</small></div><div class="arch-app app-eai">EAI<small>(server)</small></div><div class="arch-app app-eni">ENI<small>(neuralink)</small></div></div><div class="arch-bidir"><span>&#8595;</span><span>&#8593;</span><span>&#8595;</span><span>&#8593;</span><span>&#8595;</span><span>&#8593;</span></div><div class="arch-ipc">EIPC (Secure IPC)</div><div class="arch-arrows"><span>&#8595;</span><span>&#8595;</span><span>&#8595;</span></div><div class="arch-kernel"><div class="kern-title">EoS (HAL + Kernel + Services)</div><div class="kern-modules"><span class="kern-mod">GPIO</span><span class="kern-mod">UART</span><span class="kern-mod">SPI</span><span class="kern-mod">I2C</span><span class="kern-mod">Timer</span><span class="kern-mod">IRQ</span></div></div><div class="arch-arrows"><span>&#8595;</span><span>&#8595;</span></div><div class="arch-boot"><div class="boot-title">eBoot (Bootloader)</div><div class="boot-flow">Secure Boot &#8594; A/B Slots &#8594; OTA</div></div><div class="arch-arrows"><span>&#8595;</span></div><div class="arch-hw"><div class="arch-hw-label">Hardware</div><div class="arch-hw-chip">GPIO</div><div class="arch-hw-chip">UART</div><div class="arch-hw-chip">SPI</div><div class="arch-hw-chip">I2C</div><div class="arch-hw-chip">ETH</div></div></div></div></section><section class="cicd-pipeline"><h2>CI/CD Pipeline</h2><p style="text-align:center;color:var(--text-secondary);margin-bottom:2.5rem">Gated release pipeline &mdash; every commit passes 4 quality gates</p><div class="pipeline-track"><div class="gate gate-push"><div class="gate-circle">Push</div><div class="gate-label">git push</div></div><div class="gate-connector"></div><div class="gate gate-1"><div class="gate-circle">G1</div><div class="gate-label">Test All 15 Repos</div></div><div class="gate-connector"></div><div class="gate gate-2"><div class="gate-circle">G2</div><div class="gate-label">Cross-Compile 3 Archs</div></div><div class="gate-connector"></div><div class="gate gate-3"><div class="gate-circle">G3</div><div class="gate-label">EoSim 21 Boards</div></div><div class="gate-connector"></div><div class="gate gate-release"><div class="gate-circle">&#10003;</div><div class="gate-label">Release 6 Platforms</div></div></div></section><section class="hw-grid-section"><h2>Hardware Targets</h2><p style="text-align:center;color:var(--text-secondary);margin-bottom:2.5rem">52 hardware targets across 14 CPU architectures</p><div class="hw-row hw-row-mcu"><div class="hw-row-label">&#9899; MCU — 19 Platforms (ARM Cortex-M, Xtensa, RISC-V, MIPS)</div><div class="hw-row-cards"><div class="hw-target">STM32F4<small>Cortex-M4 &bull; 180MHz</small></div><div class="hw-target">STM32H7<small>Cortex-M7 &bull; 480MHz</small></div><div class="hw-target">STM32L4<small>Cortex-M4 &bull; LP</small></div><div class="hw-target">nRF52<small>Cortex-M4F &bull; BLE</small></div><div class="hw-target">nRF5340<small>Cortex-M33 &bull; Dual</small></div><div class="hw-target">nRF9160<small>Cortex-M33 &bull; LTE</small></div><div class="hw-target">RP2040<small>Cortex-M0+ &bull; Dual</small></div><div class="hw-target">K64F<small>Cortex-M4 &bull; Ethernet</small></div><div class="hw-target">PSoC 6<small>M4/M0+ &bull; BLE</small></div><div class="hw-target">SAMC21<small>Cortex-M0+ &bull; CAN</small></div><div class="hw-target">SAMD51<small>Cortex-M4 &bull; USB</small></div><div class="hw-target">RA6M5<small>Cortex-M33 &bull; TZ</small></div><div class="hw-target">MSP432<small>Cortex-M4F &bull; LP</small></div><div class="hw-target">ESP32<small>Xtensa LX6 &bull; Wi-Fi</small></div><div class="hw-target">ESP32-C3<small>RISC-V &bull; Wi-Fi</small></div><div class="hw-target">ESP32-S3<small>Xtensa LX7 &bull; AI</small></div><div class="hw-target">GD32VF103<small>RISC-V &bull; 108MHz</small></div><div class="hw-target">PIC32MZ<small>MIPS &bull; 200MHz</small></div></div></div><div class="hw-row hw-row-sbc"><div class="hw-row-label">&#128421; SBC &amp; Application Processors &mdash; 15 Platforms (ARM64, RISC-V 64)</div><div class="hw-row-cards"><div class="hw-target">Raspberry Pi 5<small>Cortex-A76 &bull; 4-core</small></div><div class="hw-target">Raspberry Pi 4<small>Cortex-A72 &bull; 8GB</small></div><div class="hw-target">Raspberry Pi 3<small>Cortex-A53 &bull; 64-bit</small></div><div class="hw-target">RPi 2B<small>Cortex-A7 &bull; Quad</small></div><div class="hw-target">RPi Zero 2W<small>Cortex-A53 &bull; Compact</small></div><div class="hw-target">NXP i.MX8M<small>Cortex-A53 &bull; NPU</small></div><div class="hw-target">TI AM64x<small>A53+R5F &bull; Industrial</small></div><div class="hw-target">STM32MP1<small>A7+M4 &bull; Linux</small></div><div class="hw-target">BeagleBone<small>Cortex-A8 &bull; PRU</small></div><div class="hw-target">Jetson Nano<small>A57 &bull; 128 CUDA</small></div><div class="hw-target">Jetson Orin<small>A78AE &bull; 40 TOPS</small></div><div class="hw-target">SiFive U<small>RISC-V U74 &bull; Linux</small></div><div class="hw-target">K210<small>RISC-V 64 &bull; AI</small></div><div class="hw-target">VExpress A9<small>Cortex-A9 &bull; Dev</small></div><div class="hw-target">VExpress A15<small>Cortex-A15 &bull; Dev</small></div></div></div><div class="hw-row hw-row-soc"><div class="hw-row-label">&#128296; Automotive &amp; Safety &mdash; 6 Platforms (TriCore, Cortex-R, RH850)</div><div class="hw-row-cards"><div class="hw-target">AURIX TC3xx<small>TriCore &bull; ASIL-D</small></div><div class="hw-target">Renesas RH850<small>RH850 &bull; Auto MCU</small></div><div class="hw-target">TI TMS570<small>Cortex-R4F &bull; Safety</small></div><div class="hw-target">Cortex-R5<small>ARM R5 &bull; Lockstep</small></div><div class="hw-target">Cortex-R52<small>ARM R52 &bull; ASIL-D</small></div><div class="hw-target">S32K344<small>Cortex-M7 &bull; CAN-FD</small></div></div></div><div class="hw-row hw-row-virt"><div class="hw-row-label">&#128187; x86 / Intel / AMD &mdash; 3 Platforms</div><div class="hw-row-cards"><div class="hw-target">x86_64 Generic<small>Intel/AMD &bull; Linux</small></div><div class="hw-target">QEMU Q35<small>Intel Q35 &bull; UEFI</small></div><div class="hw-target">x86_64 EFI<small>Intel/AMD &bull; Edge</small></div></div></div><div class="hw-row hw-row-virt"><div class="hw-row-label">&#127760; Other Architectures &mdash; 6 Platforms (MIPS, PowerPC, MicroBlaze, ARC)</div><div class="hw-row-cards"><div class="hw-target">MIPS Malta<small>MIPS 24Kf &bull; LE</small></div><div class="hw-target">PowerPC e500<small>PPC &bull; Embedded</small></div><div class="hw-target">MicroBlaze<small>Xilinx &bull; FPGA</small></div><div class="hw-target">ARC EM<small>Synopsys &bull; IoT</small></div><div class="hw-target">VersatilePB<small>ARM926 &bull; Legacy</small></div><div class="hw-target">ARM Generic<small>AArch64 &bull; Linux</small></div></div></div><div class="hw-row hw-row-soc"><div class="hw-row-label">&#127919; Specialty Simulators &mdash; 5 Platforms</div><div class="hw-row-cards"><div class="hw-target">Aerodynamics<small>Physics &bull; CFD</small></div><div class="hw-target">Finance<small>Domain &bull; Quant</small></div><div class="hw-target">Gaming<small>Domain &bull; Engine</small></div><div class="hw-target">Physiology<small>Domain &bull; Medical</small></div><div class="hw-target">Weather<small>Domain &bull; Forecast</small></div></div></div><div style="text-align:center;margin-top:2rem;padding:1.5rem;background:var(--bg-card);border:1px solid var(--border-color);border-radius:var(--radius-md)"><p style="font-size:1rem;font-weight:700;color:var(--cyan);margin-bottom:.5rem">14 CPU Architectures Supported</p><p style="font-size:.85rem;color:var(--text-secondary);margin:0">ARM Cortex-M &bull; ARM Cortex-A &bull; ARM Cortex-R &bull; AArch64 &bull; RISC-V 32 &bull; RISC-V 64 &bull; Xtensa &bull; <strong style="color:var(--blue)">x86_64 (Intel/AMD)</strong> &bull; MIPS &bull; PowerPC &bull; MicroBlaze &bull; ARC &bull; TriCore &bull; RH850</p></div></section><footer class="footer"><div class="footer-inner"><div class="footer-brand"><h3>EmbeddedOS</h3><p>Open-source embedded operating system.</p></div><div><h4>Documentation</h4><ul><li><a href="docs/eos.html">EoS</a></li><li><a href="docs/eboot.html">eBoot</a></li><li><a href="docs/ebuild.html">ebuild</a></li></ul></div><div><h4>Components</h4><ul><li><a href="docs/eai.html">EAI</a></li><li><a href="docs/eni.html">ENI</a></li><li><a href="docs/eipc.html">EIPC</a></li><li><a href="docs/eosuite.html">eApps</a></li><li><a href="docs/eosim.html">EoSim</a></li></ul></div><div><h4>Community</h4><ul><li><a href="https://github.com/embeddedos-org" target="_blank" rel="noopener">GitHub</a></li><li><a href="https://github.com/embeddedos-org/eos/discussions" target="_blank" rel="noopener">Discussions</a></li></ul></div><div><h4>Connect</h4><ul class="social-list"><li><a class="social-link social-youtube" href="https://www.youtube.com/@EmbeddedOS_ORG" target="_blank" rel="noopener" aria-label="YouTube"><span class="social-icon">▶</span> YouTube</a></li><li><a class="social-link social-linkedin" href="https://www.linkedin.com/company/embedded-operating-systems-research-foundation" target="_blank" rel="noopener" aria-label="LinkedIn"><span class="social-icon">in</span> LinkedIn</a></li><li><a class="social-link social-x" href="https://x.com/EmbeddedOS_ORG" target="_blank" rel="noopener" aria-label="X (Twitter)"><span class="social-icon">𝕏</span> X (Twitter)</a></li><li><a class="social-link social-facebook" href="https://www.facebook.com/people/Embedded-Operating-Systems-Research-Foundation/61588978691494/" target="_blank" rel="noopener" aria-label="Facebook"><span class="social-icon">f</span> Facebook</a></li></ul></div></div><div class="footer-bottom">&copy; 2025 EmbeddedOS Project &bull; Licensed under MIT</div></footer><div id="eos-search-overlay" class="search-overlay" hidden><div class="search-modal"><div class="search-header"><span class="search-icon">&#128269;</span><input type="text" id="eos-search-input" class="search-input" placeholder="Search EmbeddedOS docs..." autocomplete="off"><kbd class="search-kbd">Esc</kbd></div><ul id="eos-search-results" class="search-results"></ul></div></div><script src="js/search.js"></script><script src="js/animations.js"></script><script src="js/ebot-chat.js"></script></body></html>
+</style><script src="/js/site-chrome.js" defer></script>
+</head>
+<body class="flow-page">
+<nav class="navbar" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">
+      <span class="logo-icon">EoS</span>
+      EmbeddedOS
+      <span class="nav-version version-badge">v1.0.0</span>
+    </a>
+    <button class="nav-toggle" type="button"
+            aria-label="Toggle navigation menu"
+            aria-expanded="false"
+            aria-controls="main-nav-links">
+      <span class="hamburger-bar"></span>
+      <span class="hamburger-bar"></span>
+      <span class="hamburger-bar"></span>
+    </button>
+    <ul class="nav-links" id="main-nav-links" role="list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="getting-started.html">Get Started</a></li>
+      <li><a href="docs/index.html">Docs</a></li>
+      <li><a href="https://embeddedos-org.github.io/eApps/" class="nav-github" target="_blank" rel="noopener">&#127978; App Store</a></li>
+      <li><a href="kids.html">Kids &#127918;</a></li>
+      <li><a href="hardware-lab.html">Hardware Lab &#128268;</a></li>
+      <li><a href="flow.html" class="active">Flow</a></li>
+      <li><a href="books.html">&#128218; Books</a></li>
+      <li><a href="stacks/index.html">&#127981; Stacks</a></li>
+      <li><a href="get-involved.html">&#129309; Get Involved</a></li>
+      <li><a href="https://github.com/embeddedos-org" class="nav-github" target="_blank" rel="noopener">&#9733; GitHub</a></li>
+      <li class="nav-search-item">
+        <button class="nav-search-btn" type="button"
+                onclick="if(window.EoSearch)EoSearch.open()"
+                aria-label="Search (press /)" title="Search (/)">&#128269;</button>
+      </li>
+    </ul>
+  </div>
+</nav>
+<section class="flow-hero">
+<h1>EoS Platform Flow</h1>
+<p>Watch how the entire embedded OS ecosystem builds, tests, and deploys &mdash; from hardware design to production.</p>
+<div class="progress-bar"><div class="progress-fill"></div></div>
+</section>
+<section class="build-flow">
+<div class="flow-step step-ebuild" id="step1"><div class="flow-dot"></div><div class="step-num">1</div>
+<span class="tooltip">Analyze board schematics and pin mappings from KiCad/YAML</span>
+<h3>&#128209; Hardware Design</h3>
+<p>KiCad schematics &amp; YAML board definitions analyzed by <code>ebuild analyze</code> to extract pin maps, peripheral configs, and memory layouts.</p>
+<span class="step-output">&#8594; Board Support Package</span></div>
+<div class="flow-step step-ebuild" id="step2"><div class="flow-dot"></div><div class="step-num">2</div>
+<span class="tooltip">Generate cross-compilation toolchain and sysroot for target</span>
+<h3>&#9881; SDK Generation</h3>
+<p><code>ebuild sdk --target raspi4</code> generates cross-compilation toolchain, sysroot, headers, and pre-built libraries.</p>
+<span class="step-output">&#8594; toolchain + sysroot</span></div>
+<div class="flow-step step-eos" id="step3"><div class="flow-dot"></div><div class="step-num">3</div>
+<span class="tooltip">Compile the core OS: HAL, kernel scheduler, and system services</span>
+<h3>&#128268; Build OS</h3>
+<p><strong style="color:var(--blue)">eos</strong> (HAL + Kernel + Services) &#8594; <code>libeos.a</code><br><strong style="color:var(--green)">eboot</strong> (Secure Bootloader) &#8594; <code>libeboot.a</code></p>
+<span class="step-output">&#8594; libeos.a + libeboot.a</span></div>
+<div class="flow-step step-eai" id="step4"><div class="flow-dot"></div><div class="step-num">4</div>
+<span class="tooltip">Build AI inference engine, neural interface, and secure IPC</span>
+<h3>&#129302; Build AI + Neural</h3>
+<p><strong style="color:var(--purple)">eai</strong> &#8594; <code>libeai.a</code> &bull; <strong style="color:var(--pink)">eni</strong> &#8594; <code>libeni.a</code> &bull; <strong style="color:var(--cyan)">eipc</strong> &#8594; <code>libeipc.a</code></p>
+<span class="step-output">&#8594; libeai.a + libeni.a + libeipc.a</span></div>
+<div class="flow-step step-eosuite" id="step5"><div class="flow-dot"></div><div class="step-num">5</div>
+<span class="tooltip">Compile eApps applications and ebot chat client</span>
+<h3>&#128736; Build Tools</h3>
+<p><strong style="color:var(--yellow)">eApps</strong> (38 GUI apps + ebot) compiled into the <code>ebot</code> binary and application suite.</p>
+<span class="step-output">&#8594; ebot binary</span></div>
+<div class="flow-step step-eipc" id="step6"><div class="flow-dot"></div><div class="step-num">6</div>
+<span class="tooltip">Assemble root filesystem image from all compiled components</span>
+<h3>&#128230; Package Image</h3>
+<p>rootfs = eos + eboot + eai + eni + eipc + eApps. All components packaged into a deployable filesystem image.</p>
+<span class="step-output">&#8594; eos-image-raspi4.cpio.gz</span></div>
+<div class="flow-step step-eosim" id="step7"><div class="flow-dot"></div><div class="step-num">7</div>
+<span class="tooltip">Boot image in virtual machine and run full test suite</span>
+<h3>&#128300; Simulate &amp; Test</h3>
+<p><strong style="color:var(--red)">EoSim</strong> boots the image in a VM. Runs <strong>583+ tests</strong> across <strong>52 platforms</strong> and <strong>14 CPU architectures</strong> (GPIO, UART, SPI, I2C, crypto, OTA, AI).</p>
+<span class="step-output">&#8594; 583 tests passed</span></div>
+<div class="flow-step step-eboot" id="step8"><div class="flow-dot"></div><div class="step-num">8</div>
+<span class="tooltip">Flash firmware to real hardware and connect to AI server</span>
+<h3>&#128640; Deploy</h3>
+<p>Flash to real hardware (RPi4, STM32, etc.). <code>ebot</code> connects to <code>eai</code> server at <code>192.168.1.100:8420</code>.</p>
+<span class="step-output">&#8594; Device online</span></div>
+</section>
+<!--RUNTIME_ARCH-->
+<section class="runtime-arch">
+<h2>Runtime Architecture</h2>
+<p style="text-align:center;color:var(--text-secondary);margin-bottom:2rem">How EoS components interact on a deployed device</p>
+<div class="arch-device"><div class="arch-inner">
+<div class="arch-apps">
+<div class="arch-app app-suite">eApps<small>(ebot)</small></div>
+<div class="arch-app app-eai">EAI<small>(server)</small></div>
+<div class="arch-app app-eni">ENI<small>(neuralink)</small></div></div>
+<div class="arch-bidir"><span>&#8595;</span><span>&#8593;</span><span>&#8595;</span><span>&#8593;</span><span>&#8595;</span><span>&#8593;</span></div>
+<div class="arch-ipc">EIPC (Secure IPC)</div>
+<div class="arch-arrows"><span>&#8595;</span><span>&#8595;</span><span>&#8595;</span></div>
+<div class="arch-kernel"><div class="kern-title">EoS (HAL + Kernel + Services)</div>
+<div class="kern-modules"><span class="kern-mod">GPIO</span><span class="kern-mod">UART</span><span class="kern-mod">SPI</span><span class="kern-mod">I2C</span><span class="kern-mod">Timer</span><span class="kern-mod">IRQ</span></div></div>
+<div class="arch-arrows"><span>&#8595;</span><span>&#8595;</span></div>
+<div class="arch-boot"><div class="boot-title">eBoot (Bootloader)</div><div class="boot-flow">Secure Boot &#8594; A/B Slots &#8594; OTA</div></div>
+<div class="arch-arrows"><span>&#8595;</span></div>
+<div class="arch-hw"><div class="arch-hw-label">Hardware</div>
+<div class="arch-hw-chip">GPIO</div><div class="arch-hw-chip">UART</div><div class="arch-hw-chip">SPI</div><div class="arch-hw-chip">I2C</div><div class="arch-hw-chip">ETH</div></div>
+</div></div></section>
+<!--CICD_SECTION-->
+<section class="cicd-pipeline">
+<h2>CI/CD Pipeline</h2>
+<p style="text-align:center;color:var(--text-secondary);margin-bottom:2.5rem">Gated release pipeline &mdash; every commit passes 4 quality gates</p>
+<div class="pipeline-track">
+<div class="gate gate-push"><div class="gate-circle">Push</div><div class="gate-label">git push</div></div>
+<div class="gate-connector"></div>
+<div class="gate gate-1"><div class="gate-circle">G1</div><div class="gate-label">Test All 15 Repos</div></div>
+<div class="gate-connector"></div>
+<div class="gate gate-2"><div class="gate-circle">G2</div><div class="gate-label">Cross-Compile 3 Archs</div></div>
+<div class="gate-connector"></div>
+<div class="gate gate-3"><div class="gate-circle">G3</div><div class="gate-label">EoSim 21 Boards</div></div>
+<div class="gate-connector"></div>
+<div class="gate gate-release"><div class="gate-circle">&#10003;</div><div class="gate-label">Release 6 Platforms</div></div>
+</div></section>
+<!--HW_GRID-->
+<section class="hw-grid-section">
+<h2>Hardware Targets</h2>
+<p style="text-align:center;color:var(--text-secondary);margin-bottom:2.5rem">52 hardware targets across 14 CPU architectures</p>
+
+<div class="hw-row hw-row-mcu"><div class="hw-row-label">&#9899; MCU — 19 Platforms (ARM Cortex-M, Xtensa, RISC-V, MIPS)</div>
+<div class="hw-row-cards">
+<div class="hw-target">STM32F4<small>Cortex-M4 &bull; 180MHz</small></div>
+<div class="hw-target">STM32H7<small>Cortex-M7 &bull; 480MHz</small></div>
+<div class="hw-target">STM32L4<small>Cortex-M4 &bull; LP</small></div>
+<div class="hw-target">nRF52<small>Cortex-M4F &bull; BLE</small></div>
+<div class="hw-target">nRF5340<small>Cortex-M33 &bull; Dual</small></div>
+<div class="hw-target">nRF9160<small>Cortex-M33 &bull; LTE</small></div>
+<div class="hw-target">RP2040<small>Cortex-M0+ &bull; Dual</small></div>
+<div class="hw-target">K64F<small>Cortex-M4 &bull; Ethernet</small></div>
+<div class="hw-target">PSoC 6<small>M4/M0+ &bull; BLE</small></div>
+<div class="hw-target">SAMC21<small>Cortex-M0+ &bull; CAN</small></div>
+<div class="hw-target">SAMD51<small>Cortex-M4 &bull; USB</small></div>
+<div class="hw-target">RA6M5<small>Cortex-M33 &bull; TZ</small></div>
+<div class="hw-target">MSP432<small>Cortex-M4F &bull; LP</small></div>
+<div class="hw-target">ESP32<small>Xtensa LX6 &bull; Wi-Fi</small></div>
+<div class="hw-target">ESP32-C3<small>RISC-V &bull; Wi-Fi</small></div>
+<div class="hw-target">ESP32-S3<small>Xtensa LX7 &bull; AI</small></div>
+<div class="hw-target">GD32VF103<small>RISC-V &bull; 108MHz</small></div>
+<div class="hw-target">PIC32MZ<small>MIPS &bull; 200MHz</small></div>
+</div></div>
+
+<div class="hw-row hw-row-sbc"><div class="hw-row-label">&#128421; SBC &amp; Application Processors &mdash; 15 Platforms (ARM64, RISC-V 64)</div>
+<div class="hw-row-cards">
+<div class="hw-target">Raspberry Pi 5<small>Cortex-A76 &bull; 4-core</small></div>
+<div class="hw-target">Raspberry Pi 4<small>Cortex-A72 &bull; 8GB</small></div>
+<div class="hw-target">Raspberry Pi 3<small>Cortex-A53 &bull; 64-bit</small></div>
+<div class="hw-target">RPi 2B<small>Cortex-A7 &bull; Quad</small></div>
+<div class="hw-target">RPi Zero 2W<small>Cortex-A53 &bull; Compact</small></div>
+<div class="hw-target">NXP i.MX8M<small>Cortex-A53 &bull; NPU</small></div>
+<div class="hw-target">TI AM64x<small>A53+R5F &bull; Industrial</small></div>
+<div class="hw-target">STM32MP1<small>A7+M4 &bull; Linux</small></div>
+<div class="hw-target">BeagleBone<small>Cortex-A8 &bull; PRU</small></div>
+<div class="hw-target">Jetson Nano<small>A57 &bull; 128 CUDA</small></div>
+<div class="hw-target">Jetson Orin<small>A78AE &bull; 40 TOPS</small></div>
+<div class="hw-target">SiFive U<small>RISC-V U74 &bull; Linux</small></div>
+<div class="hw-target">K210<small>RISC-V 64 &bull; AI</small></div>
+<div class="hw-target">VExpress A9<small>Cortex-A9 &bull; Dev</small></div>
+<div class="hw-target">VExpress A15<small>Cortex-A15 &bull; Dev</small></div>
+</div></div>
+
+<div class="hw-row hw-row-soc"><div class="hw-row-label">&#128296; Automotive &amp; Safety &mdash; 6 Platforms (TriCore, Cortex-R, RH850)</div>
+<div class="hw-row-cards">
+<div class="hw-target">AURIX TC3xx<small>TriCore &bull; ASIL-D</small></div>
+<div class="hw-target">Renesas RH850<small>RH850 &bull; Auto MCU</small></div>
+<div class="hw-target">TI TMS570<small>Cortex-R4F &bull; Safety</small></div>
+<div class="hw-target">Cortex-R5<small>ARM R5 &bull; Lockstep</small></div>
+<div class="hw-target">Cortex-R52<small>ARM R52 &bull; ASIL-D</small></div>
+<div class="hw-target">S32K344<small>Cortex-M7 &bull; CAN-FD</small></div>
+</div></div>
+
+<div class="hw-row hw-row-virt"><div class="hw-row-label">&#128187; x86 / Intel / AMD &mdash; 3 Platforms</div>
+<div class="hw-row-cards">
+<div class="hw-target">x86_64 Generic<small>Intel/AMD &bull; Linux</small></div>
+<div class="hw-target">QEMU Q35<small>Intel Q35 &bull; UEFI</small></div>
+<div class="hw-target">x86_64 EFI<small>Intel/AMD &bull; Edge</small></div>
+</div></div>
+
+<div class="hw-row hw-row-virt"><div class="hw-row-label">&#127760; Other Architectures &mdash; 6 Platforms (MIPS, PowerPC, MicroBlaze, ARC)</div>
+<div class="hw-row-cards">
+<div class="hw-target">MIPS Malta<small>MIPS 24Kf &bull; LE</small></div>
+<div class="hw-target">PowerPC e500<small>PPC &bull; Embedded</small></div>
+<div class="hw-target">MicroBlaze<small>Xilinx &bull; FPGA</small></div>
+<div class="hw-target">ARC EM<small>Synopsys &bull; IoT</small></div>
+<div class="hw-target">VersatilePB<small>ARM926 &bull; Legacy</small></div>
+<div class="hw-target">ARM Generic<small>AArch64 &bull; Linux</small></div>
+</div></div>
+
+<div class="hw-row hw-row-soc"><div class="hw-row-label">&#127919; Specialty Simulators &mdash; 5 Platforms</div>
+<div class="hw-row-cards">
+<div class="hw-target">Aerodynamics<small>Physics &bull; CFD</small></div>
+<div class="hw-target">Finance<small>Domain &bull; Quant</small></div>
+<div class="hw-target">Gaming<small>Domain &bull; Engine</small></div>
+<div class="hw-target">Physiology<small>Domain &bull; Medical</small></div>
+<div class="hw-target">Weather<small>Domain &bull; Forecast</small></div>
+</div></div>
+
+<div style="text-align:center;margin-top:2rem;padding:1.5rem;background:var(--bg-card);border:1px solid var(--border-color);border-radius:var(--radius-md)">
+<p style="font-size:1rem;font-weight:700;color:var(--cyan);margin-bottom:.5rem">14 CPU Architectures Supported</p>
+<p style="font-size:.85rem;color:var(--text-secondary);margin:0">ARM Cortex-M &bull; ARM Cortex-A &bull; ARM Cortex-R &bull; AArch64 &bull; RISC-V 32 &bull; RISC-V 64 &bull; Xtensa &bull; <strong style="color:var(--blue)">x86_64 (Intel/AMD)</strong> &bull; MIPS &bull; PowerPC &bull; MicroBlaze &bull; ARC &bull; TriCore &bull; RH850</p>
+</div>
+
+</section>
+<footer class="footer"><div class="footer-inner"><div class="footer-brand"><h3>EmbeddedOS</h3><p>Open-source embedded operating system.</p></div>
+<div><h4>Documentation</h4><ul><li><a href="docs/eos.html">EoS</a></li><li><a href="docs/eboot.html">eBoot</a></li><li><a href="docs/ebuild.html">ebuild</a></li></ul></div>
+<div><h4>Components</h4><ul><li><a href="docs/eai.html">EAI</a></li><li><a href="docs/eni.html">ENI</a></li><li><a href="docs/eipc.html">EIPC</a></li><li><a href="docs/eosuite.html">eApps</a></li><li><a href="docs/eosim.html">EoSim</a></li></ul></div>
+<div><h4>Community</h4><ul><li><a href="https://github.com/embeddedos-org" target="_blank" rel="noopener">GitHub</a></li><li><a href="https://github.com/embeddedos-org/eos/discussions" target="_blank" rel="noopener">Discussions</a></li></ul></div>
+  <div>
+    <h4>Connect</h4>
+    <ul class="social-list">
+      <li><a class="social-link social-youtube" href="https://www.youtube.com/@EmbeddedOS_ORG" target="_blank" rel="noopener" aria-label="YouTube"><span class="social-icon">▶</span> YouTube</a></li>
+      <li><a class="social-link social-linkedin" href="https://www.linkedin.com/company/embedded-operating-systems-research-foundation" target="_blank" rel="noopener" aria-label="LinkedIn"><span class="social-icon">in</span> LinkedIn</a></li>
+      <li><a class="social-link social-x" href="https://x.com/EmbeddedOS_ORG" target="_blank" rel="noopener" aria-label="X (Twitter)"><span class="social-icon">𝕏</span> X (Twitter)</a></li>
+      <li><a class="social-link social-facebook" href="https://www.facebook.com/people/Embedded-Operating-Systems-Research-Foundation/61588978691494/" target="_blank" rel="noopener" aria-label="Facebook"><span class="social-icon">f</span> Facebook</a></li>
+    </ul>
+  </div></div><div class="footer-bottom">&copy; 2025 EmbeddedOS Project &bull; Licensed under MIT</div></footer>
+<div id="eos-search-overlay" class="search-overlay" hidden>
+<div class="search-modal">
+<div class="search-header">
+<span class="search-icon">&#128269;</span>
+<input type="text" id="eos-search-input" class="search-input" placeholder="Search EmbeddedOS docs..." autocomplete="off">
+<kbd class="search-kbd">Esc</kbd>
+</div>
+<ul id="eos-search-results" class="search-results"></ul>
+</div>
+</div>
+<script src="js/search.js"></script>
+<script src="js/animations.js"></script>
+<script src="js/ebot-chat.js"></script>
+</body></html>
