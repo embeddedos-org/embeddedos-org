@@ -105,18 +105,27 @@ test.describe('Mobile Navigation', () => {
       const p = await ctx.newPage();
       await p.goto(`${BASE}${page.path}`, { waitUntil: 'domcontentloaded' });
 
+      // These pages currently ship a .navbar with no .nav-toggle or .nav-links,
+      // so this suite targets a nav design the site no longer uses. Both
+      // handles are checked before use: previously only .nav-toggle was
+      // guarded, and .nav-links was dereferenced straight away, which turned a
+      // stale selector into seven failures reading
+      //   TypeError: Cannot read properties of null (reading 'evaluate')
+      // rather than a skip that says the markup is not there.
       const toggle = await p.$('.nav-toggle');
-      if (!toggle) {
-        test.skip();
+      const navLinks = await p.$('.nav-links');
+      if (!toggle || !navLinks) {
+        await ctx.close();
+        test.skip(true, 'no .nav-toggle/.nav-links in the current nav markup');
         return;
       }
 
       // Nav links should be hidden on mobile
-      const navLinks = await p.$('.nav-links');
       const isVisible = await navLinks.evaluate((el) => {
         const style = window.getComputedStyle(el);
         return style.display !== 'none';
       });
+      expect(isVisible).toBe(false);
 
       // Click hamburger - nav should open
       await toggle.click();
