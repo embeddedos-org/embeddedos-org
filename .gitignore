@@ -19,3 +19,8 @@ __pycache__/
 .venv/
 target/
 .pytest_cache/
+
+# Playwright output
+test-results/
+playwright-report/
+tests/screenshots/
