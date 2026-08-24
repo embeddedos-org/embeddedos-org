@@ -67,6 +67,16 @@
   }
 
   function createWidget() {
+    // js/site-chrome.js buildEBot() also injects #ebot-fab and #ebot-panel and
+    // guards against doing it twice; this function did not, so whenever both
+    // scripts loaded the page ended up with two floating buttons and two
+    // panels sharing the same ids. Duplicate ids are invalid HTML: they make
+    // getElementById return only the first match and leave the aria-controls
+    // reference on the other button pointing at the wrong node. A Playwright
+    // locator refuses outright:
+    //   strict mode violation: locator('#ebot-fab') resolved to 2 elements
+    if (document.getElementById('ebot-fab')) return;
+
     // Floating button
     var fab = document.createElement('button');
     fab.id = 'ebot-fab';

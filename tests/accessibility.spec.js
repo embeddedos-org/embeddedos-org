@@ -154,14 +154,27 @@ test.describe('Accessibility: eBot Chat', () => {
     await p.goto(`${BASE}/index.html`, { waitUntil: 'load' });
     await p.waitForTimeout(500);
 
-    const fab = await p.$('#ebot-fab');
-    if (fab) {
+    // Locators rather than elementHandles. #ebot-fab wraps an <svg>, and with
+    // an elementHandle the click failed on the inner node intercepting pointer
+    // events and then on the handle going stale, timing the test out at 30s:
+    //   Error: elementHandle.click: Element is not attached to the DOM
+    //   <svg ...> from <button id="ebot-fab"> subtree intercepts pointer events
+    // A locator re-resolves and auto-waits, so it survives the re-render.
+    const fab = p.locator('#ebot-fab');
+    if (await fab.count()) {
       await fab.click();
-      await p.waitForTimeout(300);
-      const panel = await p.$('#ebot-panel');
-      if (panel) {
-        const isHidden = await panel.getAttribute('hidden');
-        expect(isHidden).toBeNull();
+
+      const panel = p.locator('#ebot-panel');
+      if (await panel.count()) {
+        await expect(panel).not.toHaveAttribute('hidden', /.*/);
+      } else {
+        // index.html ships #ebot-fab but no #ebot-panel, so there is nothing
+        // to assert about the opened panel. Say so rather than passing
+        // silently on an empty branch.
+        test.info().annotations.push({
+          type: 'skip-reason',
+          description: 'no #ebot-panel in the markup; only the FAB click is exercised',
+        });
       }
     }
     await ctx.close();
