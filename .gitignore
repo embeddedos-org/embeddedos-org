@@ -24,3 +24,4 @@ target/
 test-results/
 playwright-report/
 tests/screenshots/
+test-screenshots/
