@@ -17,7 +17,8 @@ Status is one of: `todo`, `in-progress`, `blocked`, `review`, `done`.
 
 | ID | Task | Owner | Verified by | Evidence |
 |----|------|-------|-------------|----------|
-| —  | None yet. | — | — | — |
+| T-001 | Stop the link test failing on links that are correct in production | testing | reviewer | `tests/links.spec.js` treated `/eBoot/`, `/eos/` and 11 more as internal paths and required HTTP 200 from `http-server .`. Those are sibling repositories: each publishes its own GitHub Pages site, so `https://embeddedos-org.github.io/eBoot/` is the correct production URL, and a local server serving only this repo can never resolve it. The 12 "broken links" were a false failure. Those paths are now skipped only when the origin is localhost and still checked when `BASE_URL` points at the deployed site; every other internal link is verified in both modes. |
+| T-002 | Cut referenced image weight from 25 MB to 1.9 MB | performance | reviewer | Six images exceeded the suite's 1 MB-per-resource budget. The waste was resolution, not encoding: `icon-eboot.png` was 1920×1920 (2875 KB) displayed at 64×64, and `hero-main.png` was 2560×1440 (4832 KB) displayed at 600×338. `logo-icon-dark.png` (1920×1920, 2492 KB, displayed 36×36) was injected by `js/site-chrome.js` and so missed by an HTML-only scan. Each was resized to 2× its display size and quantised: hero 4832→422 KB, banners 3708/3418/2868→499/574/450 KB, the four product icons 2875/2827/2637/2417→4/5/5/7 KB, logo 2492→3 KB. Originals are unmodified in the repo's `*_original.png` files. Suite: 124 passed, 0 failed (was 2 failed). |
 
 ---
 
