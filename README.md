@@ -47,9 +47,11 @@ EmbeddedOS umbrella.*
 
 `embeddedos-org/embeddedos-org` is the **organisation's namesake landing repo**. GitHub
 serves it whenever someone visits
-[`github.com/embeddedos-org/embeddedos-org`](https://github.com/embeddedos-org/embeddedos-org),
-and because no separate `embeddedos-org/.github` repo exists, GitHub *also* renders this
-file's contents at the org-profile page [`github.com/embeddedos-org`](https://github.com/embeddedos-org).
+[`github.com/embeddedos-org/embeddedos-org`](https://github.com/embeddedos-org/embeddedos-org).
+The actual org-profile page at [`github.com/embeddedos-org`](https://github.com/embeddedos-org)
+is rendered from the separate [`.github`](https://github.com/embeddedos-org/.github) repo's
+`profile/README.md` — GitHub always prefers that repo's profile page over this one when both
+exist. This repo instead serves as a secondary, more detailed index and link tree.
 
 Its only purpose is to **route visitors quickly** to the right downstream artefact:
 
