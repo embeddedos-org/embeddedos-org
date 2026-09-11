@@ -1,98 +1,61 @@
-<!-- generated: eos-ai-scaffold -->
-# Agent Responsibilities
+# Repository guidance
 
-Each role owns a slice of the work and does only that slice. Full briefs are in
-[.ai/](./.ai/). These are responsibilities, not a required agent count — one
-agent may hold several roles on a small change. Split when the roles need
-genuinely different context, not by default.
+## Purpose
 
-One rule is structural rather than stylistic: **whoever implements does not
-approve.** Review is a separate role because self-review reliably misses the
-thing the implementer already believes is correct.
+This repository is the `embeddedos-org` organization landing index and a static
+copy of the EmbeddedOS developer portal. Keep changes focused on navigation,
+community documentation, shared site chrome, and repository automation. Product
+code belongs in the product repository identified in `CONTRIBUTING.md`.
 
-## Planner — [.ai/planner.md](./.ai/planner.md)
+## Source layout
 
-- Understand the request.
-- Break work into tasks.
-- Assign work.
+- `README.md` is the GitHub landing page and canonical repository link tree.
+- Root HTML files, `docs/`, `eApps/`, and `stacks/` make up the static site.
+- `js/site-chrome.js` owns the shared navigation and footer rendered across the
+  site.
+- `style.css` owns shared presentation.
+- `docs/wiki/` mirrors the six published GitHub Wiki pages for versioned review.
+- `.github/` contains issue, pull request, dependency, and workflow automation.
+- `tests/*.spec.js` are Playwright browser checks; `tests/*/test_*.py` are Python
+  checks run by `run_all_tests.py`.
 
-## Architect — [.ai/architect.md](./.ai/architect.md)
+## Change rules
 
-- Design structure.
-- Choose patterns.
-- Own dependencies, scalability and maintainability.
+- Preserve the repository's role as a landing index; route product changes to
+  the owning product repository.
+- Update `js/site-chrome.js` when a navigation item must appear consistently
+  across static pages instead of duplicating markup in individual HTML files.
+- Keep root-relative site URLs compatible with the local `http-server` and the
+  deployed GitHub Pages origin.
+- Use direct GitHub URLs for Wiki, Discussions, Issues, Projects, and repository
+  files. Do not create or link to a `/agents` web route; agent guidance lives in
+  `AGENTS.md`.
+- Treat `docs/wiki/` as a published snapshot. Update all six pages together from
+  the Wiki source and verify the page set and content hashes.
+- Human-authored pull requests must use a GitHub closing keyword for a real open
+  issue in this repository, for example `Fixes #123`.
+- Never include credentials, private vulnerability details, or production data.
+  Follow `SECURITY.md` for vulnerability reports.
 
-## Backend — [.ai/backend.md](./.ai/backend.md)
+## Validation
 
-- APIs
-- Database
-- Business logic
+Install JavaScript dependencies with `npm ci`, then run checks appropriate to
+what changed:
 
-## Frontend — [.ai/frontend.md](./.ai/frontend.md)
+```bash
+python -m unittest tests.governance.test_community_governance
+python run_all_tests.py
+npm run test:chromium
+npm run test:links
+```
 
-- UI
-- Components
-- Accessibility
+For documentation and workflow changes, also validate YAML parsing, Markdown
+style, relative links, and the final Git diff. When testing links locally, keep
+in mind that `playwright.config.js` documents known deployment-only paths; use
+`BASE_URL=https://embeddedos-org.github.io npm run test:links` for the deployed
+site when necessary.
 
-## Testing — [.ai/testing.md](./.ai/testing.md)
-
-- Unit tests
-- Integration tests
-- Regression tests
-
-## Security — [.ai/security.md](./.ai/security.md)
-
-- Authentication and authorization
-- Validation
-- Secrets
-- Dependency review
-
-## Performance — [.ai/performance.md](./.ai/performance.md)
-
-- Profiling
-- Optimization
-- Scalability
-
-## Reviewer — [.ai/reviewer.md](./.ai/reviewer.md)
-
-- Final review
-- Verify requirements
-- Merge findings
-
-## Documentation — [.ai/docs.md](./.ai/docs.md)
-
-- README
-- API docs
-- Changelog
-- Migration and architecture notes
-
-## Release — [.ai/release.md](./.ai/release.md)
-
-- Release notes
-- Deployment preparation
-- Rollback guidance
-
----
-
-## Switching roles
-
-Switch when the task changes domain, when specialist knowledge is required,
-when independent review is required, or when the context has grown past what
-one agent can hold accurately. Every switch runs the protocol in
-[HANDOFF.md](./HANDOFF.md).
-
-## Finding work that is not yours
-
-You will. The rule is: **record it, do not absorb it, do not drop it.**
-
-| What you found | Do |
-|----------------|-----|
-| A defect unrelated to your task | Note it in [TASKS.md](./TASKS.md) and keep going. |
-| A defect your change would sit on top of | Stop; say it blocks you; propose fixing it as its own task. |
-| A security issue | Report immediately, whatever role you hold. This one never waits for a handoff. |
-| A design decision missing from the plan | Return to the architect rather than deciding it inside an implementation. |
-| Work that belongs to a role nobody assigned | Say so. An unowned task is how requirements go missing. |
-
-Silently fixing something outside your task makes the diff unreviewable.
-Silently ignoring it means nobody ever looks again. Neither is acceptable; the
-note is what makes the difference.
+Before requesting review, confirm the feature branch is pushed normally, the
+pull request remains open and draft, its body contains a same-repository closing
+reference, the remote head SHA matches the local commit, the worktree is clean,
+and `master` has not moved as part of the change.

@@ -148,7 +148,11 @@ open https://embeddedos-org.github.io/eApps/
 | 🛠 Get Started | <https://embeddedos-org.github.io/getting-started.html> |
 | 🔬 Hardware Lab | <https://embeddedos-org.github.io/hardware-lab.html> |
 | 🧒 Kids Mode | <https://embeddedos-org.github.io/kids.html> |
-| 💬 Discussions | <https://github.com/embeddedos-org/eos/discussions> |
+| 💬 Discussions | <https://github.com/embeddedos-org/embeddedos-org/discussions> |
+| 📚 Wiki | <https://github.com/embeddedos-org/embeddedos-org/wiki> |
+| 🐛 Issues | <https://github.com/embeddedos-org/embeddedos-org/issues> |
+| 📋 Projects | <https://github.com/orgs/embeddedos-org/projects> |
+| 🤖 Contributor guidance | [`AGENTS.md`](https://github.com/embeddedos-org/embeddedos-org/blob/master/AGENTS.md) |
 | 🏢 Org Profile | <https://github.com/embeddedos-org> |
 | 🏭 eFab (manifest meta-repo) | <https://github.com/embeddedos-org/eFab> |
 
