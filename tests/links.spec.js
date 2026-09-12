@@ -52,6 +52,28 @@ test.describe('Internal Link Validation', () => {
   }
 });
 
+// ─── Shared community navigation ───
+test('Shared chrome exposes governance destinations without an /agents route', async ({ page }) => {
+  const pageErrors = [];
+  page.on('pageerror', (error) => pageErrors.push(error.message));
+  await page.goto(`${BASE}/getting-started.html`, { waitUntil: 'domcontentloaded' });
+  await page.waitForFunction(() => document.querySelector('.navbar')?.children.length > 0);
+  expect(pageErrors).toEqual([]);
+
+  const destinations = [
+    'https://github.com/embeddedos-org/embeddedos-org/wiki',
+    'https://github.com/embeddedos-org/embeddedos-org/discussions',
+    'https://github.com/embeddedos-org/embeddedos-org/issues',
+    'https://github.com/orgs/embeddedos-org/projects',
+    'https://github.com/embeddedos-org/embeddedos-org/blob/master/AGENTS.md',
+  ];
+
+  for (const href of destinations) {
+    expect(await page.locator(`a[href="${href}"]`).count(), href).toBeGreaterThan(0);
+  }
+  await expect(page.locator('a[href="/agents"], a[href^="/agents/"]')).toHaveCount(0);
+});
+
 // ─── Check for placeholder href="#" links ───
 test.describe('No Placeholder Links', () => {
   for (const page of PAGES) {

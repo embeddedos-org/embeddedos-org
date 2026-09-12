@@ -46,9 +46,11 @@
       trigger: true,
       dropdown: [
         { icon: '🤝', label: 'Get Involved', desc: 'Contribute to the project', href: '/get-involved.html' },
-        { icon: '💬', label: 'Discussions', desc: 'GitHub Discussions', href: 'https://github.com/embeddedos-org/embeddedos-org/discussions' },
-        { icon: '🐛', label: 'Issues', desc: 'Bug reports & features', href: 'https://github.com/embeddedos-org/embeddedos-org/issues' },
-        { icon: '📣', label: 'Blog', desc: 'News & announcements', href: '/docs/' },
+        { icon: '💬', label: 'Discussions', desc: 'Questions and design ideas', href: 'https://github.com/embeddedos-org/embeddedos-org/discussions', external: true },
+        { icon: '🐛', label: 'Issues', desc: 'Bug reports and accepted work', href: 'https://github.com/embeddedos-org/embeddedos-org/issues', external: true },
+        { icon: '📋', label: 'Projects', desc: 'Prioritized organization work', href: 'https://github.com/orgs/embeddedos-org/projects', external: true },
+        { icon: '📚', label: 'Wiki', desc: 'Community guides and onboarding', href: 'https://github.com/embeddedos-org/embeddedos-org/wiki', external: true },
+        { icon: '🤖', label: 'AGENTS.md', desc: 'Repository contributor guidance', href: 'https://github.com/embeddedos-org/embeddedos-org/blob/master/AGENTS.md', external: true },
       ],
     },
     { label: 'Stacks', href: '/stacks/', trigger: false },
@@ -88,9 +90,11 @@
       links: [
         { label: 'Get Involved', href: '/get-involved.html' },
         { label: 'GitHub', href: 'https://github.com/embeddedos-org' },
+        { label: 'Wiki', href: 'https://github.com/embeddedos-org/embeddedos-org/wiki' },
         { label: 'Discussions', href: 'https://github.com/embeddedos-org/embeddedos-org/discussions' },
         { label: 'Issues', href: 'https://github.com/embeddedos-org/embeddedos-org/issues' },
-        { label: 'Stacks', href: '/stacks/' },
+        { label: 'Projects', href: 'https://github.com/orgs/embeddedos-org/projects' },
+        { label: 'AGENTS.md', href: 'https://github.com/embeddedos-org/embeddedos-org/blob/master/AGENTS.md' },
       ],
     },
     {
