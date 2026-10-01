@@ -3,6 +3,36 @@ const { test, expect } = require('@playwright/test');
 
 const BASE = process.env.BASE_URL || 'http://localhost:8080';
 
+/*
+ * Product pages live in sibling repositories, not in this one. GitHub Pages
+ * publishes repo `eBoot` of org `embeddedos-org` at
+ * https://embeddedos-org.github.io/eBoot/, so `/eBoot/` is a correct link
+ * from this site in production -- but it cannot resolve against a local
+ * `http-server .`, which only ever serves this repo.
+ *
+ * These paths are therefore skipped when testing a local origin and checked
+ * normally when BASE_URL points at the deployed site. Every other internal
+ * link is still verified in both modes, so a genuinely broken link inside
+ * this repo continues to fail the test.
+ */
+const SIBLING_REPO_PATHS = new Set([
+  '/eos/', '/eBoot/', '/ebuild/', '/eIPC/', '/eAI/', '/eNI/',
+  '/EoSim/', '/EoStudio/', '/eDB/', '/eBrowser/', '/eOffice/',
+  '/eApps/', '/eCAD-Hardware-Products/',
+]);
+
+const IS_LOCAL = /^https?:\/\/(localhost|127\.0\.0\.1|\[::1\])(:|\/|$)/.test(BASE);
+
+/** True when a link points at a sibling repo's Pages site we cannot serve locally. */
+function isUnservableSiblingLink(href) {
+  if (!IS_LOCAL) return false;
+  try {
+    return SIBLING_REPO_PATHS.has(new URL(href, BASE).pathname);
+  } catch {
+    return false;
+  }
+}
+
 const PAGES = [
   { name: 'Home', path: '/index.html' },
   { name: 'Get Started', path: '/getting-started.html' },
@@ -28,7 +58,7 @@ test.describe('Internal Link Validation', () => {
           .filter((h) => h && !h.startsWith('http') && !h.startsWith('#') && !h.startsWith('mailto:') && !h.startsWith('tel:') && !h.startsWith('javascript:') && !h.includes('#'))
       );
 
-      const unique = [...new Set(links)];
+      const unique = [...new Set(links)].filter((h) => !isUnservableSiblingLink(h));
       const broken = [];
 
       for (const link of unique) {
