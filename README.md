@@ -60,7 +60,7 @@ Its only purpose is to **route visitors quickly** to the right downstream artefa
 - 🏪 the **app store** (60+ apps across 5 form factors)
 - 📖 the **documentation hub** (13 product modules)
 - 🏭 the **stacks hub** (curated, version-pinned bundles via `eFab`)
-- 🧑‍💻 the **product source repos** (13 repos, listed below)
+- 🧑‍💻 the **product source repos** (26 repos — 13 canonical products plus supporting, meta, and domain repos, full index below)
 
 ![Products Banner](https://img.shields.io/badge/━━%20Product%20Catalogue%20━━-bc8cff?style=flat-square)
 
@@ -95,9 +95,85 @@ Its only purpose is to **route visitors quickly** to the right downstream artefa
 
 | | Repo | Description |
 |---|------|-------------|
-| 🔬 | [**EoSim**](https://github.com/embeddedos-org/EoSim) | Hardware and platform simulator — 63+ boards, QEMU, GUI renderers |
+| 🔬 | [**EoSim**](https://github.com/embeddedos-org/EoSim) | Hardware and platform simulator — 63+ boards, QEMU, GUI renderers, MCP server for AI agents |
 | 🎨 | [**EoStudio**](https://github.com/embeddedos-org/EoStudio) | Visual design IDE — UI, 3D, CAD, games, hardware, code generation |
 | 🔩 | [**eCAD-Hardware-Products**](https://github.com/embeddedos-org/eCAD-Hardware-Products) | Hardware designs + EE docs + Board datasheets of multiple products |
+| 💾 | [**eFirmware**](https://github.com/embeddedos-org/eFirmware) | Board firmware images and flashing tooling |
+
+### 🟡 Security, Networking & Dataflow
+
+| | Repo | Description |
+|---|------|-------------|
+| 🔒 | [**eSec**](https://github.com/embeddedos-org/eSec) | Security framework for EmbeddedOS — crypto abstraction, key management, attestation |
+| 🌐 | [**eNet**](https://github.com/embeddedos-org/eNet) | Networking subsystem — TCP/IP, UDP, DHCP, DNS, MQTT |
+| 🌊 | [**eFlow**](https://github.com/embeddedos-org/eFlow) | Visual programming and dataflow authoring for EmbeddedOS |
+
+### 🩺 Domain Solutions
+
+| | Repo | Description |
+|---|------|-------------|
+| ❤️‍🩹 | [**eos-health**](https://github.com/embeddedos-org/eos-health) | Unified mono-repo for health devices |
+| ✈️ | [**eos-aero**](https://github.com/embeddedos-org/eos-aero) | Aerospace profile — functional-safety oriented builds |
+
+### 🤖 AI Agents & Language Models
+
+| | Repo | Description |
+|---|------|-------------|
+| 🧠 | [**eosllm**](https://github.com/embeddedos-org/eosllm) | EoS LLM — on-device language model runtime |
+
+![Full Index Banner](https://img.shields.io/badge/━━%20Full%20Repo%20Index%20━━-e3b341?style=flat-square)
+
+## 🗂 Full Repo Index (26)
+
+Beyond the 13 canonical products, the org hosts supporting, meta, and
+in-progress repos. Current as of 2026-10-04:
+
+| Repo | Visibility | Role |
+|------|-----------|------|
+| [eos](https://github.com/embeddedos-org/eos) | public | The EoS operating system |
+| [eBoot](https://github.com/embeddedos-org/eBoot) | public | Bootloader for any hardware |
+| [ebuild](https://github.com/embeddedos-org/ebuild) | public | Build tool |
+| [eAI](https://github.com/embeddedos-org/eAI) | public | AI layer |
+| [eosllm](https://github.com/embeddedos-org/eosllm) | public | On-device LLM runtime |
+| [eNI](https://github.com/embeddedos-org/eNI) | public | Neural Interface Adapter |
+| [eIPC](https://github.com/embeddedos-org/eIPC) | public | Secure IPC |
+| [EoSim](https://github.com/embeddedos-org/EoSim) | public | Hardware/platform simulator + MCP server |
+| [EoStudio](https://github.com/embeddedos-org/EoStudio) | public | Visual design IDE |
+| [eSec](https://github.com/embeddedos-org/eSec) | public | Security framework |
+| [eNet](https://github.com/embeddedos-org/eNet) | public | Networking subsystem |
+| [eFlow](https://github.com/embeddedos-org/eFlow) | public | Visual dataflow authoring |
+| [eDB](https://github.com/embeddedos-org/eDB) | public | Embedded database manager |
+| [eApps](https://github.com/embeddedos-org/eApps) | public | App marketplace & store |
+| [eBrowser](https://github.com/embeddedos-org/eBrowser) | public | Privacy-first browser |
+| [eOffice](https://github.com/embeddedos-org/eOffice) | public | Office suite |
+| [eCAD-Hardware-Products](https://github.com/embeddedos-org/eCAD-Hardware-Products) | public | Hardware designs & board datasheets |
+| [eFirmware](https://github.com/embeddedos-org/eFirmware) | public | Board firmware |
+| [eos-health](https://github.com/embeddedos-org/eos-health) | public | Health devices mono-repo |
+| [eos-aero](https://github.com/embeddedos-org/eos-aero) | public | Aerospace profile |
+| [embeddedos-stack](https://github.com/embeddedos-org/embeddedos-stack) | private | Unified build/test/release manifest |
+| [eVera](https://github.com/embeddedos-org/eVera) | private | Autonomous agent for human life |
+| [www.embeddedos.org](https://github.com/embeddedos-org/www.embeddedos.org) | public | Developer portal (live site) |
+| [embeddedos-org.github.io](https://github.com/embeddedos-org/embeddedos-org.github.io) | public | Legacy static site (parked) |
+| [.github](https://github.com/embeddedos-org/.github) | public | Org-wide CI, standards, reusable workflows |
+| [embeddedos-org](https://github.com/embeddedos-org/embeddedos-org) | public | This repo — org landing index |
+
+![Security Banner](https://img.shields.io/badge/━━%20Security%20━━-f85149?style=flat-square)
+
+## 🛡 Security & EU CRA readiness
+
+Security reports go through [`SECURITY.md`](SECURITY.md) — coordinated
+vulnerability disclosure, **not** public issues. Org-wide policy lives in
+[eSec](https://github.com/embeddedos-org/eSec) (`SECURITY.md`,
+`.well-known/security.txt`, `docs/cvd-intake.md`).
+
+For the EU Cyber Resilience Act, the org ships reusable CI building blocks in
+[`.github`](https://github.com/embeddedos-org/.github):
+
+- `reusable-sbom.yml` — CycloneDX + SPDX SBOM generation on every build
+- `reusable-kev-scan.yml` — fail the build when a dependency matches a
+  CISA Known Exploited Vulnerability
+
+Repos adopt them one by one; SBOMs are retained as build artifacts.
 
 ![Meta Banner](https://img.shields.io/badge/━━%20Meta--Repos%20━━-79c0ff?style=flat-square)
 
