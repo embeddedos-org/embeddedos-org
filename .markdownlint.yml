@@ -1,0 +1,21 @@
+# markdownlint configuration for the embeddedos-org profile repo.
+#
+# markdownlint-cli auto-discovers this file, so the lint-readme workflow
+# needs no changes. Each rule below encodes a deliberate decision from
+# the 2026-10-04/05 lint cleanups — do not "simplify" this file back to
+# defaults without re-running the linter.
+
+# MD013 (line-length): the README is a 26-repo link index. Its table rows
+# and badge/link-only lines are inherently long, and markdownlint's
+# non-strict mode already tolerates link-only lines and trailing long
+# tokens. Tables are explicitly exempt so index rows can never regress
+# the build; prose stays at the 80-column guideline.
+MD013:
+  line_length: 80
+  tables: false
+
+# MD060 (table-column-style): the index tables must keep one consistent
+# pipe style — mixed styles across the 26-repo tables are the most common
+# silent regression from hand edits.
+MD060:
+  style: consistent
