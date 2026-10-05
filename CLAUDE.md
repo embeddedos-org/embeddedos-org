@@ -96,9 +96,7 @@ Format and worked examples: [VERIFY.md](./VERIFY.md).
 
 ---
 
-# Repository
-
-<div align="center">
+## Repository
 
 ## Routing
 
@@ -106,7 +104,7 @@ Read this file every time. Read the rest when the row applies — loading all of
 them on every task is the behaviour this standard exists to prevent.
 
 | Before you... | Read |
-|---------------|------|
+| --- | --- |
 | Break a request into work | [MODES.md](./MODES.md), [TASKS.md](./TASKS.md) |
 | Decide structure or add a dependency | [.ai/architect.md](./.ai/architect.md), [MEMORY.md](./MEMORY.md) |
 | Write code | [QUALITY.md](./QUALITY.md), your role in [.ai/](./.ai/) |
@@ -131,7 +129,6 @@ When two of these documents conflict, the earlier wins:
 
 Say that a conflict exists rather than resolving it silently. A rule two people
 read differently is a defect in the rule, and it will recur until it is fixed.
-
 
 ## Node
 

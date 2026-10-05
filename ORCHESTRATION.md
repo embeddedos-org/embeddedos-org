@@ -29,14 +29,14 @@ Rework is not failure. Reporting completion to avoid rework is.
 
 ## Scaling to the change
 
-| Change | Roles worth involving |
-|--------|----------------------|
-| One-line fix, no behaviour change | Implementer + verification gate |
-| Bug fix | Implementer, testing (regression test), reviewer |
-| New feature in an existing surface | Planner, implementer, testing, reviewer, docs |
-| New component or dependency | All of the above plus architect and security |
-| Anything touching auth, secrets or user data | All of the above; security is not optional |
-| Deployment | All of the above plus release |
+| Change                         | Roles worth involving                   |
+| ------------------------------ | --------------------------------------- |
+| One-line fix                   | Implementer + verify gate               |
+| Bug fix                        | Implementer, test, review               |
+| New feature, existing surface  | Planner, implementer, test+review, docs |
+| New component or dependency    | Above + architect + security            |
+| Touches auth/secrets/user data | Above + security required               |
+| Deployment                     | Above + release                         |
 
 One agent may hold several of these roles. The rule that does not bend is that
 whoever wrote the code is not the one who approves it.

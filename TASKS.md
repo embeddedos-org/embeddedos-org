@@ -9,15 +9,15 @@ Status is one of: `todo`, `in-progress`, `blocked`, `review`, `done`.
 
 ## Active
 
-| ID | Task | Owner | Mode | Status | Depends on |
-|----|------|-------|------|--------|------------|
-| —  | No active tasks. | — | — | — | — |
+| ID | Task             | Owner | Mode | Status | Depends on |
+| -- | ---------------- | ----- | ---- | ------ | ---------- |
+| —  | No active tasks. | —     | —    | —      | —          |
 
 ## Completed
 
-| ID | Task | Owner | Verified by | Evidence |
-|----|------|-------|-------------|----------|
-| —  | None yet. | — | — | — |
+| ID | Task      | Owner | Verified by | Evidence |
+| -- | --------- | ----- | ----------- | -------- |
+| —  | None yet. | —     | —           | —        |
 
 ---
 
@@ -49,21 +49,22 @@ Risks
 
 Verification
 : | Check | Command | Result |
-  |-------|---------|--------|
-  | <name> | `<command>` | `NOT RUN` |
+| ------ | ----------- | --------- |
+| <name> | `<command>` | `NOT RUN` |
 ```
 
 ## Verification commands for this repository
 
-These commands were derived from the manifests at the repository root. Confirm one works before relying on it; a listed script may still be a stub.
+These commands were derived from the manifests at the repository root.
+Confirm one works before relying on it; a listed script may still be a stub.
 
-| Check | Command | Default state |
-|-------|---------|---------------|
-| Lint | `npm run lint:html` | `NOT RUN` |
-| Unit tests | `npm run test` | `NOT RUN` |
-| Accessibility | `npm run test:a11y` | `NOT RUN` |
-| Performance | `npm run test:perf` | `NOT RUN` |
-| Security | `npm run audit` | `NOT RUN` |
+| Check         | Command             | Default state |
+| ------------- | ------------------- | ------------- |
+| Lint          | `npm run lint:html` | `NOT RUN`     |
+| Unit tests    | `npm run test`      | `NOT RUN`     |
+| Accessibility | `npm run test:a11y` | `NOT RUN`     |
+| Performance   | `npm run test:perf` | `NOT RUN`     |
+| Security      | `npm run audit`     | `NOT RUN`     |
 
 ## Rules
 

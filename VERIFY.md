@@ -8,7 +8,8 @@ Do not report success without evidence. This file defines what counts.
 - `PASS` — the check ran and succeeded; the output was seen.
 - `FAIL` — the check ran and failed; quote the actual output.
 - `NOT RUN` — the check was not executed.
-- `UNKNOWN` — the check cannot be run in this environment, or its result cannot be interpreted.
+- `UNKNOWN` — the check cannot be run in this environment, or its result
+  cannot be interpreted.
 
 `NOT RUN` and `UNKNOWN` are acceptable answers, and reporting one honestly is
 never a failure. A guess dressed as `PASS` is.
@@ -37,26 +38,26 @@ Anything short of that is `NOT RUN` or `UNKNOWN`.
 
 > `pnpm test:unit` — exit 0. 142 passed, 0 failed, 3 skipped. The 3 skips are
 > pre-existing and unrelated to this change. → `PASS`
-
+>
 > `pnpm check` — exit 2. `src/api/user.ts(41,7): error TS2345: Argument of type
 > 'string | undefined' is not assignable to parameter of type 'string'.`
 > → `FAIL`
-
+>
 > No linter is configured in this repository. → `NOT RUN`
-
+>
 > The e2e suite needs a running database, which is not available here.
 > → `UNKNOWN` — e2e behaviour is unverified.
 
 ### Not valid
 
 > The tests should pass now.
-
+>
 > I've made the change, so the build will work.
-
+>
 > Everything looks good.
-
+>
 > `PASS` (no command, no output)
-
+>
 > Tests pass — *(when the suite was never run, only written)*
 
 The difference is not tone. The first set can be checked by someone else; the
@@ -66,18 +67,18 @@ second set cannot.
 
 Applies to every change, to the extent each item exists here:
 
-| # | Check | Applies when |
-|---|-------|--------------|
-| 1 | Build | The repository has a build step. |
-| 2 | Type check | The language or toolchain has one. |
-| 3 | Lint | A linter is configured. |
-| 4 | Unit tests | Always, including tests written for this change. |
-| 5 | Integration tests | The change crosses a component boundary. |
-| 6 | End-to-end tests | The change affects a user-visible flow. |
-| 7 | Security review | The change touches input, auth, secrets or dependencies. |
-| 8 | Performance review | The change touches a hot path or adds work per request. |
-| 9 | Accessibility review | The change alters UI. |
-| 10 | Documentation review | The change alters behaviour, API or setup. |
+| #  | Check                | Applies when                                |
+| -- | -------------------- | ------------------------------------------- |
+| 1  | Build                | The repository has a build step.            |
+| 2  | Type check           | The language or toolchain has one.          |
+| 3  | Lint                 | A linter is configured.                     |
+| 4  | Unit tests           | Always, including tests for this change.    |
+| 5  | Integration tests    | The change crosses a component boundary.    |
+| 6  | End-to-end tests     | The change affects a user-visible flow.     |
+| 7  | Security review      | Touches input, auth, secrets, dependencies. |
+| 8  | Performance review   | Touches a hot path; adds per-request work.  |
+| 9  | Accessibility review | The change alters UI.                       |
+| 10 | Documentation review | The change alters behaviour, API or setup.  |
 
 Rules:
 
@@ -128,11 +129,11 @@ Completed work: <what was done>
 Files changed: <paths>
 
 Verification:
-| Check | Command | Result |
-|-------|---------|--------|
-| Build | `<cmd>` | `PASS` — exit 0 |
-| Unit tests | `<cmd>` | `FAIL` — <actual output> |
-| Lint | — | `NOT RUN` — no linter configured |
+| Check      | Command | Result                           |
+| ---------- | ------- | -------------------------------- |
+| Build      | `<cmd>` | `PASS` — exit 0                  |
+| Unit tests | `<cmd>` | `FAIL` — <actual output>         |
+| Lint       | —       | `NOT RUN` — no linter configured |
 
 Remaining work: <what is left>
 Known risks: <what could break, and what would reveal it>

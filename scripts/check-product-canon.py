@@ -6,7 +6,6 @@ node_modules):
 
     Forbidden  ->  reason
     ─────────────────────
-    eVera                          (dropped product)
     eStocks / eStocks_Trading_Scripts (dropped product)
     eHardware-Designs-Products     (renamed -> eCAD-Hardware-Products)
     "15 products" / "15 Products"  (canonical is 13)
@@ -14,6 +13,11 @@ node_modules):
     "16 titles" / "16 guides"      (canonical is 14)
     "15-product"                   (canonical is 13-product)
     "16 repos"  / "15 repos"       (canonical is 13)
+
+NOTE (2026-10-05): eVera was previously listed here as a dropped product.
+It is an ACTIVE private repo in the org (autonomous agent; worked daily),
+so it was removed from the forbidden list. If it is ever truly retired,
+re-add it here.
 
 The intent is to lock the canonical list (13 products, 14 books) so
 accidental copy-paste regressions surface immediately in CI.
@@ -47,7 +51,6 @@ EXCLUDE_PATH_FRAGMENTS = (
 
 # (regex, friendly reason). Use re.IGNORECASE-compatible patterns where helpful.
 FORBIDDEN: list[tuple[str, str]] = [
-    (r'\beVera\b',                     'eVera (dropped product)'),
     (r'\beStocks\b',                   'eStocks (dropped product)'),
     (r'eStocks_Trading_Scripts',       'eStocks_Trading_Scripts (dropped product / renamed away)'),
     (r'eHardware-Designs-Products',    'eHardware-Designs-Products (renamed -> eCAD-Hardware-Products)'),

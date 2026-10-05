@@ -1,3 +1,5 @@
+<!-- markdownlint-disable-file MD041 -->
+<!-- The Contributor Covenant template opens with its badge, before the H1. -->
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-purple.svg?style=for-the-badge)](https://www.contributor-covenant.org/version/2/1/code_of_conduct/)
 
 # Contributor Covenant Code of Conduct
@@ -59,7 +61,7 @@ an individual is officially representing the community in public spaces.
 
 Instances of abusive, harassing, or otherwise unacceptable behavior may be
 reported to the community leaders responsible for enforcement at
-**conduct@embeddedos.org**. All complaints will be reviewed and investigated
+**<conduct@embeddedos.org>**. All complaints will be reviewed and investigated
 promptly and fairly. All community leaders are obligated to respect the privacy
 and security of the reporter of any incident.
 
@@ -69,6 +71,7 @@ Community leaders will follow these Community Impact Guidelines in determining
 the consequences for any action they deem in violation of this Code of Conduct:
 
 ### 1. Correction
+
 **Community Impact**: Use of inappropriate language or other behavior deemed
 unprofessional or unwelcome in the community.
 **Consequence**: A private, written warning from community leaders, providing
@@ -76,12 +79,14 @@ clarity around the nature of the violation and an explanation of why the
 behavior was inappropriate. A public apology may be requested.
 
 ### 2. Warning
+
 **Community Impact**: A violation through a single incident or series of actions.
 **Consequence**: A warning with consequences for continued behavior. No
 interaction with the people involved, including unsolicited interaction with
 those enforcing the Code of Conduct, for a specified period of time.
 
 ### 3. Temporary Ban
+
 **Community Impact**: A serious violation of community standards, including
 sustained inappropriate behavior.
 **Consequence**: A temporary ban from any sort of interaction or public
@@ -89,6 +94,7 @@ communication with the community for a specified period of time. No public or
 private interaction with the people involved is allowed during this period.
 
 ### 4. Permanent Ban
+
 **Community Impact**: Demonstrating a pattern of violation of community
 standards, including sustained inappropriate behavior, harassment of an
 individual, or aggression toward or disparagement of classes of individuals.

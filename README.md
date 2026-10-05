@@ -1,6 +1,11 @@
+<!-- markdownlint-disable-file MD033 MD041 -->
+<!-- This profile README deliberately uses centered-div/badge HTML and opens
+     with the banner, not an H1 (MD033/MD041 disabled above). -->
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/embeddedos-org/eos/master/docs/book/cover.png" width="180" alt="EmbeddedOS">
+<img
+  src="https://raw.githubusercontent.com/embeddedos-org/eos/master/docs/book/cover.png"
+  width="180" alt="EmbeddedOS">
 
 # 🚀 embeddedos-org
 
@@ -12,8 +17,7 @@
 [![License](https://img.shields.io/github/license/embeddedos-org/embeddedos-org)](LICENSE)
 <!-- end: org-uniform badges (audit-2026-05) -->
 
-
-### The Org Landing Repo — Your Index into the EmbeddedOS Ecosystem
+## The Org Landing Repo — Your Index into the EmbeddedOS Ecosystem
 
 *A single entry point that resolves
 [`github.com/embeddedos-org/embeddedos-org`](https://github.com/embeddedos-org/embeddedos-org)
@@ -37,7 +41,8 @@ EmbeddedOS umbrella.*
 [![Code of Conduct](https://img.shields.io/badge/Contributor_Covenant-2.1-purple?style=flat-square)](CODE_OF_CONDUCT.md)
 [![Conventional Commits](https://img.shields.io/badge/Commits-Conventional-orange?style=flat-square)](https://www.conventionalcommits.org/)
 
-**83 Board Ports** · **13 Products** · **41 Categories** · **500K+ Lines** · **65+ Diagrams** · **180+ Citations**
+**83 Board Ports** · **13 Products** · **41 Categories** · **500K+ Lines** ·
+**65+ Diagrams** · **180+ Citations**
 
 </div>
 
@@ -45,12 +50,15 @@ EmbeddedOS umbrella.*
 
 ## 📖 About this repo
 
-`embeddedos-org/embeddedos-org` is the **organisation's namesake landing repo**. GitHub
+`embeddedos-org/embeddedos-org` is the **organisation's namesake landing
+repo**. GitHub
 serves it whenever someone visits
 [`github.com/embeddedos-org/embeddedos-org`](https://github.com/embeddedos-org/embeddedos-org).
 The actual org-profile page at [`github.com/embeddedos-org`](https://github.com/embeddedos-org)
-is rendered from the separate [`.github`](https://github.com/embeddedos-org/.github) repo's
-`profile/README.md` — GitHub always prefers that repo's profile page over this one when both
+is rendered from the separate [`.github`](https://github.com/embeddedos-org/.github)
+repo's
+`profile/README.md` — GitHub always prefers that repo's profile page over this
+one when both
 exist. This repo instead serves as a secondary, more detailed index and link tree.
 
 Its only purpose is to **route visitors quickly** to the right downstream artefact:
@@ -60,7 +68,8 @@ Its only purpose is to **route visitors quickly** to the right downstream artefa
 - 🏪 the **app store** (60+ apps across 5 form factors)
 - 📖 the **documentation hub** (13 product modules)
 - 🏭 the **stacks hub** (curated, version-pinned bundles via `eFab`)
-- 🧑‍💻 the **product source repos** (26 repos — 13 canonical products plus supporting, meta, and domain repos, full index below)
+- 🧑‍💻 the **product source repos** (26 repos — 13 canonical products plus
+  supporting, meta, and domain repos, full index below)
 
 ![Products Banner](https://img.shields.io/badge/━━%20Product%20Catalogue%20━━-bc8cff?style=flat-square)
 
@@ -69,7 +78,7 @@ Its only purpose is to **route visitors quickly** to the right downstream artefa
 ### 🔵 Core Platform
 
 | | Repo | Description |
-|---|------|-------------|
+| --- | --- | --- |
 | ⚙️ | [**eos**](https://github.com/embeddedos-org/eos) | EoS Embedded Operating system |
 | 🔐 | [**eBoot**](https://github.com/embeddedos-org/eBoot) | Project: Bootloader for Any Hardware |
 | 📡 | [**eIPC**](https://github.com/embeddedos-org/eIPC) | NIA ==>> Secure IPC ==>> AIL |
@@ -78,14 +87,14 @@ Its only purpose is to **route visitors quickly** to the right downstream artefa
 ### 🟣 AI & Neural
 
 | | Repo | Description |
-|---|------|-------------|
+| --- | --- | --- |
 | 🧠 | [**eAI**](https://github.com/embeddedos-org/eAI) | AI Layer (AIL → eBot) can be integrated into EoS |
 | 🧬 | [**eNI**](https://github.com/embeddedos-org/eNI) | Neural Interface Adapter |
 
 ### 🟢 Apps & Services
 
 | | Repo | Description |
-|---|------|-------------|
+| --- | --- | --- |
 | 📱 | [**eApps**](https://github.com/embeddedos-org/eApps) | EoS Unified Marketplace & App Store |
 | 🗄 | [**eDB**](https://github.com/embeddedos-org/eDB) | Lightweight embedded database manager — SQL editor, AI query assistance, multi-model |
 | 🌐 | [**eBrowser**](https://github.com/embeddedos-org/eBrowser) | Privacy-first web browser with custom rendering engine |
@@ -94,7 +103,7 @@ Its only purpose is to **route visitors quickly** to the right downstream artefa
 ### 🟠 Tools & Hardware
 
 | | Repo | Description |
-|---|------|-------------|
+| --- | --- | --- |
 | 🔬 | [**EoSim**](https://github.com/embeddedos-org/EoSim) | Hardware and platform simulator — 63+ boards, QEMU, GUI renderers, MCP server for AI agents |
 | 🎨 | [**EoStudio**](https://github.com/embeddedos-org/EoStudio) | Visual design IDE — UI, 3D, CAD, games, hardware, code generation |
 | 🔩 | [**eCAD-Hardware-Products**](https://github.com/embeddedos-org/eCAD-Hardware-Products) | Hardware designs + EE docs + Board datasheets of multiple products |
@@ -103,7 +112,7 @@ Its only purpose is to **route visitors quickly** to the right downstream artefa
 ### 🟡 Security, Networking & Dataflow
 
 | | Repo | Description |
-|---|------|-------------|
+| --- | --- | --- |
 | 🔒 | [**eSec**](https://github.com/embeddedos-org/eSec) | Security framework for EmbeddedOS — crypto abstraction, key management, attestation |
 | 🌐 | [**eNet**](https://github.com/embeddedos-org/eNet) | Networking subsystem — TCP/IP, UDP, DHCP, DNS, MQTT |
 | 🌊 | [**eFlow**](https://github.com/embeddedos-org/eFlow) | Visual programming and dataflow authoring for EmbeddedOS |
@@ -111,14 +120,14 @@ Its only purpose is to **route visitors quickly** to the right downstream artefa
 ### 🩺 Domain Solutions
 
 | | Repo | Description |
-|---|------|-------------|
+| --- | --- | --- |
 | ❤️‍🩹 | [**eos-health**](https://github.com/embeddedos-org/eos-health) | Unified mono-repo for health devices |
 | ✈️ | [**eos-aero**](https://github.com/embeddedos-org/eos-aero) | Aerospace profile — functional-safety oriented builds |
 
 ### 🤖 AI Agents & Language Models
 
 | | Repo | Description |
-|---|------|-------------|
+| --- | --- | --- |
 | 🧠 | [**eosllm**](https://github.com/embeddedos-org/eosllm) | EoS LLM — on-device language model runtime |
 
 ![Full Index Banner](https://img.shields.io/badge/━━%20Full%20Repo%20Index%20━━-e3b341?style=flat-square)
@@ -129,7 +138,7 @@ Beyond the 13 canonical products, the org hosts supporting, meta, and
 in-progress repos. Current as of 2026-10-04:
 
 | Repo | Visibility | Role |
-|------|-----------|------|
+| --- | --- | --- |
 | [eos](https://github.com/embeddedos-org/eos) | public | The EoS operating system |
 | [eBoot](https://github.com/embeddedos-org/eBoot) | public | Bootloader for any hardware |
 | [ebuild](https://github.com/embeddedos-org/ebuild) | public | Build tool |
@@ -184,7 +193,7 @@ These repositories compose, route to, or describe the canonical roster. They are
 bump the canon counts.
 
 | | Repo | Role |
-|---|------|------|
+| --- | --- | --- |
 | 🚀 | [**embeddedos-org**](https://github.com/embeddedos-org/embeddedos-org) | This repo — org landing index. |
 | 🌐 | [**embeddedos-org.github.io**](https://github.com/embeddedos-org/embeddedos-org.github.io) | Developer portal (the live site at <https://embeddedos-org.github.io>). |
 | 🏭 | [**eFab**](https://github.com/embeddedos-org/eFab) | Stack fabricator — manifest-only meta-repo that pins versions, fetches sources, and runs end-to-end smoke tests for opinionated bundles of canonical products. v0.1.0 ships the `eai-edge` profile (ENI + EIPC + eAI). |
@@ -215,7 +224,7 @@ open https://embeddedos-org.github.io/eApps/
 ## 🌳 Link Tree
 
 | Property | URL |
-|---------|-----|
+| --- | --- |
 | 🌐 Website | <https://embeddedos-org.github.io> |
 | 📚 Book Library | <https://embeddedos-org.github.io/books.html> |
 | 🏪 App Store | <https://embeddedos-org.github.io/eApps/> |
@@ -239,8 +248,9 @@ open https://embeddedos-org.github.io/eApps/
 This repo is a **landing index**, so most code contributions belong in the downstream
 product repos listed above. For changes here:
 
-1. Read [`CONTRIBUTING.md`](CONTRIBUTING.md) for the short stub specific to this repo, and
-   the per-product `CONTRIBUTING.md` inside each downstream product repository for the
+1. Read [`CONTRIBUTING.md`](CONTRIBUTING.md) for the short stub specific to
+   this repo, and the per-product `CONTRIBUTING.md` inside each downstream
+   product repository for the
    detailed coding standards / commit conventions / review process applicable there.
 2. Open an issue or PR using the templates in [`.github/`](.github/).
 3. Follow our [Code of Conduct](CODE_OF_CONDUCT.md) (Contributor Covenant 2.1).
@@ -250,9 +260,14 @@ product repos listed above. For changes here:
 
 <div align="center">
 
-**MIT License** · Made with ❤️ by [Srikanth Patchava](https://github.com/embeddedos-org) & Contributors
+**MIT License** · Made with ❤️ by
+[Srikanth Patchava](https://github.com/embeddedos-org) & Contributors
 
-[🌐 Website](https://embeddedos-org.github.io) · [📚 Books](https://embeddedos-org.github.io/books.html) · [🏪 Apps](https://embeddedos-org.github.io/eApps/) · [🏭 Stacks](https://embeddedos-org.github.io/stacks/) · [⭐ Star EoS](https://github.com/embeddedos-org/eos)
+[🌐 Website](https://embeddedos-org.github.io) ·
+[📚 Books](https://embeddedos-org.github.io/books.html) ·
+[🏪 Apps](https://embeddedos-org.github.io/eApps/) ·
+[🏭 Stacks](https://embeddedos-org.github.io/stacks/) ·
+[⭐ Star EoS](https://github.com/embeddedos-org/eos)
 
 </div>
 

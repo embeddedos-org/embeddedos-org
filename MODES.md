@@ -4,33 +4,33 @@
 A mode is the current objective. Announce the mode you are in, and leave it only
 when its exit gate is met. Modes may repeat; the sequence is not fixed.
 
-| Mode | Objective | Leave when |
-|------|-----------|------------|
-| Discovery | Understand the problem and the affected code. | The requirement can be restated precisely, and the unknowns are named. |
-| Planning | Produce an implementation strategy. | Tasks exist in [TASKS.md](./TASKS.md) with acceptance criteria and verification commands. |
-| Research | Gather technical information that Discovery could not settle. | The open question is answered, or is recorded as unanswerable with its impact. |
-| Architecture | Validate the design against the existing system. | Components, interfaces and non-obvious choices are written down. |
-| Implementation | Write code. | The acceptance criteria are met with no placeholders. |
-| Verification | Validate the change against evidence. | Every check in [VERIFY.md](./VERIFY.md) carries `PASS`, `FAIL`, `NOT RUN` or `UNKNOWN`. |
-| Optimization | Improve quality without changing behaviour. | Behaviour is provably unchanged and the improvement is measured, not asserted. |
-| Documentation | Bring the written record back in line with the code. | Docs match the change and every example has been run. |
-| Release | Prepare deployment. | Release notes, deployment steps and rollback guidance exist. |
-| Maintenance | Resolve defects and technical debt. | The defect is fixed with a regression test, or the debt item is closed. |
+| Mode           | Objective               | Leave when                     |
+| -------------- | ----------------------- | ------------------------------ |
+| Discovery      | Name problem + code.    | Restated; unknowns named.      |
+| Planning       | Draft the strategy.     | TASKS.md: criteria + commands. |
+| Research       | Settle open questions.  | Answered or unanswerable.      |
+| Architecture   | Check design vs system. | Choices written down.          |
+| Implementation | Write the code.         | Criteria met, no placeholders. |
+| Verification   | Check against evidence. | Every check has a verdict.     |
+| Optimization   | Raise quality.          | Behaviour unchanged, measured. |
+| Documentation  | Reconcile record+code.  | Docs match; examples run.      |
+| Release        | Prepare deployment.     | Notes, steps, rollback ready.  |
+| Maintenance    | Fix defects, cut debt.  | Regression test added.         |
 
 ## Forbidden in each mode
 
-| Mode | Do not |
-|------|--------|
-| Discovery | Write code. Propose a solution before the problem is stated. |
-| Planning | Write code. Set an acceptance criterion you cannot check. |
-| Research | Present a plausible recollection as a finding — cite or mark it `Inferred`. |
-| Architecture | Redesign parts the task does not touch. |
-| Implementation | Widen scope. Fix unrelated defects — note them instead. |
-| Verification | Change code to make a check pass. That is Implementation again. |
-| Optimization | Change observable behaviour. Optimise without a baseline number. |
-| Documentation | Document intended behaviour as though it shipped. |
-| Release | Ship over a `FAIL` or a `NOT RUN`. Omit rollback steps. |
-| Maintenance | Fix a defect without a regression test that would have caught it. |
+| Mode           | Do not                                          |
+| -------------- | ----------------------------------------------- |
+| Discovery      | Write code. Solve before the problem is stated. |
+| Planning       | Write code. Set an uncheckable criterion.       |
+| Research       | Present a guess as a finding — mark `Inferred`. |
+| Architecture   | Redesign parts the task does not touch.         |
+| Implementation | Widen scope. Note unrelated defects instead.    |
+| Verification   | Change code to pass a check.                    |
+| Optimization   | Change behaviour. Optimise without a baseline.  |
+| Documentation  | Document intent as though it shipped.           |
+| Release        | Ship over `FAIL`/`NOT RUN`. Skip rollback.      |
+| Maintenance    | Fix without the regression test.                |
 
 ## Loops
 

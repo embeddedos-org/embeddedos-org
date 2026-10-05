@@ -29,21 +29,21 @@ Format: what was chosen, why, and what was rejected. The rejected option is the
 valuable half — without it the decision gets re-argued every time someone new
 notices the obvious-looking alternative.
 
-| Date | Decision | Reason | Rejected alternative |
-|------|----------|--------|----------------------|
-| —    | None recorded yet. | — | — |
+| Date | Decision           | Reason | Rejected alternative |
+| ---- | ------------------ | ------ | -------------------- |
+| —    | None recorded yet. | —      | —                    |
 
 <!-- Example of the level of detail worth recording:
-| 2026-03-14 | Queue writes in-process rather than via Redis | Deploy target has no
-network sidecar; measured throughput was sufficient at 4x expected peak |
-Redis Streams — rejected on operational cost, not on capability. Revisit if
-peak exceeds 8x. |
+     2026-03-14 — Queue writes in-process rather than via Redis.
+     Reason: the deploy target has no network sidecar, and in-process
+     throughput measured fine at 4x expected peak.
+     Rejected alternative: Redis Streams (operational cost, not capability).
 -->
 
 ## Constraints
 
 | Constraint | Source | Consequence if broken |
-|------------|--------|-----------------------|
+| ---------- | ------ | --------------------- |
 | —          | —      | —                     |
 
 ## Traps
