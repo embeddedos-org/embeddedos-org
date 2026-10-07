@@ -46,6 +46,17 @@ EmbeddedOS umbrella.*
 
 </div>
 
+## 🗞️ This week (2026-10-07)
+
+- **Zephyr Developer Summit, Day 1 (Prague):** 40+ sessions, the first-ever
+  Zephyr Community Awards announced, and MCP is now a Linux Foundation project.
+- **Synaptics/onsemi bidding war:** a competing bid forced onsemi to rewrite
+  its $7B deal ($1.3B less, all cash) — the prize is the Astra edge-AI MCU
+  platform (Cortex-M52 + Ethos-U55, Zephyr RTOS). The benchmark keeps getting
+  more commercial.
+- **Watch: Apple Oct-13 home-hub event** — smart-home hub plus LG
+  Thread/Matter accessories expected; Thread Border Router watch for eNet.
+
 ![About Banner](https://img.shields.io/badge/━━%20About%20This%20Repo%20━━-58a6ff?style=flat-square)
 
 ## 📖 About this repo
