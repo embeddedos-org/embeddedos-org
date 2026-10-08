@@ -46,16 +46,26 @@ EmbeddedOS umbrella.*
 
 </div>
 
-## 🗞️ This week (2026-10-07)
+## 🗞️ This week (2026-10-08)
 
-- **Zephyr Developer Summit, Day 1 (Prague):** 40+ sessions, the first-ever
-  Zephyr Community Awards announced, and MCP is now a Linux Foundation project.
-- **Synaptics/onsemi bidding war:** a competing bid forced onsemi to rewrite
-  its $7B deal ($1.3B less, all cash) — the prize is the Astra edge-AI MCU
-  platform (Cortex-M52 + Ethos-U55, Zephyr RTOS). The benchmark keeps getting
-  more commercial.
-- **Watch: Apple Oct-13 home-hub event** — smart-home hub plus LG
-  Thread/Matter accessories expected; Thread Border Router watch for eNet.
+- **Zephyr Developer Summit, Day 2 (Prague):** functional safety and CRA
+  readiness took center stage — the assessor's view of evidence formats
+  (hazard logs need the "why this is safe" column) and the 24h/72h/14d
+  reporting duties for embedded products.
+- **The merge wave:** roughly 45 audit findings landed across the org in
+  two waves — fix PRs merged on eBoot, ebuild, eAI, eNI, EoSim, eDB,
+  eApps, eBrowser, eos-health, www, and .github.
+- **Four new boards:** DEBIX M8391-01 (Genio 720 NPU), Arduino VENTUNO Q
+  (dual-brain), NXP FRDM-IMXRT1186 (TSN/EtherCAT), Upbeat Bluemag Pi
+  (RISC-V flight controller) — all with EoSim platform definitions.
+- **ESP-IDF v6.1:** ESP32-P4 Wi-Fi is back — but ECDSA Secure Boot V2 is
+  disabled on H2/C5/P4 for a security vulnerability. Watch item.
+- **MCP security:** Langflow CVE-2026-105697 (CVSS 9.9) and the
+  mcp-server-fetch SSRF turn protocol warnings into patch notes; the
+  org's hostile-protocol posture is now documented across eSec, eIPC,
+  eosllm, and eVera.
+- **Watch: Apple Oct-13 home-hub event** (5 days) and CEATEC Oct 13–16
+  (Bluemag Pi demo).
 
 ![About Banner](https://img.shields.io/badge/━━%20About%20This%20Repo%20━━-58a6ff?style=flat-square)
 
