@@ -46,25 +46,26 @@ EmbeddedOS umbrella.*
 
 </div>
 
-## 🗞️ This week (2026-10-08)
+## 🗞️ This week (2026-10-09)
 
-- **Zephyr Developer Summit, Day 2 (Prague):** functional safety and CRA
-  readiness took center stage — the assessor's view of evidence formats
-  (hazard logs need the "why this is safe" column) and the 24h/72h/14d
-  reporting duties for embedded products.
-- **The merge wave:** roughly 45 audit findings landed across the org in
-  two waves — fix PRs merged on eBoot, ebuild, eAI, eNI, EoSim, eDB,
-  eApps, eBrowser, eos-health, www, and .github.
-- **Four new boards:** DEBIX M8391-01 (Genio 720 NPU), Arduino VENTUNO Q
-  (dual-brain), NXP FRDM-IMXRT1186 (TSN/EtherCAT), Upbeat Bluemag Pi
-  (RISC-V flight controller) — all with EoSim platform definitions.
-- **ESP-IDF v6.1:** ESP32-P4 Wi-Fi is back — but ECDSA Secure Boot V2 is
-  disabled on H2/C5/P4 for a security vulnerability. Watch item.
-- **MCP security:** Langflow CVE-2026-105697 (CVSS 9.9) and the
-  mcp-server-fetch SSRF turn protocol warnings into patch notes; the
-  org's hostile-protocol posture is now documented across eSec, eIPC,
-  eosllm, and eVera.
-- **Watch: Apple Oct-13 home-hub event** (5 days) and CEATEC Oct 13–16
+- **Billing split:** eVera's Actions CI is restored (9/9 Test jobs green),
+  so the #52 honour-or-remove parameter fix landed with tests; the
+  embeddedos-stack queue is still billing-killed — docs-only,
+  CI-unverified, per standing policy.
+- **eCAD:** the KiCad export generator's stray `;` defect fixed at the
+  source and normalized across 70 files, with a never-again unit test.
+- **MCP security week:** the Enterprise MCP Guide's six attack classes
+  mapped to controls across eSec, eIPC, eVera, and eosllm (fail-closed,
+  allowlists, no intra-network trust); 68 CVEs in a month per
+  ClawSecure Vol 2.
+- **Silicon week:** Efinix Sapphire (RV64, 2.5W), ESP32-S31 preview (eos
+  board def + eFirmware v6.1-rc1 notes), the NGI + DDC-I Deos credit-card
+  DAL-A SBC as the eos-aero safety benchmark, and the D-Robotics S100P
+  as the dual-brain safety reference.
+- **Device-CVE series:** Moxa CVE-2026-86326 (10.0) as fail-closed
+  evidence in eBoot's threat model; the D-Link DAP-1360 (9.8, retired
+  2020) defines the KEV gate's legacy-CPE class — isolate, don't block.
+- **Watch: Apple home-hub event (Oct 13)** and CEATEC Oct 13–16
   (Bluemag Pi demo).
 
 ![About Banner](https://img.shields.io/badge/━━%20About%20This%20Repo%20━━-58a6ff?style=flat-square)
