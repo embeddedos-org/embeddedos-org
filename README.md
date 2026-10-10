@@ -46,29 +46,31 @@ EmbeddedOS umbrella.*
 
 </div>
 
-## 🗞️ This week (2026-10-09)
+## 🗞️ This week (2026-10-10)
 
-- **Billing split:** eVera's Actions CI is restored (9/9 Test jobs green),
-  so the #52 honour-or-remove parameter fix landed with tests; the
-  embeddedos-stack queue is still billing-killed — docs-only,
-  CI-unverified, per standing policy.
-- **eCAD:** the KiCad export generator's stray `;` defect fixed at the
-  source and normalized across 70 files, with a never-again unit test.
-- **MCP security week:** the Enterprise MCP Guide's six attack classes
-  mapped to controls across eSec, eIPC, eVera, and eosllm (fail-closed,
-  allowlists, no intra-network trust); 68 CVEs in a month per
-  ClawSecure Vol 2.
-- **Silicon week:** Efinix Sapphire (RV64, 2.5W), ESP32-S31 preview (eos
-  board def + eFirmware v6.1-rc1 notes), the NGI + DDC-I Deos credit-card
-  DAL-A SBC as the eos-aero safety benchmark, and the D-Robotics S100P
-  as the dual-brain safety reference.
-- **Device-CVE series:** Moxa CVE-2026-86326 (10.0) as fail-closed
-  evidence in eBoot's threat model; the D-Link DAP-1360 (9.8, retired
-  2020) defines the KEV gate's legacy-CPE class — isolate, don't block.
-- **Watch: Apple home-hub event (Oct 13)** and CEATEC Oct 13–16
-  (Bluemag Pi demo).
-
-![About Banner](https://img.shields.io/badge/━━%20About%20This%20Repo%20━━-58a6ff?style=flat-square)
+- **Fast lane:** five red default-branch builds fixed before the walk —
+  ebuild's F811 (duplicate `test` command merged into the golden path),
+  EoSim's `riscv`/`riscv64` enum + perf flake, eDB's nightly ruff,
+  eBrowser's illegal JSX comment + i18n mock, and the www digest's
+  missing `<Route>`.
+- **ESP-IDF v6.1 is final:** the "rc1" framing corrected everywhere;
+  the S31 dual-core cache fault (Espressif #18948, MCAUSE 0x19) is now
+  a recorded errata in eos and eFirmware — disable branch prediction
+  on the parked core until the fix ships.
+- **MCP taxonomy gets its CVEs:** Langflow CVE-2026-105697 (9.9) and
+  the ClawSecure report land in eSec, eIPC, and eVera — whose
+  tool-use policy gains rule 7: no executable commands from
+  configuration.
+- **Silicon + intake:** FRDM-IMXRT1186 (800 MHz M7 + 300 MHz M33, dual
+  GbE TSN) anchors the eNet lane; nRF54LC10A, T-Dongle-C5, ToughC5,
+  and Nuvoton's "Chili Pro" enter eCAD's database as `incomplete`
+  intake records; CVITEK CV1842H-P joins the eAI roster.
+- **Agent fabric:** SKILL.md is now a first-party Google format —
+  EoStudio documents the org catalog contract, eFlow ships a
+  validate-before-run JSON Schema for flows.
+- **Coverage:** eDB 86.19% with the ratchet at 75 (#88), eNI at 93.40%;
+  reviews posted on eCAD #52 and eos #192; www #92 still open.
+  Billing split holds: eVera green, embeddedos-stack docs-only.
 
 ## 📖 About this repo
 
