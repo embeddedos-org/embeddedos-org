@@ -46,31 +46,26 @@ EmbeddedOS umbrella.*
 
 </div>
 
-## 🗞️ This week (2026-10-10)
+## 🗞️ This week (2026-10-12)
 
-- **Fast lane:** five red default-branch builds fixed before the walk —
-  ebuild's F811 (duplicate `test` command merged into the golden path),
-  EoSim's `riscv`/`riscv64` enum + perf flake, eDB's nightly ruff,
-  eBrowser's illegal JSX comment + i18n mock, and the www digest's
-  missing `<Route>`.
-- **ESP-IDF v6.1 is final:** the "rc1" framing corrected everywhere;
-  the S31 dual-core cache fault (Espressif #18948, MCAUSE 0x19) is now
-  a recorded errata in eos and eFirmware — disable branch prediction
-  on the parked core until the fix ships.
-- **MCP taxonomy gets its CVEs:** Langflow CVE-2026-105697 (9.9) and
-  the ClawSecure report land in eSec, eIPC, and eVera — whose
-  tool-use policy gains rule 7: no executable commands from
-  configuration.
-- **Silicon + intake:** FRDM-IMXRT1186 (800 MHz M7 + 300 MHz M33, dual
-  GbE TSN) anchors the eNet lane; nRF54LC10A, T-Dongle-C5, ToughC5,
-  and Nuvoton's "Chili Pro" enter eCAD's database as `incomplete`
-  intake records; CVITEK CV1842H-P joins the eAI roster.
-- **Agent fabric:** SKILL.md is now a first-party Google format —
-  EoStudio documents the org catalog contract, eFlow ships a
-  validate-before-run JSON Schema for flows.
-- **Coverage:** eDB 86.19% with the ratchet at 75 (#88), eNI at 93.40%;
-  reviews posted on eCAD #52 and eos #192; www #92 still open.
-  Billing split holds: eVera green, embeddedos-stack docs-only.
+- **The Oct-11 architect queue landed** — much of it shipped by
+  Kartikey1306, srpatcha, and Copilot alongside the daily loop:
+  eosllm's Universal AI Core scoped and closed (#16), eNI's coverage
+  gates reconciled, eIPC's zero-copy tensor transport, eFlow's
+  validate-before-run CLI, ebuild's `model` registry, eApps'
+  capability registry + install-time permissions, eos-health #8.
+- **Daily loop, Oct 12:** eos gains `CMakePresets.json` (#188 closed);
+  eBoot's Cortex-R5 stage-0 is assembled in CI with a `.vectors`
+  regression guard (#151 closed, duplicate #152 closed); EoSim's MCP
+  server learns `sim_status` (#29 closed, #37 continues); eAI's
+  silicon roster adds Ara240, nRF54LC10A, BL54LM20, the M55M1
+  Ethos-U55 kit, and Chili Pro; eSec gets its first CI (docs check,
+  mirroring eNet, whose #5 closed with its CI verified green).
+- **Fast lane:** eDB's nightly ruff B010 fixed; eApps #50 filed —
+  LVGL's Helium assembly breaks the ARM mobile builds (Android
+  arm64/armeabi, iOS, android-tv) while x86_64 passes.
+- **Billing split holds:** eVera green; embeddedos-stack still
+  blocked (0-step jobs), docs-only policy in force there.
 
 ## 📖 About this repo
 
