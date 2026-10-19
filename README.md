@@ -46,26 +46,39 @@ EmbeddedOS umbrella.*
 
 </div>
 
-## 🗞️ This week (2026-10-12)
+## 🗞️ This week (2026-10-19)
 
-- **The Oct-11 architect queue landed** — much of it shipped by
-  Kartikey1306, srpatcha, and Copilot alongside the daily loop:
-  eosllm's Universal AI Core scoped and closed (#16), eNI's coverage
-  gates reconciled, eIPC's zero-copy tensor transport, eFlow's
-  validate-before-run CLI, ebuild's `model` registry, eApps'
-  capability registry + install-time permissions, eos-health #8.
-- **Daily loop, Oct 12:** eos gains `CMakePresets.json` (#188 closed);
-  eBoot's Cortex-R5 stage-0 is assembled in CI with a `.vectors`
-  regression guard (#151 closed, duplicate #152 closed); EoSim's MCP
-  server learns `sim_status` (#29 closed, #37 continues); eAI's
-  silicon roster adds Ara240, nRF54LC10A, BL54LM20, the M55M1
-  Ethos-U55 kit, and Chili Pro; eSec gets its first CI (docs check,
-  mirroring eNet, whose #5 closed with its CI verified green).
-- **Fast lane:** eDB's nightly ruff B010 fixed; eApps #50 filed —
-  LVGL's Helium assembly breaks the ARM mobile builds (Android
-  arm64/armeabi, iOS, android-tv) while x86_64 passes.
+- **Knowledge-base fabric, 6 → 21 of 26 repos:** `llms.txt` /
+  `llms-full.txt` pairs landed across the org this week — eos, ebuild,
+  eNI, eDB, eApps, and embeddedos-stack in the final batch. The
+  remaining gaps are deliberate: eos-health and www by decision, the
+  two meta repos, and the parked legacy site. (An Oct-18 recount
+  corrected the running total before it shipped: 15/26 at day start,
+  21/26 verified at close.)
+- **Security fast lane:** eDB's weekly `pip-audit` is green again
+  after a three-layer fix — the audit no longer trips on the repo's
+  own editable package, on `--strict`, or on the audit step's own
+  tools (#101 filed and closed; the dispatched Weekly run is green on
+  both matrix legs). eIPC's Go toolchain floor rose to **1.26.9**, the
+  Oct 8 security release (15 fixes) — #46 filed, landed, CI green on
+  the new floor, closed.
+- **Daily loop, Oct 13–18:** eApps #52 closed (apps/ehmi and
+  apps/esettings were never wired into the build and linked a
+  nonexistent target); eIPC's new property tests exposed and fixed
+  two real `Validate()` gaps (alignment, uint64 range wrap); ebuild's
+  receipt verifier shipped validator-only, since no genuine all-PASS
+  receipt exists yet; eBrowser's drifted SBOM was regenerated with a
+  Nightly drift checker; MCP Registry identities landed for eosllm,
+  EoSim, and eFlow; eos #148 advanced through Step 0b accessors and
+  the Step 0c dropped-option diagnostic, with the backends migration
+  next.
+- **A bug the new tests earned:** eVera's EventBus was dying on its
+  first idle timeout on Python 3.10 — `asyncio.wait_for` raises a
+  distinct `TimeoutError` class there — unmasked once CI was fixed to
+  install the declared `pytest-asyncio`. Both layers fixed; 9/9 green.
 - **Billing split holds:** eVera green; embeddedos-stack still
-  blocked (0-step jobs), docs-only policy in force there.
+  blocked (0-step jobs), so smaller, docs-only changes land there,
+  marked CI-unverified.
 
 ## 📖 About this repo
 
