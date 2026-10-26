@@ -46,39 +46,44 @@ EmbeddedOS umbrella.*
 
 </div>
 
-## 🗞️ This week (2026-10-19)
+## 🗞️ This week (2026-10-26)
 
-- **Knowledge-base fabric, 6 → 21 of 26 repos:** `llms.txt` /
-  `llms-full.txt` pairs landed across the org this week — eos, ebuild,
-  eNI, eDB, eApps, and embeddedos-stack in the final batch. The
-  remaining gaps are deliberate: eos-health and www by decision, the
-  two meta repos, and the parked legacy site. (An Oct-18 recount
-  corrected the running total before it shipped: 15/26 at day start,
-  21/26 verified at close.)
-- **Security fast lane:** eDB's weekly `pip-audit` is green again
-  after a three-layer fix — the audit no longer trips on the repo's
-  own editable package, on `--strict`, or on the audit step's own
-  tools (#101 filed and closed; the dispatched Weekly run is green on
-  both matrix legs). eIPC's Go toolchain floor rose to **1.26.9**, the
-  Oct 8 security release (15 fixes) — #46 filed, landed, CI green on
-  the new floor, closed.
-- **Daily loop, Oct 13–18:** eApps #52 closed (apps/ehmi and
-  apps/esettings were never wired into the build and linked a
-  nonexistent target); eIPC's new property tests exposed and fixed
-  two real `Validate()` gaps (alignment, uint64 range wrap); ebuild's
-  receipt verifier shipped validator-only, since no genuine all-PASS
-  receipt exists yet; eBrowser's drifted SBOM was regenerated with a
-  Nightly drift checker; MCP Registry identities landed for eosllm,
-  EoSim, and eFlow; eos #148 advanced through Step 0b accessors and
-  the Step 0c dropped-option diagnostic, with the backends migration
-  next.
-- **A bug the new tests earned:** eVera's EventBus was dying on its
-  first idle timeout on Python 3.10 — `asyncio.wait_for` raises a
-  distinct `TimeoutError` class there — unmasked once CI was fixed to
-  install the declared `pytest-asyncio`. Both layers fixed; 9/9 green.
-- **Billing split holds:** eVera green; embeddedos-stack still
-  blocked (0-step jobs), so smaller, docs-only changes land there,
-  marked CI-unverified.
+- **Two layers for everything (Oct 24 directive, first slices same
+  day):** EmbeddedOS now builds toward an **API layer** (stable C
+  contracts and service APIs other programs integrate against) and
+  an **MCP layer** that wraps it for agents — plus ROS 2 / micro-ROS
+  and Zephyr/FreeRTOS/NuttX interop, modular adoption (take the
+  full stack or a single part like eBoot or eIPC), and home-system
+  support (Zigbee, Thread/Matter, Z-Wave; Alexa, Google Home,
+  HomeKit, Home Assistant) owned by eNet. First slices landed in an
+  extra run the same evening: the eos MQTT implementation design
+  (issue #199 — the net.h client API is declared but stubbed), the
+  eNet home-systems plan (issue #7), and an org-wide MCP/API audit
+  in `.github`.
+- **eos #148, Step 2 complete:** package *options* are interned
+  into owner-held string tables on both the config side (Step 2a)
+  and the package side (Step 2b) — `EosPackageSet` shrank
+  3,979,296 → 1,357,856 bytes at the same 1,260,000-byte
+  `EosConfig` ceiling. Remaining: deps interning (~1.0 MB per side,
+  scoped 2026-10-26) and the packages[128] arena.
+- **Coverage drives:** eVera's scheduler went from file-state
+  checkers through settings-gated wrappers (S1–S3, isolation
+  coverage 42.23% → 73.68%); eDB's #88 slices took `cli.py` to
+  100% statements + branches; eIPC's TLS thread closed end to end
+  (#50/#51 plus the AutoTLSConfig doc correction).
+- **Fast lane:** an eos STM32 startup-assembly defect that was
+  failing ebuild's EoSim Sanity was fixed at the source, and
+  Sanity's first post-fix run is green. The stack's daily KEV gate
+  also corrected the record: CVE-2026-9098 is a Casdoor SAML
+  vulnerability, not cPanel & WHM — the retained entry was
+  superseded, not rewritten.
+- **Contributors:** the www site shipped its "Black Edition" dark
+  theme on master; eCAD added more original EmbeddedOS boards;
+  eos received a queue of focused security-fix PRs (#195–#209),
+  now under daily-loop review; www's dependency-security fix for
+  #101 is in PR #102. Billing split unchanged: eVera green,
+  embeddedos-stack still blocked (0-step jobs) — docs-only,
+  CI-unverified landings there.
 
 ## 📖 About this repo
 
