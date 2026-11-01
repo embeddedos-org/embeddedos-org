@@ -11,6 +11,6 @@ permissions:
 
 jobs:
   policy:
-    uses: embeddedos-org/.github/.github/workflows/linked-issue-policy.yml@d840a2d9e09384a75f79608aa68978af08a23619
+    uses: embeddedos-org/.github/.github/workflows/linked-issue-policy.yml@ef1d1522c753a7a33ae9d74fdab36fa3ca5b4701
     with:
       policy_ref: 92cb596c773496ec4df76717e8acf0e6b7700f73
